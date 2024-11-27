@@ -1,0 +1,38 @@
+GET https://api.spoonacular.com/recipes/716429/information?apiKey=6cb513c088c443ac90a7c9e8d6a2f820&includeNutrition=true.
+
+### Getting a single card
+GET https://api.tcgdex.net/v2/en/cards/swsh3-136
+
+### Searching Sets
+GET https://api.tcgdex.net/v2/en/sets
+
+### Getting a set
+GET https://api.tcgdex.net/v2/en/sets/base5
+
+### Getting card of the set
+GET https://api.tcgdex.net/v2/en/cards/base1-1
+
+### Getting a image
+GET https://assets.tcgdex.net/en/base/base1/1/high.webp
+
+### Getting a image
+GET https://assets.tcgdex.net/en/swsh/swsh3/136/high.webp
+
+
+
+###Genetic Apex
+### Getting a set
+GET https://api.tcgdex.net/v2/en/sets/A1
+
+### Getting card of the set
+GET https://api.tcgdex.net/v2/en/cards/A1-277
+
+### Getting a image
+GET https://assets.tcgdex.net/en/tcgp/A1/001/high.webp
+
+### LOGO
+GET https://assets.tcgdex.net/en/tcgp/A1/logo/low.webp
+
+
+###Filtering
+GET https://api.tcgdex.net/v2/en/cards?name=pikachu
