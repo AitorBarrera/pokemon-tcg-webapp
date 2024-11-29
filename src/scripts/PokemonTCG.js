@@ -31,3 +31,52 @@ export async function getPokemonCardsByName(name){
         return null;
     }
 }
+
+
+export async function getPokemonCardsBySuffix(suffix){
+
+    try {
+        const response = await fetch(`${API_URL}/cards?suffix=like:${suffix}`);
+
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
+
+export async function getSeries(){
+
+    try {
+        const response = await fetch(`${API_URL}/series`);
+
+        // parse the json response
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
+export async function getSets(){
+
+    try {
+        const response = await fetch(`${API_URL}/sets`);
+
+        // parse the json response
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}

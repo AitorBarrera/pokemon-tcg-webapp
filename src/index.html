@@ -11,6 +11,62 @@
 </head>
 
 <body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" aria-current="page">Home
+                <span class="visually-hidden">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+
+            <li class="nav-item dropdown dropdownSeries">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Series</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <template id="dropdownItemTemplate">
+                  <div class="dropdown-item">
+                    <a href="#"><img src="favicon.ico" alt="" class="img-fluid"></a>
+                  </div>
+                </template>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown dropdownSets">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Sets</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <template id="dropdownItemTemplate">
+                  <div class="dropdown-item">
+                    <a href="#"><img src="favicon.ico" alt="" class="img-fluid"></a>
+                  </div>
+                </template>
+              </div>
+            </li>
+          </ul>
+
+          <form class="d-flex my-2 my-lg-0">
+            <input class="form-control me-sm-2" type="text" placeholder="Search" />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+  </header>
   <!-- <form action="">
     <label for="user">User: </label>
     <input type="text" name="user" id="user">
@@ -25,10 +81,9 @@
 
     </div>
   </section>
-
-  <template id="template">
+  <template id="pokemonCardTemplate">
     <div class="col-12 col-md-6 col-lg-4 my-3">
-      <img src="img/bulbasaur.webp" alt="" srcset="" class="w-100">
+      <img src="img/bulbasaur.webp" alt="" srcset="" class="w-100 h-100">
     </div>
   </template>
   <script type="module" src="scripts/main.js"></script>

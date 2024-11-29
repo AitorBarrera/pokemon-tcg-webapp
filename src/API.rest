@@ -22,17 +22,31 @@ GET https://assets.tcgdex.net/en/swsh/swsh3/136/high.webp
 
 ###Genetic Apex
 ### Getting a set
-GET https://api.tcgdex.net/v2/en/sets/A1
+GET https://api.tcgdex.net/v2/en/sets/pl2
 
 ### Getting card of the set
-GET https://api.tcgdex.net/v2/en/cards/A1-277
+GET https://api.tcgdex.net/v2/en/cards/A1-201
 
 ### Getting a image
 GET https://assets.tcgdex.net/en/tcgp/A1/001/high.webp
 
 ### LOGO
-GET https://assets.tcgdex.net/en/tcgp/A1/logo/low.webp
+GET https://assets.tcgdex.net/en/tcgp/A1/logo/low.webp&w=630&q=100
 
 
-###Filtering
-GET https://api.tcgdex.net/v2/en/cards?name=pikachu
+
+### Searching Series
+GET https://api.tcgdex.net/v2/en/series
+
+### Getting a series
+GET https://api.tcgdex.net/v2/en/series/pl
+
+###
+GET https://api.tcgdex.net/v2/en/variants
+
+### Suffix EX
+GET https://api.tcgdex.net/v2/en/cards?suffix=like:ex
+
+###
+GET https://tcgdex.net/_next/image?url=https%3A%2F%2Fassets.tcgdex.net%2Fen%2Fsv%2Fsv03.5%2Flogo.webp&w=640&q=100
+    https://www.tcgdex.net/_next/image?url=https%3A%2F%2Fassets.tcgdex.net%2Fen%2Fpl%2Fpl1%2Flogo.webp&w=640&q=100
