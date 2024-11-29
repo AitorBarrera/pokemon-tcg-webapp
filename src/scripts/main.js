@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", event =>{
     // }).catch(error => console.log("Error: " + error))
     
     API.getPokemonCardsByName("like:cubone").then((pokemonCard) => {
-        console.log(pokemonCard);
+        // console.log(pokemonCard);
         renderPokemonCard(pokemonCard);
 
     }).catch(error => console.log("Error: " + error))
@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", event =>{
 
     }).catch(error => console.log("Error: " + error))
 
-    API.getSets().then((sets) => {
-        // console.log(sets);
-        renderSets(sets);
+    // API.getSets().then((sets) => {
+    //     // console.log(sets);
+    //     renderSets(sets);
 
-    }).catch(error => console.log("Error: " + error))
+    // }).catch(error => console.log("Error: " + error))
 });
 
 function renderPokemonCard(pokemonCards){
@@ -61,7 +61,7 @@ function renderPokemonCard(pokemonCards){
 
 function renderSeries(seriesList){
 
-    const dropdown = document.querySelector(".dropdownSeries .dropdown-menu");
+    const dropdown = document.querySelector(".dropdownSeries");
     const dropdownItemTemplate = dropdown.querySelector("#dropdownItemTemplate");
 
     seriesList.forEach(serie => {
@@ -78,18 +78,18 @@ function renderSeries(seriesList){
 }
 
 
-function renderSets(setsList){
-    const dropdown = document.querySelector(".dropdownSets .dropdown-menu");
-    const dropdownItemTemplate = dropdown.querySelector("#dropdownItemTemplate");
+// function renderSets(setsList){
+//     const dropdown = document.querySelector(".dropdownSets .dropdown-menu");
+//     const dropdownItemTemplate = dropdown.querySelector("#dropdownItemTemplate");
 
-    setsList.forEach(set => {
+//     setsList.forEach(set => {
 
-        const dropdownItem = dropdownItemTemplate.cloneNode(true).content;
-        const logoItem = dropdownItem.querySelector("img");
+//         const dropdownItem = dropdownItemTemplate.cloneNode(true).content;
+//         const logoItem = dropdownItem.querySelector("img");
         
-        logoItem.src = `${set.logo}.webp`;
-        logoItem.alt = `${set.name}`
+//         logoItem.src = `${set.logo}.webp`;
+//         logoItem.alt = `${set.name}`
 
-        dropdown.append(dropdownItem);
-    });
-}
+//         dropdown.append(dropdownItem);
+//     });
+// }
