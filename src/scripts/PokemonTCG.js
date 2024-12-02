@@ -1,4 +1,5 @@
 const API_URL = "https://api.tcgdex.net/v2/en";
+
 export async function getAllPokemonCardsBySet(set){
 
     try {
@@ -65,10 +66,26 @@ export async function getSeries(){
     }
 }
 
-export async function getSets(){
+export async function getSeriesById(id){
 
     try {
-        const response = await fetch(`${API_URL}/sets`);
+        const response = await fetch(`${API_URL}/series/${id}`);
+
+        // parse the json response
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
+export async function getSetsBySeriesId(){
+
+    try {
+        const response = await fetch(`${API_URL}/series/${id}`);
 
         // parse the json response
         const data = await response.json();

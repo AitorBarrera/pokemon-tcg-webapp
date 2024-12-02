@@ -22,7 +22,7 @@ GET https://assets.tcgdex.net/en/swsh/swsh3/136/high.webp
 
 ###Genetic Apex
 ### Getting a set
-GET https://api.tcgdex.net/v2/en/sets/pl2
+GET https://api.tcgdex.net/v2/en/sets/base1
 
 ### Getting card of the set
 GET https://api.tcgdex.net/v2/en/cards/A1-201
@@ -39,7 +39,7 @@ GET https://assets.tcgdex.net/en/tcgp/A1/logo/low.webp&w=630&q=100
 GET https://api.tcgdex.net/v2/en/series
 
 ### Getting a series
-GET https://api.tcgdex.net/v2/en/series/pl
+GET https://api.tcgdex.net/v2/en/series/base
 
 ###
 GET https://api.tcgdex.net/v2/en/variants
