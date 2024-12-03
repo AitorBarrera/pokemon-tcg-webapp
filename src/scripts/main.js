@@ -1,4 +1,6 @@
 import "../style/main.scss";
+import * as buttonUp from "./buttonUp.js";
+buttonUp.setupButtonClick();
 
 import * as API from "./PokemonTCG.js";
 
@@ -6,6 +8,7 @@ let currentListCards;
 let currentSeriesSelected = "base";
 
 document.addEventListener("DOMContentLoaded", event =>{
+    changeHTML("sectionHero")
     // API.getAllPokemonCardsBySet("A1").then((pokemonCard) => {
     //     // console.log(pokemonCard.cards);
     //     renderPokemonCard(pokemonCard.cards);
@@ -169,3 +172,27 @@ function filterByName(name) {
 
     renderPokemonCard(filterCards);
 }
+
+// funcion auxiliar que cambia la pagina que se quiere mostrar
+function changeHTML(id) { 
+    const paginas = document.querySelectorAll(".pagina");
+
+    paginas.forEach(pagina => {
+        if (pagina.classList.contains("d-block"))
+            pagina.classList.remove("d-block")
+        pagina.classList.add("d-none")
+    }
+    );
+
+    const paginaAMostrar = document.querySelector(`#${id}`);
+    
+    if (paginaAMostrar.classList.contains("d-none"))
+        paginaAMostrar.classList.remove("d-none");
+    paginaAMostrar.classList.add("d-block");
+}
+
+const buttonsChangeToSectionHero = document.querySelectorAll(".changeToSectionHero");
+buttonsChangeToSectionHero.forEach(button => button.addEventListener("click", e => changeHTML("sectionHero")));
+
+const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionCards");
+buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => changeHTML("sectionCards")));

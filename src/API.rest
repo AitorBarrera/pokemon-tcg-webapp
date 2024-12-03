@@ -49,4 +49,4 @@ GET https://api.tcgdex.net/v2/en/cards?suffix=like:ex
 
 ###
 GET https://tcgdex.net/_next/image?url=https%3A%2F%2Fassets.tcgdex.net%2Fen%2Fsv%2Fsv03.5%2Flogo.webp&w=640&q=100
-    https://www.tcgdex.net/_next/image?url=https%3A%2F%2Fassets.tcgdex.net%2Fen%2Fpl%2Fpl1%2Flogo.webp&w=640&q=100
+   
