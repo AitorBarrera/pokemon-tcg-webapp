@@ -8,7 +8,6 @@ let currentListCards;
 let currentSeriesSelected = "base";
 
 document.addEventListener("DOMContentLoaded", event =>{
-    changeHTML("sectionHero")
     // API.getAllPokemonCardsBySet("A1").then((pokemonCard) => {
     //     // console.log(pokemonCard.cards);
     //     renderPokemonCard(pokemonCard.cards);
@@ -109,13 +108,13 @@ function renderSeries(seriesList){
 
             API.getSeriesById(currentSeriesSelected).then((serie) => {
                 logoCurrentSeries.src = serie.logo + ".webp";
+                logoCurrentSeries.alt = `${serie.name}`
                 
                 renderSets(currentSeriesSelected);
         
             }).catch(error => console.log("Error: " + error))
         })
 
-        
         dropdown.append(dropdownItem);
     });
 }
@@ -144,6 +143,7 @@ function renderSets(seriesId){
             linkItem.addEventListener("click", e =>{
                 let currentSetSelectedId = set.id;
                 logoCurrent.src = set.logo + ".webp";
+                logoCurrent.alt = `${set.name}`
                 
 
                 // API.getSeriesById(currentSeriesSelectedId).then((serie) => {
@@ -159,7 +159,7 @@ function renderSets(seriesId){
             })
 
             dropdown.append(dropdownItem);
-
+            changeAPEXlogo()
         })
 
     }).catch(error => console.log("Error: " + error))
@@ -175,6 +175,15 @@ function filterByName(name) {
 
 // funcion auxiliar que cambia la pagina que se quiere mostrar
 function changeHTML(id) { 
+    const header = document.querySelector("header");
+    if (id == "sectionHero"){
+        header.classList.remove("d-none")
+        header.classList.add("d-none")
+    }else{
+        header.classList.add("d-block")
+        header.classList.remove("d-none")
+    }
+
     const paginas = document.querySelectorAll(".pagina");
 
     paginas.forEach(pagina => {
@@ -196,3 +205,19 @@ buttonsChangeToSectionHero.forEach(button => button.addEventListener("click", e 
 
 const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionCards");
 buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => changeHTML("sectionCards")));
+
+
+function changeAPEXlogo() {
+//     const imgSeries = document.querySelectorAll("img[alt='Pokémon TCG Pocket']");
+//     const imgSets = document.querySelectorAll("img[alt='Genetic Apex']");
+//     imgSeries.forEach(img=>{
+//         img.classList.remove("w-100");
+//         img.style.width = "5rem";
+//         img.style.height = "4rem";
+//     })
+//     imgSets.forEach(img=>{
+//         img.classList.remove("w-100");
+//         img.style.width = "6rem";
+//         img.style.height = "4.5rem";
+//     })
+}
