@@ -64,6 +64,21 @@ export async function getSeries(){
         return null;
     }
 }
+export async function getSetsBySeries(serie){
+
+    try {
+        const response = await fetch(`${API_URL}/series/${serie}`);
+
+        // parse the json response
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
 
 export async function getSets(){
 
