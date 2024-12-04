@@ -148,12 +148,12 @@ function renderSeriesRow(seriesList) {
             currentSeriesSelected = serie.id;
 
             API.getSeriesById(currentSeriesSelected).then((serie) => {
-                logoCurrentSeries.src = serie.logo + ".webp";
                 
                 renderSetsRowById(currentSeriesSelected);
         
             }).catch(error => console.log("Error: " + error))
         })
+
         seriesRow.appendChild(div); 
     }); 
 }
@@ -232,13 +232,15 @@ function renderSetsRow(setList) {
 
 
 function renderSetsRowById(seriesId) {
-    const setsRow = document.querySelector(".sets-row");
+    const setsRow = document.querySelector(".setsId-row");
+    
     setsRow.innerHTML = ""; 
     API.getSeriesById(seriesId).then((serie) => {
         const sets = serie.sets;
-
+        
         sets.forEach( set =>{
         const div = document.createElement("div");
+
         div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
         div.innerHTML = `
                 <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
@@ -249,7 +251,11 @@ function renderSetsRowById(seriesId) {
         setsRow.appendChild(div); 
 
 
-    }); 
+    });
+
+    const seriesRow = document.querySelector(".series-row");
+    seriesRow.classList.toggle("d-none"); 
+
 }).catch(error => console.log("Error: " + error))
 }
 
@@ -288,7 +294,16 @@ const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionC
 buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => changeHTML("sectionCards")));
 
 const buttonsChangeToSectionSeries = document.querySelectorAll(".changeToSectionSeries");
-buttonsChangeToSectionSeries.forEach(button => button.addEventListener("click", e => changeHTML("sectionSeries")));
+buttonsChangeToSectionSeries.forEach(button => button.addEventListener("click", e => {
+    changeHTML("sectionSeries")
+    
+    const seriesRow = document.querySelector(".series-row");
+
+    seriesRow.classList.remove("d-none");
+    seriesRow.classList.add("d-flex");
+
+}));
 
 const buttonsChangeToSectionSets = document.querySelectorAll(".changeToSectionSets");
 buttonsChangeToSectionSets.forEach(button => button.addEventListener("click", e => changeHTML("sectionSets")));
+
