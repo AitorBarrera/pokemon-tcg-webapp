@@ -16,6 +16,22 @@ export async function getAllPokemonCardsBySet(set){
     }
 }
 
+export async function getPokemonCardsById(id){
+
+    try {
+        const response = await fetch(`${API_URL}/cards/${id}`);
+
+        // parse the json response
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
 
 export async function getPokemonCardsByName(name){
 

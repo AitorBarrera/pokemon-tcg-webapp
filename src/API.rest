@@ -7,10 +7,10 @@ GET https://api.tcgdex.net/v2/en/cards/swsh3-136
 GET https://api.tcgdex.net/v2/en/sets
 
 ### Getting a set
-GET https://api.tcgdex.net/v2/en/sets/base5
+GET https://api.tcgdex.net/v2/en/sets/base1
 
 ### Getting card of the set
-GET https://api.tcgdex.net/v2/en/cards/base1-1
+GET https://api.tcgdex.net/v2/en/cards/base1-2
 
 ### Getting a image
 GET https://assets.tcgdex.net/en/base/base1/1/high.webp

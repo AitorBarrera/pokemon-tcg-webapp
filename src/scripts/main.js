@@ -1,5 +1,7 @@
 import "../style/main.scss";
 import * as buttonUp from "./buttonUp.js";
+import * as collectionAPI from "./collectionAPI.js";
+
 buttonUp.setupButtonClick();
 
 import * as API from "./PokemonTCG.js";
@@ -8,6 +10,7 @@ let currentListCards;
 let currentSeriesSelected = "base";
 
 document.addEventListener("DOMContentLoaded", event =>{
+    changeHTML("sectionCards")
     // API.getAllPokemonCardsBySet("A1").then((pokemonCard) => {
     //     // console.log(pokemonCard.cards);
     //     renderPokemonCard(pokemonCard.cards);
@@ -77,9 +80,29 @@ function renderPokemonCard(pokemonCards){
         const cardImg = card.querySelector("img");
 
         cardImg.src = `${pokemonCard.image}/high.webp`
+        cardImg.alt = pokemonCard.id
 
+        const starFavoriteButton = card.querySelector(".starFavoriteButton");
+        starFavoriteButton.setAttribute("data-id", pokemonCard.id);
+        
         cardContainer.append(card);
     });
+
+    const starFavoriteButtons = document.querySelectorAll(".starFavoriteButton");
+    
+    starFavoriteButtons.forEach(button => {
+        button.addEventListener("click", e =>{
+            const idCard = button.getAttribute("data-id");
+
+            API.getPokemonCardsById(idCard).then((card) => {
+                // console.log(series);
+                let selectedCard = card;
+                collectionAPI.postCardToFavorites(selectedCard);
+        
+            }).catch(error => console.log("Error: " + error));
+            
+        })
+    })
 }
 
 
@@ -159,7 +182,6 @@ function renderSets(seriesId){
             })
 
             dropdown.append(dropdownItem);
-            changeAPEXlogo()
         })
 
     }).catch(error => console.log("Error: " + error))
@@ -206,18 +228,47 @@ buttonsChangeToSectionHero.forEach(button => button.addEventListener("click", e 
 const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionCards");
 buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => changeHTML("sectionCards")));
 
+const buttonschangeToFavorites = document.querySelectorAll(".changeToFavorites");
+console.log(buttonschangeToFavorites);
 
-function changeAPEXlogo() {
-//     const imgSeries = document.querySelectorAll("img[alt='Pokémon TCG Pocket']");
-//     const imgSets = document.querySelectorAll("img[alt='Genetic Apex']");
-//     imgSeries.forEach(img=>{
-//         img.classList.remove("w-100");
-//         img.style.width = "5rem";
-//         img.style.height = "4rem";
-//     })
-//     imgSets.forEach(img=>{
-//         img.classList.remove("w-100");
-//         img.style.width = "6rem";
-//         img.style.height = "4.5rem";
-//     })
+buttonschangeToFavorites.forEach(button => button.addEventListener("click", e => {
+    renderFavorites();
+}));
+
+
+collectionAPI.getAllFavorites().then(cards =>{
+    console.log(cards);
+    
+}).catch(error => console.log("Error: " + error));
+
+
+function renderFavorites() {
+    collectionAPI.getAllFavorites().then(cards => {
+        renderPokemonCard(cards);
+        changeHTML("sectionCards");
+        changeFavoriteButtonToDelete()
+    }).catch(error => console.log("Error: " + error));
+}
+
+// function to change the favorite button to delete button
+function changeFavoriteButtonToDelete() {
+
+    const starFavoriteButtonContainers = document.querySelectorAll(".starFavoriteButtonContainer");
+    starFavoriteButtonContainers.forEach(container =>{
+        const idCard = container.querySelector(".starFavoriteButton").getAttribute("data-id");
+        
+        container.innerHTML = `<a class="deleteFavoriteButton" data-id=${idCard}>
+                                <i class="fa-solid fa-trash deleteFavorite"></i>
+                            </a>`;
+    })
+
+    const buttons = document.querySelectorAll(".deleteFavoriteButton");
+        buttons.forEach(button => button.addEventListener("click", e =>{
+            const idCard = button.getAttribute("data-id");
+            collectionAPI.deleteCardFromFavorites(idCard).then(response =>{
+                console.log(`Card with id ${idCard} has benn deleted from favorites.`);
+    
+                renderFavorites();
+            }).catch(error => console.log("Error: " + error));
+        }))
 }

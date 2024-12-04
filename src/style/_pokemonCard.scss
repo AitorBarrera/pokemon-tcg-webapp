@@ -1,0 +1,35 @@
+.pokemonCard{
+    position: relative;
+
+    .starFavorite, .starFavoriteBorder, .deleteFavorite{
+        position: absolute;
+
+        bottom: 5%;
+        right: 10%;
+
+        opacity: 0%;
+    }
+
+    &:hover{
+        .starFavorite, .starFavoriteBorder, .deleteFavorite{
+            opacity: 100%;
+
+            transition: opacity 0.5s;
+        }
+    }
+
+    .starFavorite{
+        color: gold;
+        font-size: 6rem;
+    }
+
+    .starFavoriteBorder{
+        color: rgba(0, 0, 0, 0.61);
+        font-size: 6rem;
+    }
+
+    .deleteFavorite{
+        color: rgb(252, 23, 23);
+        font-size: 4rem;
+    }
+}

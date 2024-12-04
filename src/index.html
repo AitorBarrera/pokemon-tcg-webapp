@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokemon TCG Explorer</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="style/main.scss">
@@ -26,7 +27,7 @@
         <h3><a class="nav-link text-white " href="#"><strong>SETS</strong></a></h3>
       </li>
       <li class="nav-item">
-        <h3><a class="nav-link text-white " href="#"><strong>FAVOURITES</strong></a></h3>
+        <h3><a class="nav-link text-white changeToFavorites" href="#"><strong>FAVOURITES</strong></a></h3>
       </li>
       <li class="nav-item">
         <h3><a class="nav-link text-white " href="#"><strong>YOUR COLLECTIONS</strong></a></h3>
@@ -50,7 +51,7 @@
                 FAVOURITES CARDS.
               </h4>
               <p class="card-text"> Add your favourite cards to have fast access to them.</p>
-              <button type="button" class="btn btn-outline-light">SEE FAVS</button>
+              <button type="button" class="btn btn-outline-light changeToFavorites">SEE FAVS</button>
             </div>
           </div>
         </div>
@@ -97,7 +98,7 @@
         </button>
         <div class="collapse navbar-collapse align-items-center" id="collapsibleNavId">
           <ul
-            class="navbar-nav me-auto mt-2 mt-lg-0 col-8 justify-content-evenly d-flex flex-column flex-md-row w-100 align-items-center">
+            class="navbar-nav me-auto mt-2 mt-lg-0 col-8 justify-content-between d-flex flex-column flex-md-row w-100 align-items-center">
             <!-- <li class="nav-item">
               <a class="nav-link active" href="#" aria-current="page">Home
                 <span class="visually-hidden">(current)</span></a>
@@ -131,13 +132,13 @@
               <div class="dropdown-menu dropdownSets w-100 my-5" aria-labelledby="dropdownId">
               </div>
             </li>
+            <form class="d-flex my-2 my-lg-0">
+              <input class="me-sm-2 inputSearchByName" type="text" placeholder="Search" />
+              <button class="buttonSearchByName btn btn-dark" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
           </ul>
-          <form class="d-flex my-2 my-lg-0 col-4">
-            <input class="me-sm-2 inputSearchByName" type="text" placeholder="Search" />
-            <button class="buttonSearchByName btn btn-dark" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
@@ -149,10 +150,27 @@
   </section>
 </main>
 <template id="pokemonCardTemplate">
-  <div class="col-12 col-md-6 col-lg-3 my-3">
-    <img src="img/bulbasaur.webp" class="w-100 h-100">
+  <div class="pokemonCard col-12 col-md-6 col-lg-3 my-3 position-relative">
+    <img src="img/bulbasaur.webp" alt="" class="w-100 h-100">
+    <div class="starFavoriteButtonContainer">
+      <a class="starFavoriteButton">
+        <i class="fa-solid fa-star starFavorite"></i>
+        <i class="fa-regular fa-star starFavoriteBorder"></i>
+      </a>
+    </div>
   </div>
 </template>
+
+<!-- Template for cards that are favorites and need a button to delete from favorites. -->
+<!-- <template id="pokemonCardTemplateFavorites">
+  <div class="pokemonCard col-12 col-md-6 col-lg-3 my-3 position-relative">
+    <img src="img/bulbasaur.webp" alt="" class="w-100 h-100">
+    <a class="deleteFavoriteButton">
+      <i class="fa-solid fa-star deleteFavorite"></i>
+      <i class="fa-regular fa-star deleteFavoriteBorder"></i>
+    </a>
+  </div>
+</template> -->
 <script type="module" src="scripts/main.js"></script>
 <footer>
   <button id="backToTopBtn" title="Go to top">↑</button>

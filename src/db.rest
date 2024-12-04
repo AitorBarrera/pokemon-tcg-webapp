@@ -1,0 +1,54 @@
+### Get all card
+GET http://localhost:3000/favorites HTTP/1.1
+
+### Get card by ID
+GET http://localhost:3000/favorites/base1-10 HTTP/1.1
+
+### Add card
+POST http://localhost:3000/favorites HTTP/1.1
+content-type: application/json 
+
+{
+    "id": "base1-1",
+    "image": "https://assets.tcgdex.net/en/base/base1/1",
+    "localId": "1",
+    "name": "Alakazam"
+}
+
+### Delete a post
+DELETE http://localhost:3000/favorites/base1-10 HTTP/1.1
+
+### Add collection
+POST http://localhost:3000/other_collections HTTP/1.1
+content-type: application/json 
+
+{
+    "perros":[
+
+    ]
+}
+
+### Add collection
+POST http://localhost:3000/other_collections/perros HTTP/1.1
+content-type: application/json 
+
+{
+    "id": "base1-1",
+    "image": "https://assets.tcgdex.net/en/base/base1/1",
+    "localId": "1",
+    "name": "Alakazam"
+}
+
+
+# ### Get all posts
+# GET http://172.20.99.1:3000/posts HTTP/1.1
+
+
+### Update other_collections
+PATCH  http://localhost:3000/other_collections/3a52 HTTP/1.1
+content-type: application/json 
+
+{
+    "id": "GET",
+    "name": "DELPHIN",
+}
