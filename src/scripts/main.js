@@ -243,11 +243,23 @@ function renderSetsRowById(seriesId) {
 
         div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
         div.innerHTML = `
+                <a href="#sectionCards" data-id="${set.id}">
                 <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
                 <div class="card-body">
                     <h4 class="card-title text-center">${set.name}</h4>
-                </div>`;
-
+                </div>
+                </a>`;
+            
+                const setsLink = div.querySelector("a");
+                const selectedSetId = setsLink.getAttribute("data-id");
+                setsLink.addEventListener("click", e =>{
+                    changeHTML("sectionCards");
+                    API.getAllPokemonCardsBySet(selectedSetId).then((pokemonCards) => {
+                        renderPokemonCard(pokemonCards.cards);
+                        currentListCards = pokemonCards.cards;                    
+                    }).catch(error => console.log("Error: " + error))
+                });
+                
         setsRow.appendChild(div); 
 
 
