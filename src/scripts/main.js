@@ -31,8 +31,15 @@ document.addEventListener("DOMContentLoaded", event =>{
     API.getSeries().then((series) => {
         // console.log(series);
        renderSeries(series);
-
+       renderSeriesRow(series);
     }).catch(error => console.log("Error: " + error))
+
+    API.getSets().then((sets) => {
+        // console.log(series);
+       renderSetsRow(sets);
+    }).catch(error => console.log("Error: " + error))
+
+
 
     // API.getSets().then((sets) => {
     //     // console.log(sets);
@@ -120,6 +127,41 @@ function renderSeries(seriesList){
     });
 }
 
+//Show series in row
+function renderSeriesRow(seriesList) {
+    const seriesRow = document.querySelector(".series-row");
+    seriesRow.innerHTML = ""; 
+
+    seriesList.forEach(serie => {
+        const div = document.createElement("div");
+        div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
+        div.innerHTML = `
+            <a href="#sectionSeries" class="card h-100" data-id="${serie.id}">
+                <img class="card-img-top" style="height: 12rem;" src="${serie.logo ? serie.logo + '.webp' : 'img/no-image.jpg'}" alt="${serie.name}" />
+                <div class="card-body">
+                    <h4 class="card-title text-center">${serie.name}</h4>
+                </div>
+            </a>`;
+
+        const seriesLink = div.querySelector("a");
+        seriesLink.addEventListener("click", e =>{
+            currentSeriesSelected = serie.id;
+
+            API.getSeriesById(currentSeriesSelected).then((serie) => {
+                logoCurrentSeries.src = serie.logo + ".webp";
+                
+                renderSetsRowById(currentSeriesSelected);
+        
+            }).catch(error => console.log("Error: " + error))
+        })
+        seriesRow.appendChild(div); 
+    }); 
+}
+
+
+
+
+
 function renderSets(seriesId){
     const dropdown = document.querySelector(".dropdownSets");
     dropdown.innerHTML = ""
@@ -165,6 +207,54 @@ function renderSets(seriesId){
     }).catch(error => console.log("Error: " + error))
 }
 
+
+//Show sets in row
+
+function renderSetsRow(setList) {
+    const setsRow = document.querySelector(".sets-row");
+    setsRow.innerHTML = ""; 
+
+    setList.forEach(set => {
+        const div = document.createElement("div");
+        div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
+        div.innerHTML = `
+                <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
+                <div class="card-body">
+                    <h4 class="card-title text-center">${set.name}</h4>
+                </div>`;
+
+        setsRow.appendChild(div); 
+    }); 
+}
+
+
+//Render all sets by ID 
+
+
+function renderSetsRowById(seriesId) {
+    const setsRow = document.querySelector(".sets-row");
+    setsRow.innerHTML = ""; 
+    API.getSeriesById(seriesId).then((serie) => {
+        const sets = serie.sets;
+
+        sets.forEach( set =>{
+        const div = document.createElement("div");
+        div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
+        div.innerHTML = `
+                <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
+                <div class="card-body">
+                    <h4 class="card-title text-center">${set.name}</h4>
+                </div>`;
+
+        setsRow.appendChild(div); 
+
+
+    }); 
+}).catch(error => console.log("Error: " + error))
+}
+
+
+
 function filterByName(name) {
     const filterCards = currentListCards.filter(card =>{
         return card.name.toLowerCase().indexOf(name.toLowerCase()) != -1;
@@ -196,3 +286,9 @@ buttonsChangeToSectionHero.forEach(button => button.addEventListener("click", e 
 
 const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionCards");
 buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => changeHTML("sectionCards")));
+
+const buttonsChangeToSectionSeries = document.querySelectorAll(".changeToSectionSeries");
+buttonsChangeToSectionSeries.forEach(button => button.addEventListener("click", e => changeHTML("sectionSeries")));
+
+const buttonsChangeToSectionSets = document.querySelectorAll(".changeToSectionSets");
+buttonsChangeToSectionSets.forEach(button => button.addEventListener("click", e => changeHTML("sectionSets")));

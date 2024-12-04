@@ -19,10 +19,10 @@
   </div>
   <ul class="nav justify-content-center py-3 ">
     <li class="nav-item">
-      <h3><a class="nav-link text-white " href="#"><strong>SERIES</strong></a></h3>
+      <h3><a class="nav-link text-white changeToSectionSeries" href="#sectionSeries"><strong>SERIES</strong></a></h3>
     </li>
     <li class="nav-item">
-      <h3><a class="nav-link text-white " href="#"><strong>SETS</strong></a></h3>
+      <h3><a class="nav-link text-white changeToSectionSets" href="#sectionSets"><strong>SETS</strong></a></h3>
     </li>
     <li class="nav-item">
       <h3><a class="nav-link text-white " href="#"><strong>FAVOURITES</strong></a></h3>
@@ -71,7 +71,7 @@
               </h4>
               <p class="card-text"> Have a look at the latest series and sets.
                 or be melancholic and see the old ones</p>
-              <a type="button" class="btn btn-outline-light changeToSectionCards" >SEE SERIES AND SETS</a>
+              <a type="button" class="btn btn-outline-light changeToSectionCards">SEE SERIES AND SETS</a>
             </div>
           </div>
         </div>
@@ -83,7 +83,8 @@
     <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand changeToSectionHero" href="#sectionHero">
-          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/10.png" alt="" srcset="">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/10.png" alt=""
+            srcset="">
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -91,7 +92,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse align-items-center" id="collapsibleNavId">
-          <ul class="navbar-nav me-auto mt-2 mt-lg-0 col-8 justify-content-evenly flex-md-column w-100 align-items-center">
+          <ul
+            class="navbar-nav me-auto mt-2 mt-lg-0 col-8 justify-content-evenly flex-md-column w-100 align-items-center">
             <!-- <li class="nav-item">
               <a class="nav-link active" href="#" aria-current="page">Home
                 <span class="visually-hidden">(current)</span></a>
@@ -134,12 +136,48 @@
         </div>
       </div>
     </nav>
-
     <div class="cardContainer container">
       <div class="row">
       </div>
     </div>
   </section>
+
+
+  <!--Show all series -->
+  <section id="sectionSeries" class="pagina">
+    <div class="container">
+      <a class="navbar-brand changeToSectionHero" href="#sectionHero">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/10.png" alt=""
+          srcset="">
+      </a>
+      <div class="series-row row">
+
+      </div>
+      <div class="setsId-row row">
+
+      </div>
+    </div>
+  </section>
+
+  <!--Show all sets -->
+
+  <section id="sectionSets" class="pagina">
+    <div class="container">
+      <a class="navbar-brand changeToSectionHero" href="#sectionHero">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/10.png" alt=""
+          srcset="">
+      </a>
+      <div class="sets-row row">
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
 </main>
 <template id="pokemonCardTemplate">
   <div class="col-12 col-md-6 col-lg-3 my-3">
