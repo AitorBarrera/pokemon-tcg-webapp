@@ -5,7 +5,7 @@
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: $primary-color;
+    background-color: $color-primary;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -18,7 +18,7 @@
   }
   
   #backToTopBtn:hover {
-    background-color: $primary-color-hover;
+    background-color: $color-primary-hover;
   }
   
   /* Smooth scrolling */

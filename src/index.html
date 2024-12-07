@@ -37,26 +37,39 @@
 </header>
 
 <main>
-  <section id="sectionHero" class="hero pagina p-5 d-block">
+  <section id="sectionHero" class="hero pagina p-3 d-block">
     <div class="container">
       <div class="mainLogo w-100 d-flex justify-content-center">
         <img src="img/logo.png" alt="">
       </div>
-      <div class="row justify-content-between align-items-center">
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
+      <div class="row justify-content-center justify-content-lg-between align-items-end mt-5">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4 mt-5 h-100">
+          <div class="card h-100 mt-0 d-flex flex-column">
+            <img class="card-img-top" src="img/SETS.png" alt="Title" />
+            <div class="card-body text-center text-white p-4">
+              <h4 class="card-title">WATCH ALL THE
+                SERIES AND SETS
+              </h4>
+              <p class="card-text"> Have a look at the series and sets,
+                or be melancholic and see the old ones</p>
+              <a type="button" class="btn btn-outline-light changeToSectionCards">SEE SERIES AND SETS</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4  mt-5 h-100">
+          <div class="card h-100 mt-0 d-flex flex-column">
             <img class="card-img-top" src="img/FAVOURITES.png" alt="Title" />
             <div class="card-body text-center text-white p-4">
               <h4 class="card-title">WATCH YOUR
                 FAVOURITES CARDS.
               </h4>
-              <p class="card-text"> Add your favourite cards to have fast access to them.</p>
+              <p class="card-text"> Add and remove your favourite cards to have fast access to them.</p>
               <button type="button" class="btn btn-outline-light changeToFavorites">SEE FAVS</button>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4  mt-5 h-100">
+          <div class="card h-100 mt-0 d-flex flex-column">
             <img class="card-img-top" src="img/COLLECTIONS.png" alt="Title" />
             <div class="card-body text-center text-white p-4">
               <h4 class="card-title">CREATE YOUR OWN
@@ -68,28 +81,14 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100">
-            <img class="card-img-top" src="img/SETS.png" alt="Title" />
-            <div class="card-body text-center text-white p-4">
-              <h4 class="card-title">WATCH ALL THE
-                SERIES AND SETS
-              </h4>
-              <p class="card-text"> Have a look at the latest series and sets.
-                or be melancholic and see the old ones</p>
-              <a type="button" class="btn btn-outline-light changeToSectionCards">SEE SERIES AND SETS</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-
-  <section id="sectionCards" class="pagina d-none">
-    <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light">
+  <section id="sectionCards" class="pagina d-none position-relative">
+    <!-- <nav id="navbar" class="navbar navbar-expand-sm">
       <div class="container">
-        <a class="navbar-brand changeToSectionHero d-flex justify-content-center" href="#sectionHero">
-          <img src="favicon.ico" alt="" srcset="" class="w-75">
+        <a class="navbar-brand changeToSectionHero d-flex justify-content-center col-1" href="#sectionHero">
+          <img src="favicon.ico" alt="" srcset="" class="homeIcon">
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -98,59 +97,123 @@
         </button>
         <div class="collapse navbar-collapse align-items-center" id="collapsibleNavId">
           <ul
-            class="navbar-nav me-auto mt-2 mt-lg-0 col-8 justify-content-between d-flex flex-column flex-md-row w-100 align-items-center">
-            <!-- <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page">Home
-                <span class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li> -->
-            <li class="nav-item dropdown dropdownSeriesContainer w-25 d-flex align-items-center">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+            class="navbar-nav me-auto mt-2 mt-lg-0 col-10 justify-content-center d-flex flex-column flex-md-row w-100 align-items-center">
+          
+            <li class="col-6 nav-item dropdown dropdownSeriesContainer d-flex align-items-center">
+              <a class="nav-link dropdown-toggle ms-4" href="#" id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
-                <img src="img/logo.png" alt="" class="currentSeries w-100">
+                
+                <img src="img/logo.png" alt="" class="currentSeries img-fluid">
               </a>
-              <div class="dropdown-menu dropdownSeries" aria-labelledby="dropdownId">
+              <div class="dropdown-menu dropdownSeries w-100 ms-4" aria-labelledby="dropdownId">
                 <template id="dropdownItemTemplate" class="w-100">
-                  <a class="dropdown-item text-center my-3" href="#navbar">
-                    <img src="img/logo.png" alt="" class="w-100">
+                  <a class="dropdown-item text-center my-3" href="#topCards">
+                    <img src="img/logo.png" alt="" class="w-100" onerror="this.src='img/logo-placeholder.png';" >
+                    <h4 class="w-50 flex-wrap nameItem">Lorem ipsum dolor.</h4>
+                    <hr>
                   </a>
                 </template>
               </div>
             </li>
 
-            <!-- dropdown menu of sets -->
-            <li class="nav-item dropdown dropdownSetsContainer w-25 d-flex align-items-center">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+            
+            <li class="col-6 nav-item dropdown dropdownSetsContainer d-flex align-items-center">
+              <a class="nav-link dropdown-toggle ms-4"  id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
-                <img src="img/logo.png" alt="" class="currentSet w-100">
+                <img src="img/logo.png" alt="" class="currentSet  img-fluid">
               </a>
-              <template id="dropdownItemTemplate">
-                <a class="dropdown-item text-center" href="#navbar"><img src="img/logo.png" alt="" class="w-100"></a>
-              </template>
-              <div class="dropdown-menu dropdownSets w-100 my-5" aria-labelledby="dropdownId">
+              <div class="dropdown-menu dropdownSets w-100 ms-4" aria-labelledby="dropdownId">
               </div>
             </li>
-            <form class="d-flex my-2 my-lg-0">
-              <input class="me-sm-2 inputSearchByName" type="text" placeholder="Search" />
-              <button class="buttonSearchByName btn btn-dark" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                Search
-              </button>
-            </form>
           </ul>
+        </div>
+        <form class="d-flex my-2 my-lg-0">
+          <input class="me-sm-2 inputSearchByName" type="text" placeholder="Name" />
+          <button class="buttonSearchByName btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav> -->
+    <nav id="navbar"
+      class="navbar navbar-expand-md sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand changeToSectionHero d-flex justify-content-center col-1" href="#sectionHero">
+          <img src="favicon.ico" alt="" srcset="" class="homeIcon">
+        </a>
+        <button
+          class="navbar-toggler hidden-lg-up"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav w-100 mt-2 mt-lg-0 align-items-center h-100">
+            <li class="col-4 nav-item dropdown dropdownSeriesContainer d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link dropdown-toggle ms-4 h-100" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Series:</h4>
+                <img src="img/logo.png" alt="" class="currentSeries img-fluid" onerror="this.src='img/no-logo.png';">
+              </a>
+              <div class="dropdown-menu dropdownSeries w-100 ms-4" aria-labelledby="dropdownId">
+                <template id="dropdownItemTemplate" class="w-100">
+                  <a class="dropdown-item text-center my-3" href="#topCards">
+                    <img src="img/logo.png" alt="" class="w-100" onerror="this.src='img/no-logo.png';" >
+                    <p class="w-100 nameItem"></p>
+                  </a>
+                </template>
+              </div>
+            </li>
+            <li class="col-4 nav-item dropdown dropdownSetsContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle ms-4"  id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Set:</h4>
+                <img src="img/logo.png" alt="" class="currentSet img-fluid" onerror="this.src='img/no-logo.png';">
+              </a>
+              <div class="dropdown-menu dropdownSets w-100 ms-4" aria-labelledby="dropdownId">
+              </div>
+            </li>
+
+            <li class="col-4 nav-item dropdown dropdownRarityContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle ms-4 w-100"  id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Rarity:</h4>
+                <p class="w-100 currentRarityName"></p>
+              </a>
+              <div class="dropdown-menu dropdownRarity w-100 ms-4" aria-labelledby="dropdownId">
+              </div>
+              <template id="dropdownItemRarityTemplate" class="w-100">
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h3 class="w-100 rarityName"></h3>
+                  <hr>
+                </a>
+              </template>
+            </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0 justify-content-center">
+            <input class="me-sm-2 inputSearchByName" type="text" placeholder="Name" />
+            <button class="buttonSearchByName btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
-
-    <div class="cardContainer container">
+    
+    
+    <div class="cardContainer container py-3">
       <div class="row">
+        <h3 class="h-100">Search for cards with the filters about</h3>
       </div>
     </div>
   </section>
 </main>
 <template id="pokemonCardTemplate">
-  <div class="pokemonCard col-12 col-md-6 col-lg-3 my-3 position-relative">
+  <div class="pokemonCard col-6 col-md-4 col-lg-3 my-3 position-relative">
     <img src="img/bulbasaur.webp" alt="" class="w-100 h-100">
     <div class="starFavoriteButtonContainer">
       <a class="starFavoriteButton">
@@ -161,16 +224,7 @@
   </div>
 </template>
 
-<!-- Template for cards that are favorites and need a button to delete from favorites. -->
-<!-- <template id="pokemonCardTemplateFavorites">
-  <div class="pokemonCard col-12 col-md-6 col-lg-3 my-3 position-relative">
-    <img src="img/bulbasaur.webp" alt="" class="w-100 h-100">
-    <a class="deleteFavoriteButton">
-      <i class="fa-solid fa-star deleteFavorite"></i>
-      <i class="fa-regular fa-star deleteFavoriteBorder"></i>
-    </a>
-  </div>
-</template> -->
+
 <script type="module" src="scripts/main.js"></script>
 <footer>
   <button id="backToTopBtn" title="Go to top">↑</button>

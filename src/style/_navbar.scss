@@ -1,0 +1,60 @@
+@use "globals" as *;
+
+#navbar{
+    background-color: $color-navbar;
+
+    .container{
+        max-height: 100%;
+    }
+
+    .navbar-brand{
+        max-height: 100%;
+    }
+
+    .homeIcon{
+        height: 60px;
+        width: 60px;
+    }
+
+    #collapsibleNavId{
+
+        ul{
+            height: 100%;
+
+            .currentSeries, .currentSet{
+                max-height: 70px;
+                max-width: 150px;
+            }
+
+            .dropdownSeries, .dropdownSets{
+                overflow: scroll;
+            }
+
+            img{
+                max-height: 200px;
+            }
+
+            .nameItem{
+                word-wrap: break-word;
+                height: 50%;
+            }
+
+            .dropdown-menu{
+                max-height: 600px;
+            }
+        }
+    }
+
+    form{
+        input.inputSearchByName{
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        button.buttonSearchByName{
+            background-color: $color-primary;
+            color: $white-color;
+            border: 1px solid black;
+        }
+    }
+}

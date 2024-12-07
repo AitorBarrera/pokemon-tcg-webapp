@@ -1,51 +1,6 @@
 {
   "favorites": [
     {
-      "id": "A1-239",
-      "category": "Pokemon",
-      "image": "https://assets.tcgdex.net/en/tcgp/A1/239",
-      "localId": "239",
-      "name": "Cubone",
-      "rarity": "None",
-      "set": {
-        "cardCount": {
-          "official": 226,
-          "total": 275
-        },
-        "id": "A1",
-        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
-        "name": "Genetic Apex",
-        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "hp": 60,
-      "types": [
-        "Fighting"
-      ],
-      "stage": "Basic",
-      "attacks": [
-        {
-          "cost": [
-            "Colorless"
-          ],
-          "name": "Growl",
-          "effect": "During your opponent's next turn, attacked used by the Defending Pokémon do -20 damage"
-        }
-      ],
-      "retreat": 1,
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2024-11-06T02:16:30+01:00"
-    },
-    {
       "id": "A1-278",
       "category": "Pokemon",
       "image": "https://assets.tcgdex.net/en/tcgp/A1/278",
@@ -92,6 +47,691 @@
         "expanded": false
       },
       "updated": "2024-11-06T02:16:30+01:00"
+    },
+    {
+      "id": "base1-30",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/base1/30",
+      "localId": "30",
+      "name": "Ivysaur",
+      "rarity": "Uncommon",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        2
+      ],
+      "hp": 60,
+      "types": [
+        "Grass"
+      ],
+      "evolveFrom": "Barboach",
+      "stage": "Stage1",
+      "attacks": [
+        {
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Vine Whip",
+          "damage": 30
+        },
+        {
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "name": "Poisonpowder",
+          "effect": "The Defending Pokémon is now Poisoned.",
+          "damage": 20
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fire",
+          "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "base1-100",
+      "category": "Energy",
+      "illustrator": "Keiji Kinebuchi",
+      "image": "https://assets.tcgdex.net/en/base/base1/100",
+      "localId": "100",
+      "name": "Lightning Energy",
+      "rarity": "Common",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "stage": "Basic",
+      "energyType": "Normal",
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "base1-101",
+      "category": "Energy",
+      "illustrator": "Keiji Kinebuchi",
+      "image": "https://assets.tcgdex.net/en/base/base1/101",
+      "localId": "101",
+      "name": "Psychic Energy",
+      "rarity": "Common",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "stage": "Basic",
+      "energyType": "Normal",
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "basep-4",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/basep/4",
+      "localId": "4",
+      "name": "Pikachu",
+      "rarity": "Common",
+      "set": {
+        "cardCount": {
+          "official": 53,
+          "total": 53
+        },
+        "id": "basep",
+        "logo": "https://assets.tcgdex.net/en/base/basep/logo",
+        "name": "Wizards Black Star Promos",
+        "symbol": "https://assets.tcgdex.net/univ/base/basep/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        25
+      ],
+      "hp": 50,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "attacks": [
+        {
+          "cost": [
+            "Lightning"
+          ],
+          "name": "Recharge",
+          "effect": "Search your deck for a Energy card and attach it to Pikachu. Shuffle your deck afterward."
+        },
+        {
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "name": "Thunderbolt",
+          "effect": "Discard all Energy cards attached to Pikachu in order to use this attack.",
+          "damage": 50
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ],
+      "retreat": 1,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-08-25T02:45:45+02:00"
+    },
+    {
+      "id": "base3-9",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/base3/9",
+      "localId": "9",
+      "name": "Kabutops",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 62,
+          "total": 62
+        },
+        "id": "base3",
+        "logo": "https://assets.tcgdex.net/en/base/base3/logo",
+        "name": "Fossil",
+        "symbol": "https://assets.tcgdex.net/univ/base/base3/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        141
+      ],
+      "hp": 60,
+      "types": [
+        "Fighting"
+      ],
+      "evolveFrom": "Kabuto",
+      "stage": "Stage2",
+      "attacks": [
+        {
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "name": "Sharp Sickle",
+          "damage": 30
+        },
+        {
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "name": "Absorb",
+          "effect": "Remove a number of damage counters from Kabutops equal to half the damage done to Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Kabutops has fewer damage counters than that, remove all of them.",
+          "damage": 40
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Grass",
+          "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "pl3-1",
+      "category": "Pokemon",
+      "illustrator": "Yusuke Ishikawa",
+      "image": "https://assets.tcgdex.net/en/pl/pl3/1",
+      "localId": "1",
+      "name": "Absol G",
+      "rarity": "Rare Holo",
+      "set": {
+        "cardCount": {
+          "official": 147,
+          "total": 153
+        },
+        "id": "pl3",
+        "logo": "https://assets.tcgdex.net/en/pl/pl3/logo",
+        "name": "Supreme Victors",
+        "symbol": "https://assets.tcgdex.net/univ/pl/pl3/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        359
+      ],
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "suffix": "SP",
+      "attacks": [
+        {
+          "cost": [
+            "Darkness"
+          ],
+          "name": "Feint Attack",
+          "effect": "Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on that Pokémon."
+        },
+        {
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Doom News",
+          "effect": "Return all Energy cards attached to Absol G to your hand. The Defending Pokémon is Knocked Out at the end of your opponent's next turn."
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Psychic",
+          "value": "-20"
+        }
+      ],
+      "retreat": 1,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-27T20:33:44+01:00"
+    },
+    {
+      "id": "A1-004",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/004",
+      "localId": "004",
+      "name": "Venusaur ex",
+      "rarity": "Four Diamond",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 275
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 190,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Razor Leaf",
+          "damage": "60"
+        },
+        {
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Giant Bloom",
+          "effect": "Heal 30 damage from this Pokémon.",
+          "damage": "100"
+        }
+      ],
+      "retreat": 3,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-11-06T02:16:30+01:00"
+    },
+    {
+      "id": "sv03.5-076",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/sv/sv03.5/076",
+      "localId": "076",
+      "name": "Golem ex",
+      "rarity": "Double rare",
+      "set": {
+        "cardCount": {
+          "official": 165,
+          "total": 207
+        },
+        "id": "sv03.5",
+        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
+        "name": "151",
+        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "dexId": [
+        76
+      ],
+      "hp": 330,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "attacks": [
+        {
+          "cost": [
+            "Fighting"
+          ],
+          "name": "Dynamic Roll",
+          "effect": "During your next turn, attacks used by this Pokémon do 120 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+          "damage": 50
+        },
+        {
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Rock Blaster",
+          "effect": "This attack's damage isn't affected by Resistance.",
+          "damage": 180
+        }
+      ],
+      "retreat": 4,
+      "regulationMark": "G",
+      "legal": {
+        "standard": true,
+        "expanded": true
+      },
+      "updated": "2024-07-03T12:38:33+02:00"
+    },
+    {
+      "id": "sv03.5-038",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/sv/sv03.5/038",
+      "localId": "038",
+      "name": "Ninetales ex",
+      "rarity": "Double rare",
+      "set": {
+        "cardCount": {
+          "official": 165,
+          "total": 207
+        },
+        "id": "sv03.5",
+        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
+        "name": "151",
+        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "dexId": [
+        38
+      ],
+      "hp": 260,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "attacks": [
+        {
+          "cost": [
+            "Fire"
+          ],
+          "name": "Heat Wave",
+          "effect": "Your opponent's Active Pokémon is now Burned.",
+          "damage": 30
+        },
+        {
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "name": "Mirrored Flames",
+          "effect": "If you have the same number of cards in your hand as your opponent, this attack does 140 more damage.",
+          "damage": "80+"
+        }
+      ],
+      "retreat": 2,
+      "regulationMark": "G",
+      "legal": {
+        "standard": true,
+        "expanded": true
+      },
+      "updated": "2024-07-03T12:38:33+02:00"
+    },
+    {
+      "id": "sv03.5-145",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/sv/sv03.5/145",
+      "localId": "145",
+      "name": "Zapdos ex",
+      "rarity": "Double rare",
+      "set": {
+        "cardCount": {
+          "official": 165,
+          "total": 207
+        },
+        "id": "sv03.5",
+        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
+        "name": "151",
+        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "dexId": [
+        145
+      ],
+      "hp": 200,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "abilities": [
+        {
+          "type": "Ability",
+          "name": "Voltaic Float",
+          "effect": "If this Pokémon has any Lightning Energy attached, it has no Retreat Cost."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "name": "Multishot Lightning",
+          "effect": "This attack also does 90 damage to 1 of your opponent's Benched Pokémon that has any damage counters on it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "damage": 120
+        }
+      ],
+      "retreat": 2,
+      "regulationMark": "G",
+      "legal": {
+        "standard": true,
+        "expanded": true
+      },
+      "updated": "2024-07-03T12:38:33+02:00"
+    },
+    {
+      "id": "sv03.5-151",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/sv/sv03.5/151",
+      "localId": "151",
+      "name": "Mew ex",
+      "rarity": "Double rare",
+      "set": {
+        "cardCount": {
+          "official": 165,
+          "total": 207
+        },
+        "id": "sv03.5",
+        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
+        "name": "151",
+        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "dexId": [
+        151
+      ],
+      "hp": 180,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "abilities": [
+        {
+          "type": "Ability",
+          "name": "Restart",
+          "effect": "Once during your turn, you may draw cards until you have 3 cards in your hand."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Genome Hacking",
+          "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+        }
+      ],
+      "retreat": 0,
+      "regulationMark": "G",
+      "legal": {
+        "standard": true,
+        "expanded": true
+      },
+      "updated": "2024-07-03T12:38:33+02:00"
+    },
+    {
+      "id": "ru1-16",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/pl/ru1/16",
+      "localId": "16",
+      "name": "Bibarel",
+      "rarity": "None",
+      "set": {
+        "cardCount": {
+          "official": 16,
+          "total": 16
+        },
+        "id": "ru1",
+        "logo": "https://assets.tcgdex.net/en/pl/ru1/logo",
+        "name": "Pokémon Rumble",
+        "symbol": "https://assets.tcgdex.net/univ/pl/ru1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        400
+      ],
+      "hp": 90,
+      "types": [
+        "Colorless"
+      ],
+      "evolveFrom": "Bidoof",
+      "stage": "Stage1",
+      "attacks": [
+        {
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Rollout",
+          "damage": 50
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-27T20:33:44+01:00"
     }
   ],
   "other_collections": [

@@ -7,13 +7,18 @@
 @use "buttonUp";
 @use "apexLogo";
 @use "pokemonCard";
+@use "navbar";
+@use "cardContainer";
 
-$background-color: rgb(243, 238, 212);
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .imgSerie{
     width: 100%;
 }
 
 body{
-    background-color: $background-color;
+    background-color: $color-secundary;
 }

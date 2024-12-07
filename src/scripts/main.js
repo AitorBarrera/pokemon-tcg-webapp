@@ -47,14 +47,12 @@ document.addEventListener("DOMContentLoaded", event =>{
     buttonSearchByName.addEventListener("click", e =>{
         e.preventDefault();
         e.stopPropagation();
-
-        const inputSearchByName = document.querySelector(".inputSearchByName");
-
-        filterByName(inputSearchByName.value);
+        
+        filterCards();
     })
 });
 
-function renderPokemonCard(pokemonCards){
+function renderPokemonCard(pokemonCards, favorites = false){
     // console.log(pokemonCards);
 
     const cardContainer = document.querySelector(".cardContainer .row");
@@ -116,13 +114,16 @@ function renderSeries(seriesList){
 
         const dropdownItem = dropdownItemTemplate.cloneNode(true).content;
         const logoItem = dropdownItem.querySelector("img");
+        const nameItem = dropdownItem.querySelector(".nameItem");
         
         logoItem.src = `${serie.logo}.webp`;
         logoItem.alt = `${serie.name}`
+        nameItem.textContent = `${serie.name}`
         
 
         // change current series selected logo
         const logoCurrentSeries = document.querySelector(".dropdownSeriesContainer .currentSeries");
+        const nameCurrentSeries = document.querySelector(".dropdownSeriesContainer .currentSeriesName");
         const linkItem = dropdownItem.querySelector("a");
 
         linkItem.setAttribute("data-id", serie.id);
@@ -132,7 +133,12 @@ function renderSeries(seriesList){
             API.getSeriesById(currentSeriesSelected).then((serie) => {
                 logoCurrentSeries.src = serie.logo + ".webp";
                 logoCurrentSeries.alt = `${serie.name}`
+                // nameCurrentSeries.textContent = `${serie.name}`
                 
+                // reset current set
+                
+                document.querySelector(".currentSet").setAttribute("src","img/logo-placeholder.png");
+                document.querySelector(".currentRarityName").textContent = "";
                 renderSets(currentSeriesSelected);
         
             }).catch(error => console.log("Error: " + error))
@@ -154,31 +160,25 @@ function renderSets(seriesId){
         sets.forEach( set =>{
             const dropdownItem = dropdownItemTemplate.cloneNode(true).content;
             const logoItem = dropdownItem.querySelector("img");
+            const nameItem = dropdownItem.querySelector(".nameItem");
             
             logoItem.src = `${set.logo}.webp`;
             logoItem.alt = `${set.name}`
+            nameItem.textContent = `${set.name}`;
             
             const linkItem = dropdownItem.querySelector("a");
-            linkItem.setAttribute("data-id", serie.id);
+            linkItem.setAttribute("data-id", set.id);
 
             const logoCurrent = document.querySelector(".dropdownSetsContainer .currentSet");
 
             linkItem.addEventListener("click", e =>{
-                let currentSetSelectedId = set.id;
+                
                 logoCurrent.src = set.logo + ".webp";
                 logoCurrent.alt = `${set.name}`
-                
+                logoCurrent.parentNode.setAttribute("data-id", set.id);
 
-                // API.getSeriesById(currentSeriesSelectedId).then((serie) => {
-                //     logoCurrent.src = serie.logo + ".webp";
-            
-                // }).catch(error => console.log("Error: " + error));
-
-                API.getAllPokemonCardsBySet(currentSetSelectedId).then((pokemonCards) => {
-                    renderPokemonCard(pokemonCards.cards);
-                    currentListCards = pokemonCards.cards;
-            
-                }).catch(error => console.log("Error: " + error));
+                renderRarities(set.id);
+                filterCards();
             })
 
             dropdown.append(dropdownItem);
@@ -187,13 +187,52 @@ function renderSets(seriesId){
     }).catch(error => console.log("Error: " + error))
 }
 
-function filterByName(name) {
-    const filterCards = currentListCards.filter(card =>{
-        return card.name.toLowerCase().indexOf(name.toLowerCase()) != -1;
-    })
+function renderRarities(setId){
+    const dropdown = document.querySelector(".dropdownRarity");
+    dropdown.innerHTML = ""
 
-    renderPokemonCard(filterCards);
+    const dropdownItemTemplate = document.querySelector("#dropdownItemRarityTemplate");
+
+    API.getRarities(setId).then((rarities) => {
+
+        rarities.forEach( rarity =>{
+            const dropdownItem = dropdownItemTemplate.cloneNode(true).content;
+            const rarityName = dropdownItem.querySelector(".rarityName");
+            
+            rarityName.textContent = rarity;
+            
+            const linkItem = dropdownItem.querySelector("a");
+
+            const rarityCurrent = document.querySelector(".currentRarityName");
+
+            linkItem.addEventListener("click", e =>{
+                rarityCurrent.textContent = rarity;
+
+                filterCards();
+            })
+
+            dropdown.append(dropdownItem);
+        })
+
+    }).catch(error => console.log("Error: " + error))
 }
+
+function filterCards() {
+    let currentSetId = document.querySelector(".currentSet").parentNode.getAttribute("data-id");
+    let inputSearchByName = document.querySelector(".inputSearchByName");
+    let currentRarityName = document.querySelector(".currentRarityName").textContent;
+
+    currentSetId = currentSetId==null?'':currentSetId;
+
+    API.getFilteredCards(currentSetId, inputSearchByName.value, "", currentRarityName, "").then(cards => {
+        console.log(cards);
+        
+
+        renderPokemonCard(cards);
+        
+    }).catch(error => console.log("Error: " + error));
+}
+
 
 // funcion auxiliar que cambia la pagina que se quiere mostrar
 function changeHTML(id) { 
@@ -229,7 +268,6 @@ const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionC
 buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => changeHTML("sectionCards")));
 
 const buttonschangeToFavorites = document.querySelectorAll(".changeToFavorites");
-console.log(buttonschangeToFavorites);
 
 buttonschangeToFavorites.forEach(button => button.addEventListener("click", e => {
     renderFavorites();
@@ -237,7 +275,6 @@ buttonschangeToFavorites.forEach(button => button.addEventListener("click", e =>
 
 
 collectionAPI.getAllFavorites().then(cards =>{
-    console.log(cards);
     
 }).catch(error => console.log("Error: " + error));
 
@@ -246,7 +283,7 @@ function renderFavorites() {
     collectionAPI.getAllFavorites().then(cards => {
         renderPokemonCard(cards);
         changeHTML("sectionCards");
-        changeFavoriteButtonToDelete()
+        changeFavoriteButtonToDelete();
     }).catch(error => console.log("Error: " + error));
 }
 
@@ -272,3 +309,4 @@ function changeFavoriteButtonToDelete() {
             }).catch(error => console.log("Error: " + error));
         }))
 }
+
