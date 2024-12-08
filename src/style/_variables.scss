@@ -10,3 +10,23 @@ $color-red: #FF5454;
 $color-gold: #F2C94C;
 $color-main-text:#4F4F4F;
 $color-secundary-text:#828282;
+
+@font-face {
+    font-family: pokemonFont;
+    src: url(../fonts/PokemonSolid.woff);
+}
+
+@font-face {
+    font-family: Domine;
+    src: url(../fonts/Domine-VariableFont_wght.woff);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.woff);
+}
+
+@font-face {
+    font-family: GeistMono;
+    src: url(../fonts/GeistMono-VariableFont_wght.woff);
+}

@@ -10,7 +10,7 @@ let currentListCards;
 let currentSeriesSelected = "base";
 
 document.addEventListener("DOMContentLoaded", event =>{
-    changeHTML("sectionCards")
+    changeHTML("sectionSeriesRow")
     // API.getAllPokemonCardsBySet("A1").then((pokemonCard) => {
     //     // console.log(pokemonCard.cards);
     //     renderPokemonCard(pokemonCard.cards);
@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", event =>{
     API.getSeries().then((series) => {
         // console.log(series);
        renderSeries(series);
+       renderSeriesRow(series);
 
     }).catch(error => console.log("Error: " + error))
 
-    // API.getSets().then((sets) => {
-    //     // console.log(sets);
-    //     renderSets(sets);
-
-    // }).catch(error => console.log("Error: " + error))
+    API.getSets().then((sets) => {
+        // console.log(series);
+       renderSetsRow(sets);
+    }).catch(error => console.log("Error: " + error))
 
     const buttonSearchByName = document.querySelector(".buttonSearchByName");
 
@@ -51,9 +51,98 @@ document.addEventListener("DOMContentLoaded", event =>{
         filterCards();
     })
 });
+//Show series in row
+function renderSeriesRow(seriesList) {
+    const seriesRow = document.querySelector(".series-row");
+    seriesRow.innerHTML = ""; 
+
+    seriesList.forEach(serie => {
+        const div = document.createElement("div");
+        div.className = "col-xl-3 col-md-4 col-sm-6 my-4 seriesCard";
+        div.innerHTML = `
+            <a href="#sectionSeries" class="card h-100" data-id="${serie.id}">
+                <img class="card-img-top" style="height: 12rem;" src="${serie.logo ? serie.logo + '.webp' : 'img/no-image.jpg'}" alt="${serie.name}" />
+                <div class="card-body">
+                    <h4 class="card-title text-center">${serie.name}</h4>
+                </div>
+            </a>`;
+
+        const seriesLink = div.querySelector("a");
+
+        seriesLink.addEventListener("click", e =>{
+            currentSeriesSelected = serie.id;
+
+            API.getSeriesById(currentSeriesSelected).then((serie) => {
+                
+                renderSetsRowById(currentSeriesSelected);
+                changeHTML("sectionSetIdRow");
+
+            }).catch(error => console.log("Error: " + error))
+        })
+
+        seriesRow.appendChild(div); 
+    }); 
+}
+
+function renderSetsRow(setList) {
+    const setsRow = document.querySelector(".sets-row");
+    setsRow.innerHTML = ""; 
+
+    setList.forEach(set => {
+        const div = document.createElement("div");
+        div.className = "col-xl-3 col-md-4 col-sm-6 my-4 setCard";
+        div.innerHTML = `
+                <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
+                <div class="card-body">
+                    <h4 class="card-title text-center">${set.name}</h4>
+                </div>`;
+
+        setsRow.appendChild(div); 
+    }); 
+}
+
+function renderSetsRowById(seriesId) {
+    const setsRow = document.querySelector(".setsId-row");
+    
+    setsRow.innerHTML = "";
+
+    API.getSeriesById(seriesId).then((serie) => {
+        const sets = serie.sets;
+        
+        sets.forEach( set =>{
+            const div = document.createElement("div");
+
+            div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
+            div.innerHTML = `
+                    <a href="#sectionCards" data-id="${set.id}">
+                    <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
+                    <div class="card-body">
+                        <h4 class="card-title text-center">${set.name}</h4>
+                    </div>
+                    </a>`;
+                
+                    const setsLink = div.querySelector("a");
+                    const selectedSetId = setsLink.getAttribute("data-id");
+
+                    setsLink.addEventListener("click", e =>{
+                        changeHTML("sectionCards");
+
+                        API.getAllPokemonCardsBySet(selectedSetId).then((pokemonCards) => {
+                            renderPokemonCard(pokemonCards.cards);
+                            currentListCards = pokemonCards.cards;
+
+                        }).catch(error => console.log("Error: " + error))
+                    });
+                    
+            setsRow.appendChild(div); 
+    });
+    
+    changeHTML("sectionSetIdRow");
+
+}).catch(error => console.log("Error: " + error))
+}
 
 function renderPokemonCard(pokemonCards, favorites = false){
-    // console.log(pokemonCards);
 
     const cardContainer = document.querySelector(".cardContainer .row");
 
@@ -101,6 +190,8 @@ function renderPokemonCard(pokemonCards, favorites = false){
             
         })
     })
+
+    toggleFilter(favorites)
 }
 
 
@@ -234,29 +325,34 @@ function filterCards() {
 }
 
 
-// funcion auxiliar que cambia la pagina que se quiere mostrar
+// auxiliar function to change the HTML code 
 function changeHTML(id) { 
     const header = document.querySelector("header");
+
     if (id == "sectionHero"){
-        header.classList.remove("d-none")
+        header.classList.remove("d-block")
         header.classList.add("d-none")
     }else{
         header.classList.add("d-block")
         header.classList.remove("d-none")
     }
 
+    
     const paginas = document.querySelectorAll(".pagina");
 
     paginas.forEach(pagina => {
         if (pagina.classList.contains("d-block"))
             pagina.classList.remove("d-block")
         pagina.classList.add("d-none")
-    }
-    );
+    });
 
     const paginaAMostrar = document.querySelector(`#${id}`);
     
     if (paginaAMostrar.classList.contains("d-none"))
+        paginaAMostrar.classList.remove("d-none");
+    paginaAMostrar.classList.add("d-block");
+
+    if (id="sectionC")
         paginaAMostrar.classList.remove("d-none");
     paginaAMostrar.classList.add("d-block");
 }
@@ -273,15 +369,17 @@ buttonschangeToFavorites.forEach(button => button.addEventListener("click", e =>
     renderFavorites();
 }));
 
+const buttonsChangeToSectionSeries = document.querySelectorAll(".changeToSectionSeries");
+buttonsChangeToSectionSeries.forEach(button => button.addEventListener("click", e => {
+    changeHTML("sectionSeriesRow")
+}));
 
-collectionAPI.getAllFavorites().then(cards =>{
-    
-}).catch(error => console.log("Error: " + error));
-
+const buttonsChangeToSectionSets = document.querySelectorAll(".changeToSectionSets");
+buttonsChangeToSectionSets.forEach(button => button.addEventListener("click", e => changeHTML("sectionSets")));
 
 function renderFavorites() {
     collectionAPI.getAllFavorites().then(cards => {
-        renderPokemonCard(cards);
+        renderPokemonCard(cards, true);
         changeHTML("sectionCards");
         changeFavoriteButtonToDelete();
     }).catch(error => console.log("Error: " + error));
@@ -310,3 +408,22 @@ function changeFavoriteButtonToDelete() {
         }))
 }
 
+function toggleFilter(favorite = false) {
+    let filterNavbar = document.querySelector("#navbar");
+    let favoritesTitle = document.querySelector(".favoritesTitle");
+    console.log(favoritesTitle);
+    
+
+    if (favorite){
+        filterNavbar.classList.remove("d-block")
+        filterNavbar.classList.add("d-none")
+        favoritesTitle.classList.remove("d-none")
+        favoritesTitle.classList.add("d-block")
+    } else {
+        filterNavbar.classList.remove("d-none")
+        filterNavbar.classList.add("d-block")
+        favoritesTitle.classList.remove("d-block")
+        favoritesTitle.classList.add("d-none")
+    }
+
+}

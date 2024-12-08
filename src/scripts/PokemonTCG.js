@@ -98,6 +98,22 @@ export async function getSeriesById(id){
     }
 }
 
+export async function getSets(){
+
+    try {
+        const response = await fetch(`${API_URL}/sets`);
+
+        // parse the json response
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
 export async function getSetsBySeriesId(){
 
     try {

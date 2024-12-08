@@ -244,73 +244,6 @@
       "updated": "2024-08-25T02:45:45+02:00"
     },
     {
-      "id": "base3-9",
-      "category": "Pokemon",
-      "illustrator": "Ken Sugimori",
-      "image": "https://assets.tcgdex.net/en/base/base3/9",
-      "localId": "9",
-      "name": "Kabutops",
-      "rarity": "Rare",
-      "set": {
-        "cardCount": {
-          "official": 62,
-          "total": 62
-        },
-        "id": "base3",
-        "logo": "https://assets.tcgdex.net/en/base/base3/logo",
-        "name": "Fossil",
-        "symbol": "https://assets.tcgdex.net/univ/base/base3/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        141
-      ],
-      "hp": 60,
-      "types": [
-        "Fighting"
-      ],
-      "evolveFrom": "Kabuto",
-      "stage": "Stage2",
-      "attacks": [
-        {
-          "cost": [
-            "Fighting",
-            "Fighting"
-          ],
-          "name": "Sharp Sickle",
-          "damage": 30
-        },
-        {
-          "cost": [
-            "Fighting",
-            "Fighting",
-            "Fighting",
-            "Fighting"
-          ],
-          "name": "Absorb",
-          "effect": "Remove a number of damage counters from Kabutops equal to half the damage done to Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Kabutops has fewer damage counters than that, remove all of them.",
-          "damage": 40
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Grass",
-          "value": "×2"
-        }
-      ],
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-06T00:47:28+01:00"
-    },
-    {
       "id": "pl3-1",
       "category": "Pokemon",
       "illustrator": "Yusuke Ishikawa",
@@ -732,6 +665,75 @@
         "expanded": false
       },
       "updated": "2023-12-27T20:33:44+01:00"
+    },
+    {
+      "id": "dp2-121",
+      "category": "Pokemon",
+      "illustrator": "Shizurow",
+      "image": "https://assets.tcgdex.net/en/dp/dp2/121",
+      "localId": "121",
+      "name": "Electivire",
+      "rarity": "Rare Holo LV.X",
+      "set": {
+        "cardCount": {
+          "official": 122,
+          "total": 124
+        },
+        "id": "dp2",
+        "logo": "https://assets.tcgdex.net/en/dp/dp2/logo",
+        "name": "Mysterious Treasures",
+        "symbol": "https://assets.tcgdex.net/univ/dp/dp2/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        466
+      ],
+      "hp": 120,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "LEVEL-UP",
+      "abilities": [
+        {
+          "type": "Poke-BODY",
+          "name": "Shocking Tail",
+          "effect": "As long as Electivire is your Active Pokémon, whenever your opponent attaches an Energy card from his or her hand to 1 of his or her Pokémon, put 2 damage counters on that Pokémon."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "name": "Pulse Barrier",
+          "effect": "Discard all of your opponent's Pokémon Tool cards and Stadium cards in play. If you do, prevent all effects, including damage, done to Electivire during your opponent's next turn.",
+          "damage": 50
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Metal",
+          "value": "-20"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-27T21:34:54+01:00"
     }
   ],
   "other_collections": [
