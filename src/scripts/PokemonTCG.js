@@ -130,10 +130,10 @@ export async function getSetsBySeriesId(){
     }
 }
 
-export async function getFilteredCards(set = "", name = "", category = "", rarity = "", sortedBy = ""){
+export async function getFilteredCards(set = "base1", name = "", category = "", rarity = "", sortedBy = ""){
 
     try {
-        const endPoint =`${API_URL}/cards?id=like:${set}&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}`
+        const endPoint =`${API_URL}/cards?id=like:${set}&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}&${sortedBy}=notnull:`
         console.log(endPoint);
         
         const response = await fetch(endPoint);
@@ -173,6 +173,8 @@ export async function getRarities(cardSet) {
       console.log("Card Set:", cardSet);
       console.log("Count:", count);
   
+      if (count > 200) return null;
+
       const rarities = new Set();
   
       const urls = [];

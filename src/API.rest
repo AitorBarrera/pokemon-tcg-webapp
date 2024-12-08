@@ -60,7 +60,7 @@ GET https://api.tcgdex.net/v2/en/cards?id=like:pl1&illustrator=like:Atsuk
 GET https://api.tcgdex.net/v2/en/cards?rarity=like:rare
 
 ###
-GET https://api.tcgdex.net/v2/en/cards/pl1-1
+GET https://api.tcgdex.net/v2/en/cards/gym2-132
 
 ###
 GET https://api.tcgdex.net/v2/en/cards?category=like:&id=like:pl1

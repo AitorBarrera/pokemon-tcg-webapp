@@ -115,70 +115,6 @@
       "updated": "2023-12-06T00:47:28+01:00"
     },
     {
-      "id": "base1-100",
-      "category": "Energy",
-      "illustrator": "Keiji Kinebuchi",
-      "image": "https://assets.tcgdex.net/en/base/base1/100",
-      "localId": "100",
-      "name": "Lightning Energy",
-      "rarity": "Common",
-      "set": {
-        "cardCount": {
-          "official": 102,
-          "total": 102
-        },
-        "id": "base1",
-        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
-        "name": "Base Set"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "stage": "Basic",
-      "energyType": "Normal",
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-06T00:47:28+01:00"
-    },
-    {
-      "id": "base1-101",
-      "category": "Energy",
-      "illustrator": "Keiji Kinebuchi",
-      "image": "https://assets.tcgdex.net/en/base/base1/101",
-      "localId": "101",
-      "name": "Psychic Energy",
-      "rarity": "Common",
-      "set": {
-        "cardCount": {
-          "official": 102,
-          "total": 102
-        },
-        "id": "base1",
-        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
-        "name": "Base Set"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "stage": "Basic",
-      "energyType": "Normal",
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-06T00:47:28+01:00"
-    },
-    {
       "id": "basep-4",
       "category": "Pokemon",
       "illustrator": "Ken Sugimori",
@@ -610,151 +546,489 @@
       "updated": "2024-07-03T12:38:33+02:00"
     },
     {
-      "id": "ru1-16",
+      "id": "hgss4-94",
       "category": "Pokemon",
-      "image": "https://assets.tcgdex.net/en/pl/ru1/16",
-      "localId": "16",
-      "name": "Bibarel",
-      "rarity": "None",
+      "illustrator": "Takashi Yamaguchi",
+      "image": "https://assets.tcgdex.net/en/hgss/hgss4/94",
+      "localId": "94",
+      "name": "Gengar",
+      "rarity": "Rare PRIME",
       "set": {
         "cardCount": {
-          "official": 16,
-          "total": 16
+          "official": 102,
+          "total": 103
         },
-        "id": "ru1",
-        "logo": "https://assets.tcgdex.net/en/pl/ru1/logo",
-        "name": "Pokémon Rumble",
-        "symbol": "https://assets.tcgdex.net/univ/pl/ru1/symbol"
+        "id": "hgss4",
+        "logo": "https://assets.tcgdex.net/en/hgss/hgss4/logo",
+        "name": "Triumphant",
+        "symbol": "https://assets.tcgdex.net/univ/hgss/hgss4/symbol"
       },
       "variants": {
         "firstEdition": false,
         "holo": true,
-        "normal": true,
-        "reverse": true,
+        "normal": false,
+        "reverse": false,
         "wPromo": false
       },
       "dexId": [
-        400
+        94
       ],
-      "hp": 90,
+      "hp": 130,
       "types": [
-        "Colorless"
+        "Psychic"
       ],
-      "evolveFrom": "Bidoof",
-      "stage": "Stage1",
-      "attacks": [
-        {
-          "cost": [
-            "Colorless",
-            "Colorless",
-            "Colorless",
-            "Colorless"
-          ],
-          "name": "Rollout",
-          "damage": 50
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Fighting",
-          "value": "×2"
-        }
-      ],
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-27T20:33:44+01:00"
-    },
-    {
-      "id": "dp2-121",
-      "category": "Pokemon",
-      "illustrator": "Shizurow",
-      "image": "https://assets.tcgdex.net/en/dp/dp2/121",
-      "localId": "121",
-      "name": "Electivire",
-      "rarity": "Rare Holo LV.X",
-      "set": {
-        "cardCount": {
-          "official": 122,
-          "total": 124
-        },
-        "id": "dp2",
-        "logo": "https://assets.tcgdex.net/en/dp/dp2/logo",
-        "name": "Mysterious Treasures",
-        "symbol": "https://assets.tcgdex.net/univ/dp/dp2/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        466
-      ],
-      "hp": 120,
-      "types": [
-        "Lightning"
-      ],
-      "stage": "LEVEL-UP",
+      "evolveFrom": "Haunter",
+      "stage": "Stage2",
+      "suffix": "Prime",
       "abilities": [
         {
           "type": "Poke-BODY",
-          "name": "Shocking Tail",
-          "effect": "As long as Electivire is your Active Pokémon, whenever your opponent attaches an Energy card from his or her hand to 1 of his or her Pokémon, put 2 damage counters on that Pokémon."
+          "name": "Catastrophe",
+          "effect": "As long as Gengar is your Active Pokémon, if any of your opponent’s Pokémon would be Knocked Out, put that Pokémon in the Lost Zone instead of discarding it. (Discard all cards attached to that Pokémon.)"
         }
       ],
       "attacks": [
         {
           "cost": [
-            "Lightning",
+            "Psychic"
+          ],
+          "name": "Hurl into Darkness",
+          "effect": "Look at your opponent’s hand and choose a number of Pokémon you find there up to the number of Psychic Energy attached to Gengar. Put the Pokémon you chose in the Lost Zone."
+        },
+        {
+          "cost": [
+            "Psychic",
             "Colorless"
           ],
-          "name": "Pulse Barrier",
-          "effect": "Discard all of your opponent's Pokémon Tool cards and Stadium cards in play. If you do, prevent all effects, including damage, done to Electivire during your opponent's next turn.",
-          "damage": 50
+          "name": "Cursed Drop",
+          "effect": "Put 4 damage counters on your opponent’s Pokémon in any way you like."
         }
       ],
       "weaknesses": [
         {
-          "type": "Fighting",
+          "type": "Darkness",
           "value": "×2"
         }
       ],
       "resistances": [
         {
-          "type": "Metal",
+          "type": "Colorless",
           "value": "-20"
+        }
+      ],
+      "retreat": 0,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-28T13:55:56+01:00"
+    },
+    {
+      "id": "ecard3-2",
+      "category": "Pokemon",
+      "illustrator": "Kimiya Masago",
+      "image": "https://assets.tcgdex.net/en/ecard/ecard3/2",
+      "localId": "2",
+      "name": "Alakazam",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 144,
+          "total": 182
+        },
+        "id": "ecard3",
+        "logo": "https://assets.tcgdex.net/en/ecard/ecard3/logo",
+        "name": "Skyridge",
+        "symbol": "https://assets.tcgdex.net/univ/ecard/ecard3/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        65
+      ],
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "evolveFrom": "Kadabra",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Poke-POWER",
+          "name": "Energy Jump",
+          "effect": "Once during your turn (before you attack) you may move an energy card from 1 of your Pokémon to another of your Pokémon. This power can't be used if Alakazam is affected by a Special Condition."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Psychic",
+          "effect": "This attack does 30 damage plus 10 more damage for each energy card attached to the Defending Pokémon.",
+          "damage": "30+"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Psychic",
+          "value": "×2"
         }
       ],
       "legal": {
         "standard": false,
         "expanded": false
       },
-      "updated": "2023-12-27T21:34:54+01:00"
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "base1-1",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/base1/1",
+      "localId": "1",
+      "name": "Alakazam",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        65
+      ],
+      "hp": 80,
+      "types": [
+        "Psychic"
+      ],
+      "evolveFrom": "Kadabra",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Pokemon Power",
+          "name": "Damage Swap",
+          "effect": "As often as you like during your turn (before your attack), you may move 1 damage counter from 1 of your Pokémon to another as long as you don't Knock Out that Pokémon. This power can't be used if Alakazam is Asleep, Confused, or Paralyzed."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "name": "Confuse Ray",
+          "effect": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "damage": 30
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Psychic",
+          "value": "×2"
+        }
+      ],
+      "retreat": 3,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-05-28T14:19:12+02:00"
+    },
+    {
+      "id": "gym1-1",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/gym/gym1/1",
+      "localId": "1",
+      "name": "Blaine's Moltres",
+      "rarity": "Rare Holo",
+      "set": {
+        "cardCount": {
+          "official": 132,
+          "total": 132
+        },
+        "id": "gym1",
+        "logo": "https://assets.tcgdex.net/en/gym/gym1/logo",
+        "name": "Gym Heroes",
+        "symbol": "https://assets.tcgdex.net/univ/gym/gym1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        146
+      ],
+      "hp": 90,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "attacks": [
+        {
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "name": "Phoenix Flame",
+          "effect": "Flip a coin. If tails, shuffle Blaine's Moltres and all cards attached to it into your deck (after doing damage).",
+          "damage": 90
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Fighting",
+          "value": "-30"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-27T22:05:41+01:00"
+    },
+    {
+      "id": "base1-2",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/base1/2",
+      "localId": "2",
+      "name": "Blastoise",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        9
+      ],
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "evolveFrom": "Wartortle",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Pokemon Power",
+          "name": "Rain Dance",
+          "effect": "As often as you like during your turn (before your attack), you may attach 1 Water Energy Card to 1 of your Water Pokémon. (This doesn't use up your 1 Energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "name": "Hydro Pump",
+          "effect": "Does 40 damage plus 10 more damage for each attached Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+          "damage": "40+"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Lightning",
+          "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "base2-4",
+      "category": "Pokemon",
+      "illustrator": "Kagemaru Himeno",
+      "image": "https://assets.tcgdex.net/en/base/base2/4",
+      "localId": "4",
+      "name": "Jolteon",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 64,
+          "total": 64
+        },
+        "id": "base2",
+        "logo": "https://assets.tcgdex.net/en/base/base2/logo",
+        "name": "Jungle",
+        "symbol": "https://assets.tcgdex.net/univ/base/base2/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        135
+      ],
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "evolveFrom": "Eevee",
+      "stage": "Stage1",
+      "attacks": [
+        {
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Quick Attack",
+          "effect": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "damage": "10+"
+        },
+        {
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "name": "Pin Missile",
+          "effect": "Flip 4 coins. This attack does 20 damage times the number of heads.",
+          "damage": "20x"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
     }
   ],
   "other_collections": [
     {
-      "id": "566c",
-      "perros": []
-    },
-    {
-      "id": "3a52",
-      "name": "gato",
-      "cards": []
-    },
-    {
-      "id": "752a",
-      "name": "gato",
-      "cards": []
-    },
-    {
       "id": "daca",
       "name": "gato",
       "cards": []
+    },
+    {
+      "id": "634c",
+      "name": "LAGARTIJA",
+      "cards": []
+    },
+    {
+      "id": "55a1",
+      "name": "LAGARTIJA",
+      "cards": []
+    },
+    {
+      "id": "3a52",
+      "name": "DELPHIN",
+      "cards": [
+        {
+          "category": "Pokemon",
+          "id": "base1-2",
+          "illustrator": "Ken Sugimori",
+          "image": "https://assets.tcgdex.net/en/base/base1/2",
+          "localId": "2",
+          "name": "Blastoise",
+          "rarity": "Rare",
+          "set": {
+            "cardCount": {
+              "official": 102,
+              "total": 102
+            },
+            "id": "base1",
+            "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+            "name": "Base Set"
+          },
+          "variants": {
+            "firstEdition": false,
+            "holo": true,
+            "normal": true,
+            "reverse": true,
+            "wPromo": false
+          },
+          "dexId": [
+            9
+          ],
+          "hp": 100,
+          "types": [
+            "Water"
+          ],
+          "evolveFrom": "Wartortle",
+          "stage": "Stage2",
+          "abilities": [
+            {
+              "type": "Pokemon Power",
+              "name": "Rain Dance",
+              "effect": "As often as you like during your turn (before your attack), you may attach 1 Water Energy Card to 1 of your Water Pokémon. (This doesn't use up your 1 Energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed."
+            }
+          ],
+          "attacks": [
+            {
+              "cost": [
+                "Water",
+                "Water",
+                "Water"
+              ],
+              "name": "Hydro Pump",
+              "effect": "Does 40 damage plus 10 more damage for each attached Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+              "damage": "40+"
+            }
+          ],
+          "weaknesses": [
+            {
+              "type": "Lightning",
+              "value": "×2"
+            }
+          ],
+          "legal": {
+            "standard": false,
+            "expanded": false
+          },
+          "updated": "2023-12-06T00:47:28+01:00"
+        }
+      ]
     }
   ]
 }

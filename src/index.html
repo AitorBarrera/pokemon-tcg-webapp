@@ -38,12 +38,14 @@
 
 <main>
     <div class="container">
-      <div id="sectionSeriesRow" class="sectionSetIdRow pagina">
+      <div id="sectionSeriesRow" class="sectionSeriesRow pagina">
+        <h2 class="display-1 pt-4 text-center">SERIES</h4>
         <div class="series-row row">
 
         </div>
       </div>
       <div id="sectionSetIdRow" class="sectionSetIdRow pagina">
+        <h2 class="display-1 pt-4 text-center"> <span class="selectedSerie"></span> SETs</h4>
         <div class="setsId-row row">
           
         </div>
@@ -51,13 +53,9 @@
     </div>
 
   <!--Show all sets -->
-
   <section id="sectionSets" class="pagina">
     <div class="container">
-      <a class="navbar-brand changeToSectionHero" href="#sectionHero">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/10.png" alt=""
-          srcset="">
-      </a>
+      <h2 class="display-1 pt-4 text-center">SETS</h4>
       <div class="sets-row row">
 
       </div>
@@ -79,7 +77,7 @@
               </h4>
               <p class="card-text"> Have a look at the series and sets,
                 or be melancholic and see the old ones</p>
-              <a type="button" class="btn btn-outline-light changeToSectionCards">SEE SERIES AND SETS</a>
+              <a type="button" class="btn btn-outline-light changeToSectionSeries">SEE SERIES AND SETS</a>
             </div>
           </div>
         </div>
@@ -130,11 +128,11 @@
         ></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav w-100 mt-2 mt-lg-0 align-items-center h-100">
-            <li class="col-4 nav-item dropdown dropdownSeriesContainer d-flex justify-content-center align-items-center h-100">
+            <li class="col-3 nav-item dropdown dropdownSeriesContainer d-flex justify-content-center align-items-center h-100">
               <a class="nav-link dropdown-toggle ms-4 h-100" href="#" id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
                 <h4 class="text-center">Series:</h4>
-                <img src="img/logo.png" alt="" class="currentSeries img-fluid" onerror="this.src='img/no-logo.png';">
+                <img src="" alt="" class="currentSeries img-fluid" onerror="this.src='img/logo-placeholder.png';">
               </a>
               <div class="dropdown-menu dropdownSeries w-100 ms-4" aria-labelledby="dropdownId">
                 <template id="dropdownItemTemplate" class="w-100">
@@ -145,30 +143,55 @@
                 </template>
               </div>
             </li>
-            <li class="col-4 nav-item dropdown dropdownSetsContainer d-flex justify-content-center align-items-center">
-              <a class="nav-link dropdown-toggle ms-4"  id="dropdownId" data-bs-toggle="dropdown"
+            <li class="col-3 nav-item dropdown dropdownSetsContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle ms-4 text-center"  id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
                 <h4 class="text-center">Set:</h4>
-                <img src="img/logo.png" alt="" class="currentSet img-fluid" onerror="this.src='img/no-logo.png';">
+                <img src="" alt="" class="currentSet img-fluid" onerror="this.src='img/logo-placeholder.png';">
               </a>
               <div class="dropdown-menu dropdownSets w-100 ms-4" aria-labelledby="dropdownId">
               </div>
             </li>
 
-            <li class="col-4 nav-item dropdown dropdownRarityContainer d-flex justify-content-center align-items-center">
-              <a class="nav-link dropdown-toggle ms-4 w-100"  id="dropdownId" data-bs-toggle="dropdown"
+            <li class="col-3 nav-item dropdown dropdownRarityContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle ms-4 w-100 text-center"  id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
                 <h4 class="text-center">Rarity:</h4>
-                <p class="w-100 currentRarityName"></p>
+                <p class="w-100 currentRarityName m-0 text-center d-inline"><img src="img/logo-placeholder.png" alt="" class="w-50"></p>
               </a>
               <div class="dropdown-menu dropdownRarity w-100 ms-4" aria-labelledby="dropdownId">
               </div>
               <template id="dropdownItemRarityTemplate" class="w-100">
                 <a class="dropdown-item text-center my-3" href="#topCards">
-                  <h3 class="w-100 rarityName"></h3>
-                  <hr>
+                  <h4 class="w-100 rarityName"></h4>
                 </a>
               </template>
+            </li>
+
+            <li class="col-3 nav-item dropdown dropdownSortContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle ms-4 w-100 text-center"  id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Sort:</h4>
+                <p class="w-100 currentSortName m-0 text-center d-inline" data-id=""><img src="img/logo-placeholder.png" alt="" class="w-50"></p>
+              </a>
+              <div class="dropdown-menu dropdownSort w-100 ms-4" aria-labelledby="dropdownId">
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="name">Name</h4>
+                  <hr>
+                </a>
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="localId">Local ID</h4>
+                  <hr>
+                </a>
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="hp">HP</h4>
+                  <hr>
+                </a>
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="illustrator">Illustrator</h4>
+                  <hr>
+                </a>
+              </div>
             </li>
           </ul>
           <form class="d-flex my-2 my-lg-0 justify-content-center">
@@ -181,19 +204,28 @@
       </div>
     </nav>
     
-    <div class="cardContainer container py-3">
-      <h2 class="display-1 text-center favoritesTitle d-none">FAVORITES</h2>
-      <div class="row">
-        <h3 class="h-100">Search for cards with the filters about</h3>
+    <div class="cardContainer container py-3 h-100">
+      <h2 class="display-1 text-center favoritesTitle d-none">Collection: <span class="collectionTitle"></span></h2>
+      <div class="row h-100">
+        <h3 class="h-100 text-center display-6 text-warning">Search for cards with the filters about</h3>
       </div>
     </div>
   </section>
 </main>
+<footer>
+  <button id="backToTopBtn" title="Go to top">↑</button>
+  <h1 class="text-center text-white py-2 m-0">&#169; By Hugo and Aitor</h1>
+</footer>
+
 <template id="pokemonCardTemplate">
   <div class="pokemonCard col-6 col-md-4 col-lg-3 my-3 position-relative">
     <img src="img/bulbasaur.webp" alt="" class="w-100 h-100">
     <div class="starFavoriteButtonContainer">
-      <a class="starFavoriteButton">
+      <!-- <a class="starFavoriteButton" 
+      data-bs-toggle="modal"
+      data-bs-target="#modalId"> -->
+      <a class="starFavoriteButton" 
+      >
         <i class="fa-solid fa-star starFavorite"></i>
         <i class="fa-regular fa-star starFavoriteBorder"></i>
       </a>
@@ -201,12 +233,63 @@
   </div>
 </template>
 
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div
+  class="modal fade modalAddCollection"
+  id="modalId"
+  tabindex="-1"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  
+  role="dialog"
+  aria-labelledby="modalTitleId"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleId">
+          Add <span class="modalCardName"></span> to collection
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body h-100 pt-0">
+        <div class="cardSelected d-flex justify-content-center">
+
+        </div>
+        <label for="">Add to collection:</label>
+        <select name="collection" id="collectionSelect">
+          <option value="favorites">favorites</option>
+          <template class="selectCollectionOptionTemplate">
+            <option value="a">a</option>
+          </template>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button type="button" class="btn btn-primary addCollectionButton">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script type="module" src="scripts/main.js"></script>
-<footer>
-  <button id="backToTopBtn" title="Go to top">↑</button>
-  <h1 class="text-center text-white py-2 m-0">&#169; By Hugo and Aitor</h1>
-</footer>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
   integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 

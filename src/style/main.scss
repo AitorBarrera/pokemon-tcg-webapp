@@ -9,6 +9,7 @@
 @use "pokemonCard";
 @use "navbar";
 @use "cardContainer";
+@use "sectionSeries";
 
 *{
     margin: 0;
@@ -21,5 +22,16 @@
 }
 
 body{
-    background-color: $color-secundary;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+main{
+    flex: 1;
+}
+
+a{
+    color: $color-gold;
+    text-decoration: none;
 }

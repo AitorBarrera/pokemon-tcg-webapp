@@ -1,4 +1,5 @@
 const API_URL = "http://localhost:3000";
+import * as API from "./PokemonTCG.js";
 
 export async function getAllFavorites(){
 
@@ -59,52 +60,132 @@ export async function deleteCardFromFavorites(idCard) {
     }
 }
 
-// export async function postNewCollection(nameCollection) {
-//     const newCollection = {
-//         "name": nameCollection,
-//         "cards": [
 
-//         ]
-//     }
+// COLLECTIONS
+export async function getCollections(){
+    try {
+        const response = await fetch(`${API_URL}/other_collections`);
 
-//     try {
-//         const response = await fetch(`${API_URL}/other_collections`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(newCollection)
-//         });
+        let data = await response.json();
 
-//         if (!response.ok) {
-//             throw new Error(`Error: ${response.statusText}`);
-//         }
-//         const newCard = await response.json();
-//         return newCard;
+        let collectionNames = new Set();
 
-//     } catch (error) {
-//         console.error('Post Data Error:', error);
-//         throw error;
-//     }
-// }
+        data.forEach(collection => {
+            collectionNames.add(collection.name)
+        });
 
-// export async function postCardToCollection(nameCollection,card) {
-//     try {
-//         const response = await fetch(`${API_URL}/ot`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(card)
-//         });
-//         if (!response.ok) {
-//             throw new Error(`Error: ${response.statusText}`);
-//         }
-//         const newCard = await response.json();
-//         return newCard;
+        return collectionNames;
 
-//     } catch (error) {
-//         console.error('Post Data Error:', error);
-//         throw error;
-//     }
-// }
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
+export async function getCollectionByName(name){
+    try {
+        const response = await fetch(`${API_URL}/other_collections?name=${name}`);
+
+        let data = await response.json();
+
+        return data[0];
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
+export async function postNewCollection(nameCollection) {
+    const newCollection = {
+        "name": nameCollection,
+        "cards": []
+    }
+
+    try {
+        const response = await fetch(`${API_URL}/other_collections`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newCollection)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+        const newCard = await response.json();
+        return newCard;
+
+    } catch (error) {
+        console.error('Post Data Error:', error);
+        throw error;
+    }
+}
+
+export async function addCardToCollection(nameCollection,card) {
+    let collection = await getCollectionByName(nameCollection);
+    let collectionId = collection.id;
+
+    collection.cards.push(card);
+
+    try {
+        const response = await fetch(`${API_URL}/other_collections/${collectionId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(collection)
+        });
+        if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+        const newCard = await response.json();
+        return newCard;
+
+    } catch (error) {
+        console.error('Post Data Error:', error);
+        throw error;
+    }
+}
+
+export async function deleteCardFromCollection(nameCollection,card) {
+    let collection = await getCollectionByName(nameCollection);
+    let collectionId = collection.id;
+    let cardId = card.id;
+    collection.cards = collection.cards.filter(currentCard => {
+        console.log(currentCard.id + " " + cardId);
+        
+        return currentCard.id != cardId}
+    );
+
+    try {
+        const response = await fetch(`${API_URL}/other_collections/${collectionId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(collection)
+        });
+        if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+        const newCard = await response.json();
+        return newCard;
+
+    } catch (error) {
+        console.error('Post Data Error:', error);
+        throw error;
+    }
+}
+
+// API.getPokemonCardsById("base1-1").then(card =>{
+//     console.log(card);
+    
+//     deleteCardFromCollection("DELPHIN", card);
+// });
+
+getCollections().then(names =>{
+    console.log(names);
+    
+})

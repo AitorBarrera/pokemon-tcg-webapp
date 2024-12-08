@@ -1,16 +1,16 @@
 import "../style/main.scss";
 import * as buttonUp from "./buttonUp.js";
 import * as collectionAPI from "./collectionAPI.js";
+import * as toastWindow from "./toastWindow.js";
+import * as API from "./PokemonTCG.js";
 
 buttonUp.setupButtonClick();
 
-import * as API from "./PokemonTCG.js";
 
 let currentListCards;
 let currentSeriesSelected = "base";
-
 document.addEventListener("DOMContentLoaded", event =>{
-    changeHTML("sectionSeriesRow")
+    changeHTML("sectionCards")
     // API.getAllPokemonCardsBySet("A1").then((pokemonCard) => {
     //     // console.log(pokemonCard.cards);
     //     renderPokemonCard(pokemonCard.cards);
@@ -58,30 +58,36 @@ function renderSeriesRow(seriesList) {
 
     seriesList.forEach(serie => {
         const div = document.createElement("div");
-        div.className = "col-xl-3 col-md-4 col-sm-6 my-4 seriesCard";
+        div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
         div.innerHTML = `
-            <a href="#sectionSeries" class="card h-100" data-id="${serie.id}">
-                <img class="card-img-top" style="height: 12rem;" src="${serie.logo ? serie.logo + '.webp' : 'img/no-image.jpg'}" alt="${serie.name}" />
-                <div class="card-body">
+            <a href="#sectionSeriesRow" class="card seriesCard h-100" data-id="${serie.id}">
+                    <div class="card-img-top">
+                        <img class="img-fluid" src="${serie.logo}.webp" alt="${serie.name}" onerror="this.src='img/no-logo.png';"/>
+                    </div>
+                    <div class="card-body">
                     <h4 class="card-title text-center">${serie.name}</h4>
                 </div>
             </a>`;
 
         const seriesLink = div.querySelector("a");
-
+        
         seriesLink.addEventListener("click", e =>{
             currentSeriesSelected = serie.id;
 
             API.getSeriesById(currentSeriesSelected).then((serie) => {
                 
                 renderSetsRowById(currentSeriesSelected);
+                document.querySelector(".selectedSerie").textContent = serie.name;
+                document.querySelector(".currentSeries").src = serie.logo + ".webp"
                 changeHTML("sectionSetIdRow");
-
+                renderSets(serie.id);
+            
             }).catch(error => console.log("Error: " + error))
         })
 
         seriesRow.appendChild(div); 
     }); 
+    fixLogos();
 }
 
 function renderSetsRow(setList) {
@@ -92,10 +98,31 @@ function renderSetsRow(setList) {
         const div = document.createElement("div");
         div.className = "col-xl-3 col-md-4 col-sm-6 my-4 setCard";
         div.innerHTML = `
-                <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
-                <div class="card-body">
-                    <h4 class="card-title text-center">${set.name}</h4>
-                </div>`;
+                <a href="#sectionSets" class="card setsCard h-100" data-id="${set.id}">
+                        <div class="card-img-top">
+                            <img class="img-fluid" src="${set.logo}.webp" alt="${set.name}" onerror="this.src='img/no-logo.png';"/>
+                        </div>
+                        <div class="card-body">
+                        <h4 class="card-title text-center">${set.name}</h4>
+                    </div>
+                </a>
+            `;
+
+            const setsLink = div.querySelector("a");
+            const selectedSetId = setsLink.getAttribute("data-id");
+
+            setsLink.addEventListener("click", e =>{
+                changeHTML("sectionCards");                
+                document.querySelector(".currentSeries").src = "";
+                document.querySelector(".currentSet").src = set.logo + ".webp"
+                document.querySelector(".currentSet").parentNode.setAttribute("data-id", set.id);
+
+                API.getAllPokemonCardsBySet(selectedSetId).then((pokemonCards) => {
+                    renderPokemonCard(pokemonCards.cards);
+                    currentListCards = pokemonCards.cards;
+
+                }).catch(error => console.log("Error: " + error))
+            });
 
         setsRow.appendChild(div); 
     }); 
@@ -114,11 +141,13 @@ function renderSetsRowById(seriesId) {
 
             div.className = "col-xl-3 col-md-4 col-sm-6 my-4";
             div.innerHTML = `
-                    <a href="#sectionCards" data-id="${set.id}">
-                    <img class="card-img-top" style="height: 12rem;" src="${set.logo ? set.logo + '.webp' : 'img/no-image.jpg'}" alt="${set.name}" />
-                    <div class="card-body">
-                        <h4 class="card-title text-center">${set.name}</h4>
-                    </div>
+                    <a href="#sectionSetIdRow" class="card setByIdCard h-100" data-id="${set.id}">
+                            <div class="card-img-top">
+                                <img class="img-fluid" src="${set.logo}.webp" alt="${set.name}" onerror="this.src='img/no-logo.png';"/>
+                            </div>
+                            <div class="card-body">
+                            <h4 class="card-title text-center">${set.name}</h4>
+                        </div>
                     </a>`;
                 
                     const setsLink = div.querySelector("a");
@@ -126,6 +155,8 @@ function renderSetsRowById(seriesId) {
 
                     setsLink.addEventListener("click", e =>{
                         changeHTML("sectionCards");
+                        document.querySelector(".currentSet").src = set.logo + ".webp"
+                        document.querySelector(".currentSet").parentNode.setAttribute("data-id", set.id);
 
                         API.getAllPokemonCardsBySet(selectedSetId).then((pokemonCards) => {
                             renderPokemonCard(pokemonCards.cards);
@@ -142,12 +173,12 @@ function renderSetsRowById(seriesId) {
 }).catch(error => console.log("Error: " + error))
 }
 
-function renderPokemonCard(pokemonCards, favorites = false){
+function renderPokemonCard(pokemonCards, collections = false, ){
 
     const cardContainer = document.querySelector(".cardContainer .row");
 
     if (!pokemonCards.length > 0){
-        cardContainer.innerHTML = "<h2 class='errorFilters'>There are not cards that fit the filters</h2>";
+        cardContainer.innerHTML = "<h2 class='errorFilters text-center text-danger display-6 bg-dark'>There are not cards that fit the filters</h2>";
     } else {
         cardContainer.innerHTML = "";
     }
@@ -182,8 +213,8 @@ function renderPokemonCard(pokemonCards, favorites = false){
             const idCard = button.getAttribute("data-id");
 
             API.getPokemonCardsById(idCard).then((card) => {
-                // console.log(series);
                 let selectedCard = card;
+                // renderModalAddCollection(card);
                 collectionAPI.postCardToFavorites(selectedCard);
         
             }).catch(error => console.log("Error: " + error));
@@ -191,7 +222,7 @@ function renderPokemonCard(pokemonCards, favorites = false){
         })
     })
 
-    toggleFilter(favorites)
+    toggleFilter(collections)
 }
 
 
@@ -227,9 +258,9 @@ function renderSeries(seriesList){
                 // nameCurrentSeries.textContent = `${serie.name}`
                 
                 // reset current set
-                
                 document.querySelector(".currentSet").setAttribute("src","img/logo-placeholder.png");
-                document.querySelector(".currentRarityName").textContent = "";
+                document.querySelector(".currentRarityName").innerHTML = '<img src="img/logo-placeholder.png" alt="" class="w-50">';
+                
                 renderSets(currentSeriesSelected);
         
             }).catch(error => console.log("Error: " + error))
@@ -268,6 +299,7 @@ function renderSets(seriesId){
                 logoCurrent.alt = `${set.name}`
                 logoCurrent.parentNode.setAttribute("data-id", set.id);
 
+                document.querySelector(".currentRarityName").innerHTML = '<img src="img/logo-placeholder.png" alt="" class="w-50">';
                 renderRarities(set.id);
                 filterCards();
             })
@@ -312,10 +344,11 @@ function filterCards() {
     let currentSetId = document.querySelector(".currentSet").parentNode.getAttribute("data-id");
     let inputSearchByName = document.querySelector(".inputSearchByName");
     let currentRarityName = document.querySelector(".currentRarityName").textContent;
+    let currentSortName = document.querySelector(".currentSortName").getAttribute("data-id");
 
-    currentSetId = currentSetId==null?'':currentSetId;
+    currentSetId = currentSetId==null? undefined :currentSetId;
 
-    API.getFilteredCards(currentSetId, inputSearchByName.value, "", currentRarityName, "").then(cards => {
+    API.getFilteredCards(currentSetId, inputSearchByName.value, "", currentRarityName, currentSortName).then(cards => {
         console.log(cards);
         
 
@@ -351,10 +384,6 @@ function changeHTML(id) {
     if (paginaAMostrar.classList.contains("d-none"))
         paginaAMostrar.classList.remove("d-none");
     paginaAMostrar.classList.add("d-block");
-
-    if (id="sectionC")
-        paginaAMostrar.classList.remove("d-none");
-    paginaAMostrar.classList.add("d-block");
 }
 
 const buttonsChangeToSectionHero = document.querySelectorAll(".changeToSectionHero");
@@ -377,14 +406,84 @@ buttonsChangeToSectionSeries.forEach(button => button.addEventListener("click", 
 const buttonsChangeToSectionSets = document.querySelectorAll(".changeToSectionSets");
 buttonsChangeToSectionSets.forEach(button => button.addEventListener("click", e => changeHTML("sectionSets")));
 
-function renderFavorites() {
-    collectionAPI.getAllFavorites().then(cards => {
-        renderPokemonCard(cards, true);
-        changeHTML("sectionCards");
-        changeFavoriteButtonToDelete();
-    }).catch(error => console.log("Error: " + error));
+const buttonsSortCards = document.querySelectorAll(".dropdownSort .sortName");
+buttonsSortCards.forEach(button => {
+    button.addEventListener("click", e => {
+        document.querySelector(".currentSortName").textContent = button.textContent;
+        document.querySelector(".currentSortName").setAttribute("data-id", button.getAttribute("data-id"));
+
+        filterCards();
+        })
+    }
+);
+
+function renderFavorites(collectionName = "favorites") {
+
+    switch (collectionName) {
+        case "favorites":
+            collectionAPI.getAllFavorites().then(cards => {
+                renderPokemonCard(cards, true);
+                changeHTML("sectionCards");
+                document.querySelector(".collectionTitle").textContent = collectionName;
+                changeFavoriteButtonToDelete();
+            }).catch(error => console.log("Error: " + error));
+            break;
+    
+        case "":
+            
+            break;
+        default:
+            break;
+    }
 }
 
+function renderModalAddCollection(card) {
+    const modalAddCollection = document.querySelector(".modalAddCollection");
+    modalAddCollection.querySelector(".modalCardName").textContent = card.name;
+    const idCard = card.id;
+
+    API.getPokemonCardsById(idCard).then(givenCard =>{
+        const cardTemplate = document.querySelector("#pokemonCardTemplate");
+        let selectedCard = cardTemplate.cloneNode(true).content;
+        
+        const cardImg = selectedCard.querySelector("img");
+        cardImg.src = `${givenCard.image}/high.webp`
+        cardImg.alt = givenCard.id
+
+        let pokemonCard = selectedCard.querySelector(".pokemonCard")
+        
+        pokemonCard.classList.add("w-50");
+
+        selectedCard.querySelector(".pokemonCard").querySelector(".starFavoriteButtonContainer").innerHTML = "";
+
+        modalAddCollection.querySelector(".cardSelected").innerHTML = "";
+        
+        modalAddCollection.querySelector(".cardSelected").append(selectedCard);
+    })
+
+    const collectionSelect = modalAddCollection.querySelector("#collectionSelect");
+    const selectCollectionOptionTemplate = modalAddCollection.querySelector(".selectCollectionOptionTemplate");
+
+    collectionAPI.getCollections().then(collectionNames =>{
+        collectionNames.forEach(collectionName =>{        
+            let selectCollectionOption = selectCollectionOptionTemplate.cloneNode(true).content.querySelector("option");
+            selectCollectionOption.value = collectionName;
+            selectCollectionOption.textContent = collectionName;
+            console.log(collectionName);
+
+            collectionSelect.append(selectCollectionOption);
+        })
+    })
+
+    modalAddCollection.querySelector(".addCollectionButton").addEventListener("click", e =>{
+        API.getPokemonCardsById(idCard).then(givenCard =>{
+            const collectionName = modalAddCollection.querySelector("#collectionSelect").value;
+            console.log(collectionName);
+
+            collectionAPI.postCardToFavorites
+        })
+    })
+}
 // function to change the favorite button to delete button
 function changeFavoriteButtonToDelete() {
 
@@ -411,7 +510,6 @@ function changeFavoriteButtonToDelete() {
 function toggleFilter(favorite = false) {
     let filterNavbar = document.querySelector("#navbar");
     let favoritesTitle = document.querySelector(".favoritesTitle");
-    console.log(favoritesTitle);
     
 
     if (favorite){
@@ -426,4 +524,28 @@ function toggleFilter(favorite = false) {
         favoritesTitle.classList.add("d-none")
     }
 
+}
+
+function fixLogos() {
+    let allImgs= document.querySelectorAll("img");
+
+    allImgs.forEach(img =>{
+        let srcImg = img.src;
+        
+        if (srcImg.indexOf("/pop/np/logo.webp") != -1){
+            img.src = `https://assets.tcgdex.net/en/pop/pop1/logo.webp`
+        }
+        if (srcImg.indexOf("/dp/dpp/logo.webp") != -1){
+            img.src = `https://assets.tcgdex.net/en/dp/dp1/logo.webp`
+        }
+        if (srcImg.indexOf("/xy/xyp/logo.webp") != -1){
+            img.src = `https://assets.tcgdex.net/en/xy/xy1/logo.webp`
+        }
+        if (srcImg.indexOf("/sm/smp/logo.webp") != -1){
+            img.src = `https://assets.tcgdex.net/en/sm/sm1/logo.webp`
+        }
+        if (srcImg.indexOf("/swsh/swshp/logo.webp") != -1){
+            img.src = `https://assets.tcgdex.net/en/swsh/swsh1/logo.webp`
+        }
+    })
 }
