@@ -98,7 +98,6 @@ export async function getFilteredCards(set = "base1", name = "", category = "", 
 
     try {
         const endPoint =`${API_URL}/cards?id=like:${set}-&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}&sort:order=ASC`
-        console.log(endPoint);
         
         const response = await fetch(endPoint);
 
