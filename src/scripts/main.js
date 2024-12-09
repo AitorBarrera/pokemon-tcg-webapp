@@ -11,24 +11,39 @@ let currentListCards;
 let currentSeriesSelected = "base";
 document.addEventListener("DOMContentLoaded", event =>{
     changeHTML("sectionHero")
-    // API.getAllPokemonCardsBySet("A1").then((pokemonCard) => {
-    //     // console.log(pokemonCard.cards);
-    //     renderPokemonCard(pokemonCard.cards);
-
-    // }).catch(error => console.log("Error: " + error))
     
-    // API.getPokemonCardsByName("like:cubone").then((pokemonCards) => {
-    //     // console.log(pokemonCard);
-    //     currentListCards = pokemonCards;
-    //     renderPokemonCard(pokemonCards);
+    const buttonsChangeToSectionHero = document.querySelectorAll(".changeToSectionHero");
+    buttonsChangeToSectionHero.forEach(button => button.addEventListener("click", e => changeHTML("sectionHero")));
 
-    // }).catch(error => console.log("Error: " + error))
+    const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionCards");
+    buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => {
+        filterCards();
+        changeHTML("sectionCards")
+    }));
 
-    // API.getPokemonCardsBySuffix("ex").then((pokemonCard) => {
-    //     // console.log(pokemonCard);
-    //     renderPokemonCard(pokemonCard);
+    const buttonschangeToFavorites = document.querySelectorAll(".changeToFavorites");
+    buttonschangeToFavorites.forEach(button => button.addEventListener("click", e => {
+        renderFavorites();
+    }));
 
-    // }).catch(error => console.log("Error: " + error))
+    const buttonsChangeToSectionSeries = document.querySelectorAll(".changeToSectionSeries");
+    buttonsChangeToSectionSeries.forEach(button => button.addEventListener("click", e => {
+        changeHTML("sectionSeriesRow")
+    }));
+
+    const buttonsChangeToSectionSets = document.querySelectorAll(".changeToSectionSets");
+    buttonsChangeToSectionSets.forEach(button => button.addEventListener("click", e => changeHTML("sectionSets")));
+
+    const buttonsSortCards = document.querySelectorAll(".dropdownSort .sortName");
+    buttonsSortCards.forEach(button => {
+        button.addEventListener("click", e => {
+            document.querySelector(".currentSortName").textContent = button.textContent;
+            document.querySelector(".currentSortName").setAttribute("data-id", button.getAttribute("data-id"));
+
+            filterCards();
+            })
+        }
+    );
 
     API.getSeries().then((series) => {
         // console.log(series);
@@ -173,7 +188,7 @@ function renderSetsRowById(seriesId) {
 }).catch(error => console.log("Error: " + error))
 }
 
-function renderPokemonCard(pokemonCards, collections = false, ){
+function renderPokemonCard(pokemonCards, collections = false){
 
     const cardContainer = document.querySelector(".cardContainer .row");
 
@@ -386,37 +401,6 @@ function changeHTML(id) {
     paginaAMostrar.classList.add("d-block");
 }
 
-const buttonsChangeToSectionHero = document.querySelectorAll(".changeToSectionHero");
-buttonsChangeToSectionHero.forEach(button => button.addEventListener("click", e => changeHTML("sectionHero")));
-
-const buttonsChangeToSectionCards = document.querySelectorAll(".changeToSectionCards");
-buttonsChangeToSectionCards.forEach(button => button.addEventListener("click", e => changeHTML("sectionCards")));
-
-const buttonschangeToFavorites = document.querySelectorAll(".changeToFavorites");
-
-buttonschangeToFavorites.forEach(button => button.addEventListener("click", e => {
-    renderFavorites();
-}));
-
-const buttonsChangeToSectionSeries = document.querySelectorAll(".changeToSectionSeries");
-buttonsChangeToSectionSeries.forEach(button => button.addEventListener("click", e => {
-    changeHTML("sectionSeriesRow")
-}));
-
-const buttonsChangeToSectionSets = document.querySelectorAll(".changeToSectionSets");
-buttonsChangeToSectionSets.forEach(button => button.addEventListener("click", e => changeHTML("sectionSets")));
-
-const buttonsSortCards = document.querySelectorAll(".dropdownSort .sortName");
-buttonsSortCards.forEach(button => {
-    button.addEventListener("click", e => {
-        document.querySelector(".currentSortName").textContent = button.textContent;
-        document.querySelector(".currentSortName").setAttribute("data-id", button.getAttribute("data-id"));
-
-        filterCards();
-        })
-    }
-);
-
 function renderFavorites(collectionName = "favorites") {
 
     switch (collectionName) {
@@ -424,7 +408,6 @@ function renderFavorites(collectionName = "favorites") {
             collectionAPI.getAllFavorites().then(cards => {
                 renderPokemonCard(cards, true);
                 changeHTML("sectionCards");
-                document.querySelector(".collectionTitle").textContent = collectionName;
                 changeFavoriteButtonToDelete();
             }).catch(error => console.log("Error: " + error));
             break;
@@ -487,6 +470,8 @@ function renderModalAddCollection(card) {
 // function to change the favorite button to delete button
 function changeFavoriteButtonToDelete() {
 
+    console.log("change");
+    
     const starFavoriteButtonContainers = document.querySelectorAll(".starFavoriteButtonContainer");
     starFavoriteButtonContainers.forEach(container =>{
         const idCard = container.querySelector(".starFavoriteButton").getAttribute("data-id");

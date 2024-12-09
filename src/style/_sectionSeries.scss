@@ -4,6 +4,7 @@
     background-color: $color-navbar;
     justify-content: space-between;
     padding: 15px;
+    max-height: 20rem;
 
     .card-img-top{
         height: 70%;
@@ -13,7 +14,7 @@
         justify-content: center;
 
         img{
-            max-height: 70%;
+            max-height: 100%;
             text-align: center;
         }
     }

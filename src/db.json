@@ -115,142 +115,6 @@
       "updated": "2023-12-06T00:47:28+01:00"
     },
     {
-      "id": "basep-4",
-      "category": "Pokemon",
-      "illustrator": "Ken Sugimori",
-      "image": "https://assets.tcgdex.net/en/base/basep/4",
-      "localId": "4",
-      "name": "Pikachu",
-      "rarity": "Common",
-      "set": {
-        "cardCount": {
-          "official": 53,
-          "total": 53
-        },
-        "id": "basep",
-        "logo": "https://assets.tcgdex.net/en/base/basep/logo",
-        "name": "Wizards Black Star Promos",
-        "symbol": "https://assets.tcgdex.net/univ/base/basep/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        25
-      ],
-      "hp": 50,
-      "types": [
-        "Lightning"
-      ],
-      "stage": "Basic",
-      "attacks": [
-        {
-          "cost": [
-            "Lightning"
-          ],
-          "name": "Recharge",
-          "effect": "Search your deck for a Energy card and attach it to Pikachu. Shuffle your deck afterward."
-        },
-        {
-          "cost": [
-            "Lightning",
-            "Lightning",
-            "Lightning"
-          ],
-          "name": "Thunderbolt",
-          "effect": "Discard all Energy cards attached to Pikachu in order to use this attack.",
-          "damage": 50
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Fighting",
-          "value": "×2"
-        }
-      ],
-      "retreat": 1,
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2024-08-25T02:45:45+02:00"
-    },
-    {
-      "id": "pl3-1",
-      "category": "Pokemon",
-      "illustrator": "Yusuke Ishikawa",
-      "image": "https://assets.tcgdex.net/en/pl/pl3/1",
-      "localId": "1",
-      "name": "Absol G",
-      "rarity": "Rare Holo",
-      "set": {
-        "cardCount": {
-          "official": 147,
-          "total": 153
-        },
-        "id": "pl3",
-        "logo": "https://assets.tcgdex.net/en/pl/pl3/logo",
-        "name": "Supreme Victors",
-        "symbol": "https://assets.tcgdex.net/univ/pl/pl3/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        359
-      ],
-      "hp": 70,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Basic",
-      "suffix": "SP",
-      "attacks": [
-        {
-          "cost": [
-            "Darkness"
-          ],
-          "name": "Feint Attack",
-          "effect": "Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on that Pokémon."
-        },
-        {
-          "cost": [
-            "Darkness",
-            "Colorless",
-            "Colorless"
-          ],
-          "name": "Doom News",
-          "effect": "Return all Energy cards attached to Absol G to your hand. The Defending Pokémon is Knocked Out at the end of your opponent's next turn."
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Fighting",
-          "value": "×2"
-        }
-      ],
-      "resistances": [
-        {
-          "type": "Psychic",
-          "value": "-20"
-        }
-      ],
-      "retreat": 1,
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-27T20:33:44+01:00"
-    },
-    {
       "id": "A1-004",
       "category": "Pokemon",
       "image": "https://assets.tcgdex.net/en/tcgp/A1/004",
@@ -362,65 +226,6 @@
         }
       ],
       "retreat": 4,
-      "regulationMark": "G",
-      "legal": {
-        "standard": true,
-        "expanded": true
-      },
-      "updated": "2024-07-03T12:38:33+02:00"
-    },
-    {
-      "id": "sv03.5-038",
-      "category": "Pokemon",
-      "image": "https://assets.tcgdex.net/en/sv/sv03.5/038",
-      "localId": "038",
-      "name": "Ninetales ex",
-      "rarity": "Double rare",
-      "set": {
-        "cardCount": {
-          "official": 165,
-          "total": 207
-        },
-        "id": "sv03.5",
-        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
-        "name": "151",
-        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": false,
-        "reverse": false,
-        "wPromo": false
-      },
-      "dexId": [
-        38
-      ],
-      "hp": 260,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Stage1",
-      "attacks": [
-        {
-          "cost": [
-            "Fire"
-          ],
-          "name": "Heat Wave",
-          "effect": "Your opponent's Active Pokémon is now Burned.",
-          "damage": 30
-        },
-        {
-          "cost": [
-            "Fire",
-            "Colorless"
-          ],
-          "name": "Mirrored Flames",
-          "effect": "If you have the same number of cards in your hand as your opponent, this attack does 140 more damage.",
-          "damage": "80+"
-        }
-      ],
-      "retreat": 2,
       "regulationMark": "G",
       "legal": {
         "standard": true,
@@ -689,71 +494,6 @@
       "updated": "2023-12-06T00:47:28+01:00"
     },
     {
-      "id": "base1-1",
-      "category": "Pokemon",
-      "illustrator": "Ken Sugimori",
-      "image": "https://assets.tcgdex.net/en/base/base1/1",
-      "localId": "1",
-      "name": "Alakazam",
-      "rarity": "Rare",
-      "set": {
-        "cardCount": {
-          "official": 102,
-          "total": 102
-        },
-        "id": "base1",
-        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
-        "name": "Base Set"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        65
-      ],
-      "hp": 80,
-      "types": [
-        "Psychic"
-      ],
-      "evolveFrom": "Kadabra",
-      "stage": "Stage2",
-      "abilities": [
-        {
-          "type": "Pokemon Power",
-          "name": "Damage Swap",
-          "effect": "As often as you like during your turn (before your attack), you may move 1 damage counter from 1 of your Pokémon to another as long as you don't Knock Out that Pokémon. This power can't be used if Alakazam is Asleep, Confused, or Paralyzed."
-        }
-      ],
-      "attacks": [
-        {
-          "cost": [
-            "Psychic",
-            "Psychic",
-            "Psychic"
-          ],
-          "name": "Confuse Ray",
-          "effect": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
-          "damage": 30
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Psychic",
-          "value": "×2"
-        }
-      ],
-      "retreat": 3,
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2024-05-28T14:19:12+02:00"
-    },
-    {
       "id": "gym1-1",
       "category": "Pokemon",
       "illustrator": "Ken Sugimori",
@@ -811,70 +551,6 @@
         "expanded": false
       },
       "updated": "2023-12-27T22:05:41+01:00"
-    },
-    {
-      "id": "base1-2",
-      "category": "Pokemon",
-      "illustrator": "Ken Sugimori",
-      "image": "https://assets.tcgdex.net/en/base/base1/2",
-      "localId": "2",
-      "name": "Blastoise",
-      "rarity": "Rare",
-      "set": {
-        "cardCount": {
-          "official": 102,
-          "total": 102
-        },
-        "id": "base1",
-        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
-        "name": "Base Set"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        9
-      ],
-      "hp": 100,
-      "types": [
-        "Water"
-      ],
-      "evolveFrom": "Wartortle",
-      "stage": "Stage2",
-      "abilities": [
-        {
-          "type": "Pokemon Power",
-          "name": "Rain Dance",
-          "effect": "As often as you like during your turn (before your attack), you may attach 1 Water Energy Card to 1 of your Water Pokémon. (This doesn't use up your 1 Energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed."
-        }
-      ],
-      "attacks": [
-        {
-          "cost": [
-            "Water",
-            "Water",
-            "Water"
-          ],
-          "name": "Hydro Pump",
-          "effect": "Does 40 damage plus 10 more damage for each attached Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
-          "damage": "40+"
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Lightning",
-          "value": "×2"
-        }
-      ],
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-06T00:47:28+01:00"
     },
     {
       "id": "base2-4",
@@ -935,6 +611,137 @@
         {
           "type": "Fighting",
           "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "fut2020-1",
+      "category": "Pokemon",
+      "illustrator": "The Pokémon Company Art Team",
+      "image": "https://assets.tcgdex.net/en/swsh/fut2020/1",
+      "localId": "1",
+      "name": "Pikachu on the Ball",
+      "rarity": "None",
+      "set": {
+        "cardCount": {
+          "official": 5,
+          "total": 5
+        },
+        "id": "fut2020",
+        "logo": "https://assets.tcgdex.net/en/swsh/fut2020/logo",
+        "name": "Pokémon Futsal 2020",
+        "symbol": "https://assets.tcgdex.net/univ/swsh/fut2020/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "description": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+      "stage": "Basic",
+      "attacks": [
+        {
+          "cost": [
+            "Colorless"
+          ],
+          "name": "Tail Whap",
+          "damage": 10
+        },
+        {
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "name": "Lightning Shot",
+          "effect": "Flip a coin. If tails, this attack does nothing.",
+          "damage": 120
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Fighting",
+          "value": "×2"
+        }
+      ],
+      "retreat": 1,
+      "regulationMark": "D",
+      "legal": {
+        "standard": false,
+        "expanded": true
+      },
+      "updated": "2024-08-25T02:45:45+02:00"
+    },
+    {
+      "id": "neo4-3",
+      "category": "Pokemon",
+      "illustrator": "Shin-ichi Yoshida",
+      "image": "https://assets.tcgdex.net/en/neo/neo4/3",
+      "localId": "3",
+      "name": "Dark Donphan",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 105,
+          "total": 113
+        },
+        "id": "neo4",
+        "logo": "https://assets.tcgdex.net/en/neo/neo4/logo",
+        "name": "Neo Destiny",
+        "symbol": "https://assets.tcgdex.net/univ/neo/neo4/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        232
+      ],
+      "hp": 60,
+      "types": [
+        "Fighting"
+      ],
+      "evolveFrom": "Phanpy",
+      "stage": "Stage1",
+      "attacks": [
+        {
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "name": "Tusk Toss",
+          "effect": "If your opponent has any Benched Pokémon, flip a coin. If heads, return the Defending Pokémon and all cards attached to it to your opponent's hand. If tails, your opponent chooses 1 of his or her Benched Pokémon and switches it with the Defending Pokémon."
+        },
+        {
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "name": "Giant Tusk",
+          "damage": 50
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Grass",
+          "value": "×2"
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Lightning",
+          "value": "-30"
         }
       ],
       "legal": {
