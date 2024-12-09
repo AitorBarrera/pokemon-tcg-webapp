@@ -206,7 +206,7 @@ function renderPokemonCard(pokemonCards, collections = false){
     const cardContainer = document.querySelector(".cardContainer .row");
 
     if (!pokemonCards.length > 0){
-        cardContainer.innerHTML = "<h2 class='errorFilters text-center text-danger display-6 bg-dark'>There are not cards that fit the filters</h2>";
+        cardContainer.innerHTML = "<h2 class='errorFilters text-center display-4'>There are not cards that fit the filters</h2>";
     } else {
         cardContainer.innerHTML = "";
     }
@@ -236,16 +236,23 @@ function renderPokemonCard(pokemonCards, collections = false){
     const starFavoriteButtons = document.querySelectorAll(".starFavoriteButton");
     
     starFavoriteButtons.forEach(button => {
+        const toastElement = document.getElementById('liveToastFav');
+        const toast = new bootstrap.Toast(toastElement);
+
         button.addEventListener("click", e =>{
+
             const idCard = button.getAttribute("data-id");
 
             API.getPokemonCardsById(idCard).then((card) => {
                 let selectedCard = card;
                 // renderModalAddCollection(card);
+                document.querySelector(".toastIcon").src = card.image + "/high.webp";
+                document.querySelector(".toastCardName").textContent = card.name;
                 collectionAPI.postCardToFavorites(selectedCard);
         
             }).catch(error => console.log("Error: " + error));
             
+            toast.show();
         })
     })
 
@@ -328,6 +335,7 @@ function renderSets(seriesId){
                 document.querySelector(".currentRarityName").innerHTML = '<img src="img/logo-placeholder.png" alt="" class="w-50">';
                 renderRarities(set.id);
                 filterCards();
+                fixLogos();
             })
 
             dropdown.append(dropdownItem);
@@ -335,6 +343,7 @@ function renderSets(seriesId){
 
     }).catch(error => console.log("Error: " + error))
 }
+
 
 function renderRarities(setId){
     const dropdown = document.querySelector(".dropdownRarity");
@@ -377,9 +386,6 @@ function filterCards() {
     currentSetId = currentSetId==null? undefined :currentSetId;
 
     API.getFilteredCards(currentSetId, inputSearchByName.value, "", currentRarityName, currentSortName).then(cards => {
-        console.log(cards);
-        
-
         renderPokemonCard(cards);
         
     }).catch(error => console.log("Error: " + error));
@@ -417,8 +423,6 @@ function changeHTML(id) {
 
 //-----------------------------CHANGE THE BUTTON ON CARDS TO DELETE IN FAVORITE PAGE------------------------------------
 function changeFavoriteButtonToDelete() {
-
-    console.log("change");
     
     const starFavoriteButtonContainers = document.querySelectorAll(".starFavoriteButtonContainer");
     starFavoriteButtonContainers.forEach(container =>{
@@ -430,14 +434,26 @@ function changeFavoriteButtonToDelete() {
     })
 
     const buttons = document.querySelectorAll(".deleteFavoriteButton");
-        buttons.forEach(button => button.addEventListener("click", e =>{
-            const idCard = button.getAttribute("data-id");
-            collectionAPI.deleteCardFromFavorites(idCard).then(response =>{
-                console.log(`Card with id ${idCard} has benn deleted from favorites.`);
-    
-                renderFavorites();
-            }).catch(error => console.log("Error: " + error));
-        }))
+        buttons.forEach(button => {
+            const toastElement = document.getElementById('liveToastFavDel');
+            const toast = new bootstrap.Toast(toastElement);
+
+            button.addEventListener("click", e =>{
+                toast.show();
+
+                const idCard = button.getAttribute("data-id");
+
+                collectionAPI.deleteCardFromFavorites(idCard).then(card =>{
+                    console.log(`Card with id ${idCard} has benn deleted from favorites.`);
+        
+                    document.querySelector(".toastIconDelete").src = card.image + "/high.webp";
+                    document.querySelector(".toastCardNameDelete").textContent = card.name;
+                    
+                    renderFavorites();
+                }).catch(error => console.log("Error: " + error));
+            
+            })
+        })
 }
 
 //-----------------------------HIDE THE FILTER FOR FAOVRITES PAGE------------------------------------
@@ -469,16 +485,16 @@ function fixLogos() {
         
         if (srcImg.indexOf("/pop/np/logo.webp") != -1){
             img.src = `https://assets.tcgdex.net/en/pop/pop1/logo.webp`
-        }
+        } else
         if (srcImg.indexOf("/dp/dpp/logo.webp") != -1){
             img.src = `https://assets.tcgdex.net/en/dp/dp1/logo.webp`
-        }
+        } else
         if (srcImg.indexOf("/xy/xyp/logo.webp") != -1){
             img.src = `https://assets.tcgdex.net/en/xy/xy1/logo.webp`
-        }
+        } else
         if (srcImg.indexOf("/sm/smp/logo.webp") != -1){
             img.src = `https://assets.tcgdex.net/en/sm/sm1/logo.webp`
-        }
+        } else
         if (srcImg.indexOf("/swsh/swshp/logo.webp") != -1){
             img.src = `https://assets.tcgdex.net/en/swsh/swsh1/logo.webp`
         }

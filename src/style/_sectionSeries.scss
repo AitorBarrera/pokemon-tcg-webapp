@@ -2,9 +2,10 @@
 
 .seriesCard, .setsCard, .setByIdCard {
     background-color: $color-navbar;
+    border: 0;
     justify-content: space-between;
     padding: 15px;
-    max-height: 20rem;
+    min-height: 20rem;
 
     .card-img-top{
         height: 70%;
@@ -14,7 +15,7 @@
         justify-content: center;
 
         img{
-            max-height: 100%;
+            max-height: 70%;
             text-align: center;
         }
     }
@@ -26,7 +27,8 @@
         justify-content: center;
 
         .card-title{
-            color: $color-secundary-text;
+            color: $color-primary-hover;
+            font-weight: 800;
             margin: 0;
         }
     }

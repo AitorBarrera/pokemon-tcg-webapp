@@ -33,6 +33,8 @@
 
             img{
                 max-height: 200px;
+                max-width: 80%;
+                margin-bottom: 0.5rem;
             }
 
             .nameItem{
@@ -42,6 +44,7 @@
 
             .dropdown-menu{
                 max-height: 600px;
+                width: 18rem !important;
             }
         }
     }

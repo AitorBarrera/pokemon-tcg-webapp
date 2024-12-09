@@ -10,6 +10,7 @@
 @use "navbar";
 @use "cardContainer";
 @use "sectionSeries";
+@use "toastFavorites";
 
 *{
     margin: 0;
@@ -25,6 +26,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.801);
 }
 
 main{
@@ -37,7 +39,14 @@ a{
 }
 
 .sectionTitle{
-    background-color: $color-main-text;
-    color: $color-secundary;
+    color: $color-gold;
     border-radius: 10px;
+    text-shadow: 3px 3px black;
+}
+
+.errorFilters{
+    color: red;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+    margin-top: 1rem;
 }

@@ -49,131 +49,6 @@
       "updated": "2024-11-06T02:16:30+01:00"
     },
     {
-      "id": "base1-30",
-      "category": "Pokemon",
-      "illustrator": "Ken Sugimori",
-      "image": "https://assets.tcgdex.net/en/base/base1/30",
-      "localId": "30",
-      "name": "Ivysaur",
-      "rarity": "Uncommon",
-      "set": {
-        "cardCount": {
-          "official": 102,
-          "total": 102
-        },
-        "id": "base1",
-        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
-        "name": "Base Set"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        2
-      ],
-      "hp": 60,
-      "types": [
-        "Grass"
-      ],
-      "evolveFrom": "Barboach",
-      "stage": "Stage1",
-      "attacks": [
-        {
-          "cost": [
-            "Grass",
-            "Colorless",
-            "Colorless"
-          ],
-          "name": "Vine Whip",
-          "damage": 30
-        },
-        {
-          "cost": [
-            "Grass",
-            "Grass",
-            "Grass"
-          ],
-          "name": "Poisonpowder",
-          "effect": "The Defending Pokémon is now Poisoned.",
-          "damage": 20
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Fire",
-          "value": "×2"
-        }
-      ],
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-06T00:47:28+01:00"
-    },
-    {
-      "id": "A1-004",
-      "category": "Pokemon",
-      "image": "https://assets.tcgdex.net/en/tcgp/A1/004",
-      "localId": "004",
-      "name": "Venusaur ex",
-      "rarity": "Four Diamond",
-      "set": {
-        "cardCount": {
-          "official": 226,
-          "total": 275
-        },
-        "id": "A1",
-        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
-        "name": "Genetic Apex",
-        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "hp": 190,
-      "types": [
-        "Grass"
-      ],
-      "stage": "Stage2",
-      "suffix": "EX",
-      "attacks": [
-        {
-          "cost": [
-            "Grass",
-            "Colorless",
-            "Colorless"
-          ],
-          "name": "Razor Leaf",
-          "damage": "60"
-        },
-        {
-          "cost": [
-            "Grass",
-            "Grass",
-            "Colorless",
-            "Colorless"
-          ],
-          "name": "Giant Bloom",
-          "effect": "Heal 30 damage from this Pokémon.",
-          "damage": "100"
-        }
-      ],
-      "retreat": 3,
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2024-11-06T02:16:30+01:00"
-    },
-    {
       "id": "sv03.5-076",
       "category": "Pokemon",
       "image": "https://assets.tcgdex.net/en/sv/sv03.5/076",
@@ -285,64 +160,6 @@
         }
       ],
       "retreat": 2,
-      "regulationMark": "G",
-      "legal": {
-        "standard": true,
-        "expanded": true
-      },
-      "updated": "2024-07-03T12:38:33+02:00"
-    },
-    {
-      "id": "sv03.5-151",
-      "category": "Pokemon",
-      "image": "https://assets.tcgdex.net/en/sv/sv03.5/151",
-      "localId": "151",
-      "name": "Mew ex",
-      "rarity": "Double rare",
-      "set": {
-        "cardCount": {
-          "official": 165,
-          "total": 207
-        },
-        "id": "sv03.5",
-        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
-        "name": "151",
-        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": false,
-        "reverse": false,
-        "wPromo": false
-      },
-      "dexId": [
-        151
-      ],
-      "hp": 180,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "abilities": [
-        {
-          "type": "Ability",
-          "name": "Restart",
-          "effect": "Once during your turn, you may draw cards until you have 3 cards in your hand."
-        }
-      ],
-      "attacks": [
-        {
-          "cost": [
-            "Colorless",
-            "Colorless",
-            "Colorless"
-          ],
-          "name": "Genome Hacking",
-          "effect": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
-        }
-      ],
-      "retreat": 0,
       "regulationMark": "G",
       "legal": {
         "standard": true,
@@ -494,208 +311,76 @@
       "updated": "2023-12-06T00:47:28+01:00"
     },
     {
-      "id": "gym1-1",
+      "id": "A1-277",
       "category": "Pokemon",
-      "illustrator": "Ken Sugimori",
-      "image": "https://assets.tcgdex.net/en/gym/gym1/1",
-      "localId": "1",
-      "name": "Blaine's Moltres",
-      "rarity": "Rare Holo",
-      "set": {
-        "cardCount": {
-          "official": 132,
-          "total": 132
-        },
-        "id": "gym1",
-        "logo": "https://assets.tcgdex.net/en/gym/gym1/logo",
-        "name": "Gym Heroes",
-        "symbol": "https://assets.tcgdex.net/univ/gym/gym1/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        146
-      ],
-      "hp": 90,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Basic",
-      "attacks": [
-        {
-          "cost": [
-            "Fire",
-            "Fire",
-            "Fire",
-            "Fire",
-            "Fire"
-          ],
-          "name": "Phoenix Flame",
-          "effect": "Flip a coin. If tails, shuffle Blaine's Moltres and all cards attached to it into your deck (after doing damage).",
-          "damage": 90
-        }
-      ],
-      "resistances": [
-        {
-          "type": "Fighting",
-          "value": "-30"
-        }
-      ],
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-27T22:05:41+01:00"
-    },
-    {
-      "id": "base2-4",
-      "category": "Pokemon",
-      "illustrator": "Kagemaru Himeno",
-      "image": "https://assets.tcgdex.net/en/base/base2/4",
-      "localId": "4",
-      "name": "Jolteon",
-      "rarity": "Rare",
-      "set": {
-        "cardCount": {
-          "official": 64,
-          "total": 64
-        },
-        "id": "base2",
-        "logo": "https://assets.tcgdex.net/en/base/base2/logo",
-        "name": "Jungle",
-        "symbol": "https://assets.tcgdex.net/univ/base/base2/symbol"
-      },
-      "variants": {
-        "firstEdition": false,
-        "holo": true,
-        "normal": true,
-        "reverse": true,
-        "wPromo": false
-      },
-      "dexId": [
-        135
-      ],
-      "hp": 70,
-      "types": [
-        "Lightning"
-      ],
-      "evolveFrom": "Eevee",
-      "stage": "Stage1",
-      "attacks": [
-        {
-          "cost": [
-            "Colorless",
-            "Colorless"
-          ],
-          "name": "Quick Attack",
-          "effect": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
-          "damage": "10+"
-        },
-        {
-          "cost": [
-            "Lightning",
-            "Lightning",
-            "Colorless"
-          ],
-          "name": "Pin Missile",
-          "effect": "Flip 4 coins. This attack does 20 damage times the number of heads.",
-          "damage": "20x"
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Fighting",
-          "value": "×2"
-        }
-      ],
-      "legal": {
-        "standard": false,
-        "expanded": false
-      },
-      "updated": "2023-12-06T00:47:28+01:00"
-    },
-    {
-      "id": "fut2020-1",
-      "category": "Pokemon",
-      "illustrator": "The Pokémon Company Art Team",
-      "image": "https://assets.tcgdex.net/en/swsh/fut2020/1",
-      "localId": "1",
-      "name": "Pikachu on the Ball",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/277",
+      "localId": "277",
+      "name": "Gengar ex",
       "rarity": "None",
       "set": {
         "cardCount": {
-          "official": 5,
-          "total": 5
+          "official": 226,
+          "total": 275
         },
-        "id": "fut2020",
-        "logo": "https://assets.tcgdex.net/en/swsh/fut2020/logo",
-        "name": "Pokémon Futsal 2020",
-        "symbol": "https://assets.tcgdex.net/univ/swsh/fut2020/symbol"
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
       },
       "variants": {
         "firstEdition": false,
         "holo": true,
-        "normal": false,
-        "reverse": false,
+        "normal": true,
+        "reverse": true,
         "wPromo": false
       },
-      "description": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
-      "stage": "Basic",
+      "hp": 170,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage2",
+      "suffix": "EX",
+      "abilities": [
+        {
+          "type": "Ability",
+          "name": "Shadowy Spellbind",
+          "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
+        }
+      ],
       "attacks": [
         {
           "cost": [
-            "Colorless"
+            "Psychic",
+            "Psychic",
+            "Psychic"
           ],
-          "name": "Tail Whap",
-          "damage": 10
-        },
-        {
-          "cost": [
-            "Lightning",
-            "Lightning",
-            "Colorless"
-          ],
-          "name": "Lightning Shot",
-          "effect": "Flip a coin. If tails, this attack does nothing.",
-          "damage": 120
+          "name": "Spooky Shot",
+          "damage": "100"
         }
       ],
-      "weaknesses": [
-        {
-          "type": "Fighting",
-          "value": "×2"
-        }
-      ],
-      "retreat": 1,
-      "regulationMark": "D",
+      "retreat": 2,
       "legal": {
         "standard": false,
-        "expanded": true
+        "expanded": false
       },
-      "updated": "2024-08-25T02:45:45+02:00"
+      "updated": "2024-11-06T02:16:30+01:00"
     },
     {
-      "id": "neo4-3",
+      "id": "base1-16",
       "category": "Pokemon",
-      "illustrator": "Shin-ichi Yoshida",
-      "image": "https://assets.tcgdex.net/en/neo/neo4/3",
-      "localId": "3",
-      "name": "Dark Donphan",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/base1/16",
+      "localId": "16",
+      "name": "Zapdos",
       "rarity": "Rare",
       "set": {
         "cardCount": {
-          "official": 105,
-          "total": 113
+          "official": 102,
+          "total": 102
         },
-        "id": "neo4",
-        "logo": "https://assets.tcgdex.net/en/neo/neo4/logo",
-        "name": "Neo Destiny",
-        "symbol": "https://assets.tcgdex.net/univ/neo/neo4/symbol"
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
       },
       "variants": {
         "firstEdition": false,
@@ -705,42 +390,40 @@
         "wPromo": false
       },
       "dexId": [
-        232
+        145
       ],
-      "hp": 60,
+      "hp": 90,
       "types": [
-        "Fighting"
+        "Lightning"
       ],
-      "evolveFrom": "Phanpy",
-      "stage": "Stage1",
+      "stage": "Basic",
       "attacks": [
         {
           "cost": [
-            "Fighting",
-            "Fighting"
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Colorless"
           ],
-          "name": "Tusk Toss",
-          "effect": "If your opponent has any Benched Pokémon, flip a coin. If heads, return the Defending Pokémon and all cards attached to it to your opponent's hand. If tails, your opponent chooses 1 of his or her Benched Pokémon and switches it with the Defending Pokémon."
+          "name": "Thunder",
+          "effect": "Flip a coin. If tails, Zapdos does 30 damage to itself.",
+          "damage": 60
         },
         {
           "cost": [
-            "Fighting",
-            "Fighting",
-            "Colorless"
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Lightning"
           ],
-          "name": "Giant Tusk",
-          "damage": 50
-        }
-      ],
-      "weaknesses": [
-        {
-          "type": "Grass",
-          "value": "×2"
+          "name": "Thunderbolt",
+          "effect": "Discard all Energy cards attached to Zapdos in order to use this attack.",
+          "damage": 100
         }
       ],
       "resistances": [
         {
-          "type": "Lightning",
+          "type": "Fighting",
           "value": "-30"
         }
       ],
@@ -749,6 +432,178 @@
         "expanded": false
       },
       "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "lc-11",
+      "category": "Pokemon",
+      "illustrator": "Keiji Kinebuchi",
+      "image": "https://assets.tcgdex.net/en/lc/lc/11",
+      "localId": "11",
+      "name": "Gengar",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 110,
+          "total": 110
+        },
+        "id": "lc",
+        "logo": "https://assets.tcgdex.net/en/lc/lc/logo",
+        "name": "Legendary Collection",
+        "symbol": "https://assets.tcgdex.net/univ/lc/lc/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        94
+      ],
+      "hp": 80,
+      "types": [
+        "Psychic"
+      ],
+      "evolveFrom": "Haunter",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Poke-POWER",
+          "name": "Curse",
+          "effect": "Once during your turn (before your attack), you may move 1 damage counter from 1 of your opponent's Pokémon to another (even if it would Knock Out the other Pokémon). This power can't be used if Gengar is Asleep, Confused, or Paralyzed."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "name": "Dark Mind",
+          "effect": "If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "damage": 30
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Fighting",
+          "value": "-30"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2021-05-26T14:51:02+02:00"
+    },
+    {
+      "id": "A1-284",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/284",
+      "localId": "284",
+      "name": "Charizard ex",
+      "rarity": "Crown",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 275
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 180,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Slash",
+          "damage": "60"
+        },
+        {
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Crimson Storm",
+          "effect": "Discard 2 R Energy from this Pokémon.",
+          "damage": "200"
+        }
+      ],
+      "retreat": 2,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-11-06T02:16:30+01:00"
+    },
+    {
+      "id": "A1-281",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/281",
+      "localId": "281",
+      "name": "Pikachu ex",
+      "rarity": "None",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 275
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 120,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "name": "Circle Circuit",
+          "effect": "This attack does 30 damage for each of your Benched L Pokémon.",
+          "damage": "30x"
+        }
+      ],
+      "retreat": 1,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-11-06T02:16:30+01:00"
     }
   ],
   "other_collections": [

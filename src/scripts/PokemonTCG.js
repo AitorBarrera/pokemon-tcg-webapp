@@ -135,8 +135,6 @@ export async function getCardCount(cardSet){
 export async function getRarities(cardSet) {
     try {
         const count = await getCardCount(cardSet);
-        console.log("Card Set:", cardSet);
-        console.log("Count:", count);
 
         const rarities = new Set();
         const limitCount = count/2;
@@ -168,7 +166,6 @@ export async function getRarities(cardSet) {
         }
     
         const raritiesArray = [...rarities];
-        console.log("Rarities:", raritiesArray);
         return raritiesArray;
     
         } catch (error) {
