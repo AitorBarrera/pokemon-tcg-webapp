@@ -133,7 +133,7 @@ export async function getSetsBySeriesId(){
 export async function getFilteredCards(set = "base1", name = "", category = "", rarity = "", sortedBy = ""){
 
     try {
-        const endPoint =`${API_URL}/cards?id=like:${set}&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}&${sortedBy}=notnull:`
+        const endPoint =`${API_URL}/cards?id=like:${set}&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}&sort:order=ASC`
         console.log(endPoint);
         
         const response = await fetch(endPoint);

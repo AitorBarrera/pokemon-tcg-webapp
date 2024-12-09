@@ -10,7 +10,7 @@ buttonUp.setupButtonClick();
 let currentListCards;
 let currentSeriesSelected = "base";
 document.addEventListener("DOMContentLoaded", event =>{
-    changeHTML("sectionCards")
+    changeHTML("sectionHero")
     // API.getAllPokemonCardsBySet("A1").then((pokemonCard) => {
     //     // console.log(pokemonCard.cards);
     //     renderPokemonCard(pokemonCard.cards);
@@ -262,7 +262,7 @@ function renderSeries(seriesList){
                 document.querySelector(".currentRarityName").innerHTML = '<img src="img/logo-placeholder.png" alt="" class="w-50">';
                 
                 renderSets(currentSeriesSelected);
-        
+                fixLogos();
             }).catch(error => console.log("Error: " + error))
         })
 

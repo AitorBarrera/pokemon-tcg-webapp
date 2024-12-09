@@ -2,5 +2,12 @@
 
 footer{
     background-color: $color-primary;
-    height: 7vh;
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        font-size: 3vh;
+    }
 }
