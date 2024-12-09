@@ -6,12 +6,14 @@ import * as API from "./PokemonTCG.js";
 
 buttonUp.setupButtonClick();
 
-
 let currentListCards;
 let currentSeriesSelected = "base";
 document.addEventListener("DOMContentLoaded", event =>{
+
+    //-----------------------------INDEX PAGE------------------------------------
     changeHTML("sectionHero")
-    
+
+    //-----------------------------NAVIGATION BUTTONS------------------------------------
     const buttonsChangeToSectionHero = document.querySelectorAll(".changeToSectionHero");
     buttonsChangeToSectionHero.forEach(button => button.addEventListener("click", e => changeHTML("sectionHero")));
 
@@ -45,6 +47,7 @@ document.addEventListener("DOMContentLoaded", event =>{
         }
     );
 
+    //-----------------------------REQUEST TO GET THE SERIES AND SETS FROM THE API------------------------------------
     API.getSeries().then((series) => {
         // console.log(series);
        renderSeries(series);
@@ -57,6 +60,7 @@ document.addEventListener("DOMContentLoaded", event =>{
        renderSetsRow(sets);
     }).catch(error => console.log("Error: " + error))
 
+    //-----------------------------FILTERS BY THE NAME WRITTEN IN THE INPUT------------------------------------
     const buttonSearchByName = document.querySelector(".buttonSearchByName");
 
     buttonSearchByName.addEventListener("click", e =>{
@@ -66,7 +70,8 @@ document.addEventListener("DOMContentLoaded", event =>{
         filterCards();
     })
 });
-//Show series in row
+
+//-----------------------------RENDER PAGES------------------------------------
 function renderSeriesRow(seriesList) {
     const seriesRow = document.querySelector(".series-row");
     seriesRow.innerHTML = ""; 
@@ -188,6 +193,14 @@ function renderSetsRowById(seriesId) {
 }).catch(error => console.log("Error: " + error))
 }
 
+function renderFavorites() {
+    collectionAPI.getAllFavorites().then(cards => {
+        renderPokemonCard(cards, true);
+        changeHTML("sectionCards");
+        changeFavoriteButtonToDelete();
+    }).catch(error => console.log("Error: " + error));    
+}
+
 function renderPokemonCard(pokemonCards, collections = false){
 
     const cardContainer = document.querySelector(".cardContainer .row");
@@ -206,7 +219,6 @@ function renderPokemonCard(pokemonCards, collections = false){
     })
 
     pokemonCards.forEach(pokemonCard => {
-        // console.log(pokemonCard);
 
         const card = cardTemplate.cloneNode(true).content;
 
@@ -240,14 +252,13 @@ function renderPokemonCard(pokemonCards, collections = false){
     toggleFilter(collections)
 }
 
-
+//-----------------------------RENDER FILTERS------------------------------------
 function renderSeries(seriesList){
 
     const dropdown = document.querySelector(".dropdownSeries");
     const dropdownItemTemplate = dropdown.querySelector("#dropdownItemTemplate");
 
     seriesList.forEach(serie => {
-        // console.log(series);
 
         const dropdownItem = dropdownItemTemplate.cloneNode(true).content;
         const logoItem = dropdownItem.querySelector("img");
@@ -355,6 +366,8 @@ function renderRarities(setId){
     }).catch(error => console.log("Error: " + error))
 }
 
+
+//-----------------------------FILTER OF CARDS BY THE SETUP PARAMETERS------------------------------------
 function filterCards() {
     let currentSetId = document.querySelector(".currentSet").parentNode.getAttribute("data-id");
     let inputSearchByName = document.querySelector(".inputSearchByName");
@@ -373,7 +386,7 @@ function filterCards() {
 }
 
 
-// auxiliar function to change the HTML code 
+//-----------------------------SPA FUNCTION------------------------------------
 function changeHTML(id) { 
     const header = document.querySelector("header");
 
@@ -401,73 +414,8 @@ function changeHTML(id) {
     paginaAMostrar.classList.add("d-block");
 }
 
-function renderFavorites(collectionName = "favorites") {
 
-    switch (collectionName) {
-        case "favorites":
-            collectionAPI.getAllFavorites().then(cards => {
-                renderPokemonCard(cards, true);
-                changeHTML("sectionCards");
-                changeFavoriteButtonToDelete();
-            }).catch(error => console.log("Error: " + error));
-            break;
-    
-        case "":
-            
-            break;
-        default:
-            break;
-    }
-}
-
-function renderModalAddCollection(card) {
-    const modalAddCollection = document.querySelector(".modalAddCollection");
-    modalAddCollection.querySelector(".modalCardName").textContent = card.name;
-    const idCard = card.id;
-
-    API.getPokemonCardsById(idCard).then(givenCard =>{
-        const cardTemplate = document.querySelector("#pokemonCardTemplate");
-        let selectedCard = cardTemplate.cloneNode(true).content;
-        
-        const cardImg = selectedCard.querySelector("img");
-        cardImg.src = `${givenCard.image}/high.webp`
-        cardImg.alt = givenCard.id
-
-        let pokemonCard = selectedCard.querySelector(".pokemonCard")
-        
-        pokemonCard.classList.add("w-50");
-
-        selectedCard.querySelector(".pokemonCard").querySelector(".starFavoriteButtonContainer").innerHTML = "";
-
-        modalAddCollection.querySelector(".cardSelected").innerHTML = "";
-        
-        modalAddCollection.querySelector(".cardSelected").append(selectedCard);
-    })
-
-    const collectionSelect = modalAddCollection.querySelector("#collectionSelect");
-    const selectCollectionOptionTemplate = modalAddCollection.querySelector(".selectCollectionOptionTemplate");
-
-    collectionAPI.getCollections().then(collectionNames =>{
-        collectionNames.forEach(collectionName =>{        
-            let selectCollectionOption = selectCollectionOptionTemplate.cloneNode(true).content.querySelector("option");
-            selectCollectionOption.value = collectionName;
-            selectCollectionOption.textContent = collectionName;
-            console.log(collectionName);
-
-            collectionSelect.append(selectCollectionOption);
-        })
-    })
-
-    modalAddCollection.querySelector(".addCollectionButton").addEventListener("click", e =>{
-        API.getPokemonCardsById(idCard).then(givenCard =>{
-            const collectionName = modalAddCollection.querySelector("#collectionSelect").value;
-            console.log(collectionName);
-
-            collectionAPI.postCardToFavorites
-        })
-    })
-}
-// function to change the favorite button to delete button
+//-----------------------------CHANGE THE BUTTON ON CARDS TO DELETE IN FAVORITE PAGE------------------------------------
 function changeFavoriteButtonToDelete() {
 
     console.log("change");
@@ -492,6 +440,7 @@ function changeFavoriteButtonToDelete() {
         }))
 }
 
+//-----------------------------HIDE THE FILTER FOR FAOVRITES PAGE------------------------------------
 function toggleFilter(favorite = false) {
     let filterNavbar = document.querySelector("#navbar");
     let favoritesTitle = document.querySelector(".favoritesTitle");
@@ -511,6 +460,7 @@ function toggleFilter(favorite = false) {
 
 }
 
+//-----------------------------FIX WRONG LOGOS------------------------------------
 function fixLogos() {
     let allImgs= document.querySelectorAll("img");
 
