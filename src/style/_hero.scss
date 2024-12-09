@@ -6,7 +6,7 @@
     background-size: cover;
     background-attachment: fixed;
 
-    height: 93vh;
+    min-height: 93vh;
 
     @include respond-to("medium"){
         height: 100%;
