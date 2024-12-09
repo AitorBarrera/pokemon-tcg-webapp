@@ -749,6 +749,136 @@
         "expanded": false
       },
       "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "base1-4",
+      "category": "Pokemon",
+      "illustrator": "Mitsuhiro Arita",
+      "image": "https://assets.tcgdex.net/en/base/base1/4",
+      "localId": "4",
+      "name": "Charizard",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        6
+      ],
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "evolveFrom": "Charmeleon",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Pokemon Power",
+          "name": "Energy Burn",
+          "effect": "As often as you like during your turn (before your attack), you may turn all Energy attached to Charizard into Fire Energy for the rest of the turn. This power can't be used if Charizard is Asleep, Confused, or Paralyzed."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "name": "Fire Spin",
+          "effect": "Discard 2 Energy cards attached to Charizard in order to use this attack.",
+          "damage": 100
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Water",
+          "value": "×2"
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Fighting",
+          "value": "-30"
+        }
+      ],
+      "retreat": 3,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-08-25T02:45:45+02:00"
+    },
+    {
+      "id": "swsh10-098",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/swsh/swsh10/098",
+      "localId": "098",
+      "name": "Darkrai V",
+      "rarity": "Holo Rare V",
+      "set": {
+        "cardCount": {
+          "official": 189,
+          "total": 246
+        },
+        "id": "swsh10",
+        "logo": "https://assets.tcgdex.net/en/swsh/swsh10/logo",
+        "name": "Astral Radiance",
+        "symbol": "https://assets.tcgdex.net/univ/swsh/swsh10/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "suffix": "V",
+      "attacks": [
+        {
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "name": "Wind of Darkness",
+          "damage": 50
+        },
+        {
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "name": "Dark Void",
+          "effect": "Your opponent's Active Pokémon is now Asleep.",
+          "damage": 130
+        }
+      ],
+      "retreat": 2,
+      "regulationMark": "F",
+      "legal": {
+        "standard": true,
+        "expanded": true
+      },
+      "updated": "2023-12-27T19:30:08+01:00"
     }
   ],
   "other_collections": [
