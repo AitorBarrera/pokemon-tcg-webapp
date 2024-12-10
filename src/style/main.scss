@@ -2,13 +2,51 @@
 @use "header";
 @use "hero";
 @use "footer";
+@use "dropdown";
+@use "layout";
+@use "buttonUp";
+@use "apexLogo";
+@use "pokemonCard";
+@use "navbar";
+@use "cardContainer";
+@use "sectionSeries";
+@use "toastFavorites";
 
-$background-color: rgb(243, 238, 212);
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
 .imgSerie{
     width: 100%;
 }
 
 body{
-    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.801);
+}
+
+main{
+    flex: 1;
+}
+
+a{
+    color: $color-gold;
+    text-decoration: none;
+}
+
+.sectionTitle{
+    color: $color-gold;
+    border-radius: 10px;
+    text-shadow: 3px 3px black;
+}
+
+.errorFilters{
+    color: red;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+    margin-top: 1rem;
 }

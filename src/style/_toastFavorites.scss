@@ -1,0 +1,20 @@
+@use "globals" as *;
+.toast-container{
+
+    .toast-header{
+        background-color: $color-primary;
+        color: $color-secundary;
+    }
+
+    .toast-body{
+        background-color: $color-secundary-opacity-medium;
+    }
+
+    // #liveToastFav{
+
+    // }
+
+    // #liveToastFavDel{
+
+    // }
+}

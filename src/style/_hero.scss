@@ -1,11 +1,23 @@
 @use "globals" as *;
 .hero {
     background-image: url(../img/hero.png);
-    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    height: 41rem;
+    background-size: cover;
+    background-attachment: fixed;
+
+    min-height: 93vh;
+
+    @include respond-to("medium"){
+        height: 100%;
+    }
+
     .card{
-        background-color: $primary-color;
+        background-color: $color-primary;
         margin-top: 6rem;
+    }
+
+    img{
+        height: 14rem;
     }
 }

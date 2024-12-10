@@ -1,0 +1,51 @@
+@use "globals" as *;
+
+.pokemonCard{
+    position: relative;
+
+    .starFavorite, .starFavoriteBorder, .deleteFavorite{
+        position: absolute;
+
+        bottom: 5%;
+        right: 10%;
+
+        opacity: 0%;
+    }
+
+    &:hover{
+        .starFavorite, .starFavoriteBorder, .deleteFavorite{
+            opacity: 100%;
+
+            transition: opacity 0.5s;
+        }
+    }
+
+    .starFavorite{
+        color: gold;
+        font-size: 2rem;
+    }
+
+    .starFavoriteBorder{
+        color: rgb(0, 0, 0);
+        font-size: 2rem;
+        font-weight: 100;
+    }
+
+    .deleteFavorite{
+        color: rgb(252, 23, 23);
+        font-size: 4rem;
+    }
+
+    img{
+        border: 3px solid $color-gold;
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px black;
+    }
+
+    &:hover{
+        transform: scale(1.15); /* Aplica un ligero zoom (10% más grande) */
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Incrementa la intensidad de la sombra */
+        transition: all 2sec;
+        z-index: 100;
+    }
+}

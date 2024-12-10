@@ -5,61 +5,195 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokemon TCG Explorer</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="style/main.scss">
 </head>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+<header class="d-none">
+  <nav>
+    <div class="d-flex justify-content-center py-3">
+      <a href="#sectionHero" class="changeToSectionHero">
+        <img src="img/logo.png" class="mx-auto" alt="">
+      </a>
+    </div>
+    <ul class="nav justify-content-center py-3 ">
+      <li class="nav-item">
+        <h3><a class="nav-link text-white changeToSectionSeries" href="#"><strong>SERIES</strong></a></h3>
+      </li>
+      <li class="nav-item">
+        <h3><a class="nav-link text-white changeToSectionSets" href="#"><strong>SETS</strong></a></h3>
+      </li>
+      <li class="nav-item">
+        <h3><a class="nav-link text-white changeToFavorites" href="#"><strong>FAVOURITES</strong></a></h3>
+      </li>
+      <li class="nav-item">
+        <h3><a class="nav-link text-white changeToSectionCards" href="#"><strong>FILTER</strong></a></h3>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+    <div id="sectionSeriesRow" class="sectionSeriesRow pagina">
+      <h2 class="display-1 text-center sectionTitle mt-4">ALL SERIES</h4>
+        <div class="series-row row">
+
+        </div>
+    </div>
+    <div id="sectionSetIdRow" class="sectionSetIdRow pagina">
+      <h2 class="display-1 text-center sectionTitle mt-4"> <span class="selectedSerie"></span> SETs</h4>
+        <div class="setsId-row row">
+
+        </div>
+    </div>
+  </div>
+
+  <!--Show all sets -->
+  <section id="sectionSets" class="pagina">
+    <div class="container">
+      <h2 class="display-1 text-center sectionTitle mt-4">ALL SETS</h4>
+        <div class="sets-row row">
+
+        </div>
+    </div>
+  </section>
+
+  <section id="sectionHero" class="hero pagina p-3 d-block">
+    <div class="container d-flex flex-column">
+      <div class="mainLogo w-100 d-flex justify-content-center">
+        <img src="img/logo.png" alt="">
+      </div>
+      <div class="row justify-content-center justify-content-lg-between align-items-end">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4 mt-5 h-100">
+          <div class="card h-100 mt-0 d-flex flex-column">
+            <img class="card-img-top" src="img/SETS.png" alt="Title" />
+            <div class="card-body text-center text-white p-4">
+              <h4 class="card-title">WATCH ALL THE
+                SERIES AND SETS
+              </h4>
+              <p class="card-text"> Have a look at the series and sets,
+                or be melancholic and see the old ones</p>
+              <a type="button" class="btn btn-outline-light changeToSectionSeries">SEE SERIES AND SETS</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4  mt-5 h-100">
+          <div class="card h-100 mt-0 d-flex flex-column">
+            <img class="card-img-top" src="img/FAVOURITES.png" alt="Title" />
+            <div class="card-body text-center text-white p-4">
+              <h4 class="card-title">WATCH YOUR
+                FAVOURITES CARDS.
+              </h4>
+              <p class="card-text"> Add and remove your favourite cards to have fast access to them.</p>
+              <button type="button" class="btn btn-outline-light changeToFavorites">SEE FAVS</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4  mt-5 h-100">
+          <div class="card h-100 mt-0 d-flex flex-column">
+            <img class="card-img-top" src="img/COLLECTIONS.png" alt="Title" />
+            <div class="card-body text-center text-white p-4">
+              <h4 class="card-title">FILTER TO SEARCH FOR SPECIFIC POKEMONS
+              </h4>
+              <p class="card-text">Check if there are pokemon cards for what you are looking for.</p>
+              <button type="button" class="btn btn-outline-light changeToSectionCards">SEE FILTERS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sectionCards" class="pagina d-none position-relative">
+    <nav id="navbar" class="navbar navbar-expand-lg sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+        <a class="navbar-brand changeToSectionHero d-flex justify-content-center col-1" href="#sectionHero">
+          <img src="img/favicon.ico" alt="" srcset="" class="homeIcon">
+        </a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
           aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa-solid fa-bars"></i>
         </button>
-
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page">Home
-                <span class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-
-            <li class="nav-item dropdown dropdownSeries">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Series</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <template id="dropdownItemTemplate">
-                  <div class="dropdown-item">
-                    <a href="#"><img src="favicon.ico" alt="" class="img-fluid"></a>
-                  </div>
+          <ul class="navbar-nav w-100 mt-2 mt-lg-0 align-items-center h-100">
+            <li
+              class="col-6 col-md-3 nav-item dropdown dropdownSeriesContainer d-flex justify-content-center align-items-center h-100">
+              <a class="nav-link dropdown-toggle ms-4 h-100" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Series:</h4>
+                <img src="" alt="" class="currentSeries img-fluid" onerror="this.src='img/logo-placeholder.png';">
+              </a>
+              <div class="dropdown-menu dropdownSeries w-100" aria-labelledby="dropdownId">
+                <template id="dropdownItemTemplate" class="w-100">
+                  <a class="dropdown-item text-center my-3" href="#topCards">
+                    <img src="img/logo.png" alt="" class="" onerror="this.src='img/no-logo.png';">
+                    <p class="w-100 nameItem"></p>
+                  </a>
                 </template>
               </div>
             </li>
+            <li class="col-6 col-md-3 nav-item dropdown dropdownSetsContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle ms-4 text-center" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Set:</h4>
+                <img src="" alt="" class="currentSet img-fluid" onerror="this.src='img/logo-placeholder.png';">
+              </a>
+              <div class="dropdown-menu dropdownSets w-100" aria-labelledby="dropdownId">
+              </div>
+            </li>
 
-            <li class="nav-item dropdown dropdownSets">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Sets</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <template id="dropdownItemTemplate">
-                  <div class="dropdown-item">
-                    <a href="#"><img src="favicon.ico" alt="" class="img-fluid"></a>
-                  </div>
-                </template>
+            <li
+              class="col-6 col-md-3 nav-item dropdown dropdownRarityContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle w-100 text-center" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Rarity:</h4>
+                <p class="w-100 currentRarityName m-0 text-center d-inline"><img src="img/logo-placeholder.png" alt=""
+                    class="w-50"></p>
+              </a>
+              <div class="dropdown-menu dropdownRarity w-100" aria-labelledby="dropdownId">
+              </div>
+              <template id="dropdownItemRarityTemplate" class="w-100">
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 rarityName"></h4>
+                </a>
+              </template>
+            </li>
+
+            <li class="col-6 col-md-3 nav-item dropdown dropdownSortContainer d-flex justify-content-center align-items-center">
+              <a class="nav-link dropdown-toggle ms-4 w-100 text-center" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" class="">
+                <h4 class="text-center">Sort:</h4>
+                <p class="w-100 currentSortName m-0 text-center d-inline" data-id=""><img src="img/logo-placeholder.png"
+                    alt="" class="w-50"></p>
+              </a>
+              <div class="dropdown-menu dropdownSort w-100 ms-4" aria-labelledby="dropdownId">
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="">Local ID</h4>
+                </a>
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="name">Name</h4>
+                </a>
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="hp">HP</h4>
+                </a>
+                <a class="dropdown-item text-center my-3" href="#topCards">
+                  <h4 class="w-100 sortName" data-id="illustrator">Illustrator</h4>
+                </a>
               </div>
             </li>
           </ul>
-
-          <form class="d-flex my-2 my-lg-0">
-            <input class="form-control me-sm-2" type="text" placeholder="Search" />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <form action="" id="formName" class="d-flex my-2 my-lg-0 justify-content-center align-items-center needs-validation" novalidate>
+            <div class="form-group">
+              <input class="me-sm-2 inputSearchByName form-control" type="text" placeholder="Name"/>             
+              <div class="invalid-feedback">
+                Please insert only letters.
+            </div>
+            </div>
+            <button class="buttonSearchByName btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
               Search
             </button>
           </form>
@@ -67,119 +201,69 @@
       </div>
     </nav>
 
-  </header>
-  <header class="row justify-content-center ">
-    <img src="img/logo.png" class="w-25 col-4 pt-4 " alt="">
-    <ul class="nav justify-content-center py-3 ">
-      <li class="nav-item">
-        <h3><a class="nav-link active text-white ms-5 " href="#"><strong>SETS</strong></a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link text-white " href="#"><strong>SERIES</strong></a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link text-white " href="#"><strong>FAVOURITES</strong></a></h3>
-      </li>
-      <li class="nav-item">
-        <h3><a class="nav-link text-white " href="#"><strong>YOUR COLLECTIONS</strong></a></h3>
-      </li>
-    </ul>
-
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="row justify-content-between align-items-center">
-          <div class="col-xl-4 h-100">
-            <div class="card ">
-              <img class="card-img-top" src="img/FAVOURITES.png" alt="Title" />
-              <div class="card-body text-center text-white p-4">
-                <h4 class="card-title">WATCH YOUR
-                  FAVOURITES CARDS.
-                </h4>
-                <p class="card-text"> Add your favourite cards to have fast access to them.</p>
-                <button type="button" class="btn btn-outline-light favourite-button">SEE FAVS</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 h-100">
-            <div class="card  ">
-              <img class="card-img-top" src="img/COLLECTIONS.png" alt="Title" />
-              <div class="card-body text-center text-white p-4">
-                <h4 class="card-title">CREATE YOUR OWN
-                  COLLECTIONS
-                </h4>
-                <p class="card-text">Create many collections as you
-                  want with cards from all sets</p>
-                <button type="button" class="btn btn-outline-light collections-button">SEE COLLECTIONS</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 h-100">
-            <div class="card ">
-              <img class="card-img-top" src="img/SETS.png" alt="Title" />
-              <div class="card-body text-center text-white p-4">
-                <h4 class="card-title">WATCH ALL THE
-                  SERIES AND SETS
-                </h4>
-                <p class="card-text"> Have a look at the latest series and sets.
-                  or be melancholic and see the old ones</p>
-                <button type="button" class="btn btn-outline-light series-button">SEE SERIES AND SETS</button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="cardContainer container-lg py-3 h-100">
+      <h2 class="display-1 text-center favoritesTitle d-none sectionTitle">FAVORITES</h2>
+      <div class="row h-100">
+        <h3 class="h-100 text-center display-6 text-warning">Search for cards with the filters about</h3>
       </div>
-    </section>
-    <section class="series d-none container">
-      <div class="series-row row">
-
-      </div>
-    </section>
-    <section class="collections d-none container">
-      <h1>collections</h1>
-    </section>
-    <section class="favourite d-none container">
-      <h1>Favourites</h1>
-    </section>
-    <section class="sets d-none container">
-      <div class="sets-row row">
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <h1 class="text-center text-white py-5">&#169; By Hugo and Aitor</h1>
-  </footer>
-  <!-- <form action="">
-    <label for="user">User: </label>
-    <input type="text" name="user" id="user">
-    <label for="title">Title: </label>
-    <input type="text" name="title" id="title">
-    <label for="text">Post text: </label>
-    <textarea name="text" id="text"></textarea>
-    <button type="button">Send</button>
-  </form> -->
-  <section class="cardContainer container">
-    <div class="row">
-
     </div>
   </section>
-  <template id="pokemonCardTemplate">
-    <div class="col-12 col-md-6 col-lg-4 my-3">
-      <img src="img/bulbasaur.webp" alt="" srcset="" class="w-100 h-100">
-    </div>
-  </template>
-  <script type="module" src="scripts/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
+</main>
+<footer class="py-2 ">
+  <button id="backToTopBtn" title="Go to top">↑</button>
+  <h2 class="text-center text-white m-0">&#169; By Hugo and Aitor</h2>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+<template id="pokemonCardTemplate">
+  <div class="pokemonCard col-6 col-md-4 col-lg-3 my-3 position-relative">
+    <img src="img/bulbasaur.webp" alt="" class="w-100 h-100">
+    <div class="starFavoriteButtonContainer">
+      <a class="starFavoriteButton">
+        <i class="fa-solid fa-star starFavorite"></i>
+        <i class="fa-regular fa-star starFavoriteBorder"></i>
+      </a>
+    </div>
+  </div>
+</template>
+
+<!-- Modal Body for favorites-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToastFav" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <i class="fa-solid fa-star starFavorite me-3 text-warning"></i>
+      <strong class="me-auto">Favorites</strong>
+      <small class="">Just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-center">
+      <img src="" class="rounded me-2 w-50 toastIcon mx-auto" alt="">
+      <p class="mt-3">Card <span class="toastCardName"></span> has been added to favorites.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Body for delete favorites-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToastFavDel" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <i class="fa-solid fa-trash deleteFavorite me-3 text-danger"></i>
+      <strong class="me-auto">Delete favorites</strong>
+      <small class="">Just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body text-center">
+      <img src="" class="rounded me-2 w-50 toastIconDelete mx-auto" alt="">
+      <p class="mt-3">Card <span class="toastCardNameDelete"></span> has been delete from favorites.</p>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 
 </html>

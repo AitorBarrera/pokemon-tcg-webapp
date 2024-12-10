@@ -1,0 +1,696 @@
+{
+  "favorites": [
+    {
+      "id": "A1-278",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/278",
+      "localId": "278",
+      "name": "Machamp ex",
+      "rarity": "None",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 275
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 180,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "name": "Mega Punch",
+          "damage": "120"
+        }
+      ],
+      "retreat": 3,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-11-06T02:16:30+01:00"
+    },
+    {
+      "id": "sv03.5-076",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/sv/sv03.5/076",
+      "localId": "076",
+      "name": "Golem ex",
+      "rarity": "Double rare",
+      "set": {
+        "cardCount": {
+          "official": 165,
+          "total": 207
+        },
+        "id": "sv03.5",
+        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
+        "name": "151",
+        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "dexId": [
+        76
+      ],
+      "hp": 330,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "attacks": [
+        {
+          "cost": [
+            "Fighting"
+          ],
+          "name": "Dynamic Roll",
+          "effect": "During your next turn, attacks used by this Pokémon do 120 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+          "damage": 50
+        },
+        {
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Rock Blaster",
+          "effect": "This attack's damage isn't affected by Resistance.",
+          "damage": 180
+        }
+      ],
+      "retreat": 4,
+      "regulationMark": "G",
+      "legal": {
+        "standard": true,
+        "expanded": true
+      },
+      "updated": "2024-07-03T12:38:33+02:00"
+    },
+    {
+      "id": "sv03.5-145",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/sv/sv03.5/145",
+      "localId": "145",
+      "name": "Zapdos ex",
+      "rarity": "Double rare",
+      "set": {
+        "cardCount": {
+          "official": 165,
+          "total": 207
+        },
+        "id": "sv03.5",
+        "logo": "https://assets.tcgdex.net/en/sv/sv03.5/logo",
+        "name": "151",
+        "symbol": "https://assets.tcgdex.net/univ/sv/sv03.5/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "dexId": [
+        145
+      ],
+      "hp": 200,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "abilities": [
+        {
+          "type": "Ability",
+          "name": "Voltaic Float",
+          "effect": "If this Pokémon has any Lightning Energy attached, it has no Retreat Cost."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "name": "Multishot Lightning",
+          "effect": "This attack also does 90 damage to 1 of your opponent's Benched Pokémon that has any damage counters on it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "damage": 120
+        }
+      ],
+      "retreat": 2,
+      "regulationMark": "G",
+      "legal": {
+        "standard": true,
+        "expanded": true
+      },
+      "updated": "2024-07-03T12:38:33+02:00"
+    },
+    {
+      "id": "hgss4-94",
+      "category": "Pokemon",
+      "illustrator": "Takashi Yamaguchi",
+      "image": "https://assets.tcgdex.net/en/hgss/hgss4/94",
+      "localId": "94",
+      "name": "Gengar",
+      "rarity": "Rare PRIME",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 103
+        },
+        "id": "hgss4",
+        "logo": "https://assets.tcgdex.net/en/hgss/hgss4/logo",
+        "name": "Triumphant",
+        "symbol": "https://assets.tcgdex.net/univ/hgss/hgss4/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": false,
+        "reverse": false,
+        "wPromo": false
+      },
+      "dexId": [
+        94
+      ],
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "evolveFrom": "Haunter",
+      "stage": "Stage2",
+      "suffix": "Prime",
+      "abilities": [
+        {
+          "type": "Poke-BODY",
+          "name": "Catastrophe",
+          "effect": "As long as Gengar is your Active Pokémon, if any of your opponent’s Pokémon would be Knocked Out, put that Pokémon in the Lost Zone instead of discarding it. (Discard all cards attached to that Pokémon.)"
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Psychic"
+          ],
+          "name": "Hurl into Darkness",
+          "effect": "Look at your opponent’s hand and choose a number of Pokémon you find there up to the number of Psychic Energy attached to Gengar. Put the Pokémon you chose in the Lost Zone."
+        },
+        {
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "name": "Cursed Drop",
+          "effect": "Put 4 damage counters on your opponent’s Pokémon in any way you like."
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Darkness",
+          "value": "×2"
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Colorless",
+          "value": "-20"
+        }
+      ],
+      "retreat": 0,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-28T13:55:56+01:00"
+    },
+    {
+      "id": "ecard3-2",
+      "category": "Pokemon",
+      "illustrator": "Kimiya Masago",
+      "image": "https://assets.tcgdex.net/en/ecard/ecard3/2",
+      "localId": "2",
+      "name": "Alakazam",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 144,
+          "total": 182
+        },
+        "id": "ecard3",
+        "logo": "https://assets.tcgdex.net/en/ecard/ecard3/logo",
+        "name": "Skyridge",
+        "symbol": "https://assets.tcgdex.net/univ/ecard/ecard3/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        65
+      ],
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "evolveFrom": "Kadabra",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Poke-POWER",
+          "name": "Energy Jump",
+          "effect": "Once during your turn (before you attack) you may move an energy card from 1 of your Pokémon to another of your Pokémon. This power can't be used if Alakazam is affected by a Special Condition."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Psychic",
+          "effect": "This attack does 30 damage plus 10 more damage for each energy card attached to the Defending Pokémon.",
+          "damage": "30+"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Psychic",
+          "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "A1-277",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/277",
+      "localId": "277",
+      "name": "Gengar ex",
+      "rarity": "None",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 275
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 170,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage2",
+      "suffix": "EX",
+      "abilities": [
+        {
+          "type": "Ability",
+          "name": "Shadowy Spellbind",
+          "effect": "As long as this Pokémon is in the Active Spot, your opponent can't use any Supporter cards from their hand."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "name": "Spooky Shot",
+          "damage": "100"
+        }
+      ],
+      "retreat": 2,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-11-06T02:16:30+01:00"
+    },
+    {
+      "id": "base1-16",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/base1/16",
+      "localId": "16",
+      "name": "Zapdos",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        145
+      ],
+      "hp": 90,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "attacks": [
+        {
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "name": "Thunder",
+          "effect": "Flip a coin. If tails, Zapdos does 30 damage to itself.",
+          "damage": 60
+        },
+        {
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "name": "Thunderbolt",
+          "effect": "Discard all Energy cards attached to Zapdos in order to use this attack.",
+          "damage": 100
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Fighting",
+          "value": "-30"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "lc-11",
+      "category": "Pokemon",
+      "illustrator": "Keiji Kinebuchi",
+      "image": "https://assets.tcgdex.net/en/lc/lc/11",
+      "localId": "11",
+      "name": "Gengar",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 110,
+          "total": 110
+        },
+        "id": "lc",
+        "logo": "https://assets.tcgdex.net/en/lc/lc/logo",
+        "name": "Legendary Collection",
+        "symbol": "https://assets.tcgdex.net/univ/lc/lc/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        94
+      ],
+      "hp": 80,
+      "types": [
+        "Psychic"
+      ],
+      "evolveFrom": "Haunter",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Poke-POWER",
+          "name": "Curse",
+          "effect": "Once during your turn (before your attack), you may move 1 damage counter from 1 of your opponent's Pokémon to another (even if it would Knock Out the other Pokémon). This power can't be used if Gengar is Asleep, Confused, or Paralyzed."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "name": "Dark Mind",
+          "effect": "If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "damage": 30
+        }
+      ],
+      "resistances": [
+        {
+          "type": "Fighting",
+          "value": "-30"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2021-05-26T14:51:02+02:00"
+    },
+    {
+      "id": "A1-284",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/284",
+      "localId": "284",
+      "name": "Charizard ex",
+      "rarity": "Crown",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 275
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 180,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Slash",
+          "damage": "60"
+        },
+        {
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Crimson Storm",
+          "effect": "Discard 2 R Energy from this Pokémon.",
+          "damage": "200"
+        }
+      ],
+      "retreat": 2,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-11-06T02:16:30+01:00"
+    },
+    {
+      "id": "A1-281",
+      "category": "Pokemon",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/281",
+      "localId": "281",
+      "name": "Pikachu ex",
+      "rarity": "None",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 275
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 120,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "name": "Circle Circuit",
+          "effect": "This attack does 30 damage for each of your Benched L Pokémon.",
+          "damage": "30x"
+        }
+      ],
+      "retreat": 1,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-11-06T02:16:30+01:00"
+    }
+  ],
+  "other_collections": [
+    {
+      "id": "daca",
+      "name": "gato",
+      "cards": []
+    },
+    {
+      "id": "634c",
+      "name": "LAGARTIJA",
+      "cards": []
+    },
+    {
+      "id": "55a1",
+      "name": "LAGARTIJA",
+      "cards": []
+    },
+    {
+      "id": "3a52",
+      "name": "DELPHIN",
+      "cards": [
+        {
+          "category": "Pokemon",
+          "id": "base1-2",
+          "illustrator": "Ken Sugimori",
+          "image": "https://assets.tcgdex.net/en/base/base1/2",
+          "localId": "2",
+          "name": "Blastoise",
+          "rarity": "Rare",
+          "set": {
+            "cardCount": {
+              "official": 102,
+              "total": 102
+            },
+            "id": "base1",
+            "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+            "name": "Base Set"
+          },
+          "variants": {
+            "firstEdition": false,
+            "holo": true,
+            "normal": true,
+            "reverse": true,
+            "wPromo": false
+          },
+          "dexId": [
+            9
+          ],
+          "hp": 100,
+          "types": [
+            "Water"
+          ],
+          "evolveFrom": "Wartortle",
+          "stage": "Stage2",
+          "abilities": [
+            {
+              "type": "Pokemon Power",
+              "name": "Rain Dance",
+              "effect": "As often as you like during your turn (before your attack), you may attach 1 Water Energy Card to 1 of your Water Pokémon. (This doesn't use up your 1 Energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed."
+            }
+          ],
+          "attacks": [
+            {
+              "cost": [
+                "Water",
+                "Water",
+                "Water"
+              ],
+              "name": "Hydro Pump",
+              "effect": "Does 40 damage plus 10 more damage for each attached Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+              "damage": "40+"
+            }
+          ],
+          "weaknesses": [
+            {
+              "type": "Lightning",
+              "value": "×2"
+            }
+          ],
+          "legal": {
+            "standard": false,
+            "expanded": false
+          },
+          "updated": "2023-12-06T00:47:28+01:00"
+        }
+      ]
+    }
+  ]
+}

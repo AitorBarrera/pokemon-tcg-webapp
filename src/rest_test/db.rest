@@ -1,0 +1,121 @@
+### Get all card
+GET http://localhost:3000/favorites HTTP/1.1
+
+### Get card by ID
+GET http://localhost:3000/other_collections HTTP/1.1
+
+### Add card
+POST http://localhost:3000/favorites HTTP/1.1
+content-type: application/json 
+
+{
+    "id": "base1-1",
+    "image": "https://assets.tcgdex.net/en/base/base1/1",
+    "localId": "1",
+    "name": "Alakazam"
+}
+
+### Delete a post
+DELETE http://localhost:3000/other_collections/752a HTTP/1.1
+
+### Add collection
+DELETE http://localhost:3000/other_collections HTTP/1.1
+content-type: application/json 
+
+{
+    "perros":[
+
+    ]
+}
+
+### Add collection
+PUT http://localhost:3000/other_collections/3a52 HTTP/1.1
+content-type: application/json 
+
+{
+    "id": "3a52",
+    "name": "DELPHIN",
+    "cards": [
+        {
+            "category": "Energy",
+            "id": "base1-101",
+            "illustrator": "Keiji Kinebuchi",
+            "image": "https://assets.tcgdex.net/en/base/base1/101",
+            "localId": "101",
+            "name": "Psychic Energy",
+            "rarity": "Common",
+            "set": {
+                "cardCount": {
+                "official": 102,
+                "total": 102
+                },
+                "id": "base1",
+                "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+                "name": "Base Set"
+            },
+            "variants": {
+                "firstEdition": false,
+                "holo": true,
+                "normal": true,
+                "reverse": true,
+                "wPromo": false
+            },
+            "stage": "Basic",
+            "energyType": "Normal",
+            "legal": {
+                "standard": false,
+                "expanded": false
+            },
+            "updated": "2023-12-06T00:47:28+01:00"
+        },
+        {
+            "category": "Energy",
+            "id": "gym2-132",
+            "illustrator": "Keiji Kinebuchi",
+            "image": "https://assets.tcgdex.net/en/gym/gym2/132",
+            "localId": "132",
+            "name": "Water Energy",
+            "rarity": "Common",
+            "set": {
+                "cardCount": {
+                "official": 132,
+                "total": 132
+                },
+                "id": "gym2",
+                "logo": "https://assets.tcgdex.net/en/gym/gym2/logo",
+                "name": "Gym Challenge",
+                "symbol": "https://assets.tcgdex.net/univ/gym/gym2/symbol"
+            },
+            "variants": {
+                "firstEdition": false,
+                "holo": true,
+                "normal": true,
+                "reverse": true,
+                "wPromo": false
+            },
+            "stage": "Basic",
+            "energyType": "Normal",
+            "legal": {
+                "standard": false,
+                "expanded": false
+            },
+            "updated": "2021-02-24T16:56:26+01:00"
+        }
+    ]
+}
+
+
+
+
+# ### Get all posts
+# GET http://172.20.99.1:3000/posts HTTP/1.1
+
+
+### Update other_collections
+POST http://localhost:3000/other_collections/3a52 HTTP/1.1
+content-type: application/json 
+
+{
+    "id": "DELPHIN",
+    "cards": []
+}

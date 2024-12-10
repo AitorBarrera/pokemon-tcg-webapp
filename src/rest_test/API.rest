@@ -7,10 +7,10 @@ GET https://api.tcgdex.net/v2/en/cards/swsh3-136
 GET https://api.tcgdex.net/v2/en/sets
 
 ### Getting a set
-GET https://api.tcgdex.net/v2/en/sets/base5
+GET https://api.tcgdex.net/v2/en/sets/jumbo
 
 ### Getting card of the set
-GET https://api.tcgdex.net/v2/en/cards/base1-1
+GET https://api.tcgdex.net/v2/en/cards/A1-003
 
 ### Getting a image
 GET https://assets.tcgdex.net/en/base/base1/1/high.webp
@@ -22,10 +22,10 @@ GET https://assets.tcgdex.net/en/swsh/swsh3/136/high.webp
 
 ###Genetic Apex
 ### Getting a set
-GET https://api.tcgdex.net/v2/en/sets/pl2
+GET https://api.tcgdex.net/v2/en/sets/bwp
 
 ### Getting card of the set
-GET https://api.tcgdex.net/v2/en/cards/A1-201
+GET https://api.tcgdex.net/v2/en/cards/base1-1
 
 ### Getting a image
 GET https://assets.tcgdex.net/en/tcgp/A1/001/high.webp
@@ -39,7 +39,7 @@ GET https://assets.tcgdex.net/en/tcgp/A1/logo/low.webp&w=630&q=100
 GET https://api.tcgdex.net/v2/en/series
 
 ### Getting a series
-GET https://api.tcgdex.net/v2/en/series/pl
+GET https://api.tcgdex.net/v2/en/series/base
 
 ###
 GET https://api.tcgdex.net/v2/en/variants
@@ -49,4 +49,27 @@ GET https://api.tcgdex.net/v2/en/cards?suffix=like:ex
 
 ###
 GET https://tcgdex.net/_next/image?url=https%3A%2F%2Fassets.tcgdex.net%2Fen%2Fsv%2Fsv03.5%2Flogo.webp&w=640&q=100
-    https://www.tcgdex.net/_next/image?url=https%3A%2F%2Fassets.tcgdex.net%2Fen%2Fpl%2Fpl1%2Flogo.webp&w=640&q=100
+
+###Filtering 
+GET https://api.tcgdex.net/v2/en/cards?id=like:pl1
+
+###
+GET https://api.tcgdex.net/v2/en/cards?id=like:pl1&illustrator=like:Atsuk
+
+###
+GET https://api.tcgdex.net/v2/en/cards?rarity=like:rare
+
+###
+GET https://api.tcgdex.net/v2/en/cards/gym2-132
+
+###
+GET https://api.tcgdex.net/v2/en/cards?category=like:&id=like:pl1
+
+###
+GET https://api.tcgdex.net/v2/en/cards?id=like:pl1&name=like:&category=like:&category=like:`
+
+###
+GET https://api.tcgdex.net/v2/en/cards?category=like:&id=like:pl1&sort:field=illustrator
+
+###
+GET https://api.tcgdex.net/v2/en/cards?id=like:base1&name=like:&category=like:&rarity=like:Rare&sort:field=

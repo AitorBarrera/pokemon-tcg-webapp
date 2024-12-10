@@ -1,5 +1,19 @@
 @use "globals" as *;
 
 header{
-    background-color: $primary-color;
+    background-color: $color-primary;
+
+    img{
+        height: 10rem;
+    }
+
+    nav{
+        ul{
+            li{
+                h3{
+                    text-shadow: 2px 2px black;
+                }
+            }
+        }
+    }
 }
