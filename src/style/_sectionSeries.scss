@@ -1,7 +1,7 @@
 @use "globals" as *;
 
 .seriesCard, .setsCard, .setByIdCard {
-    background-color: $color-navbar;
+    background: $color-series-card;
     border: 0;
     justify-content: space-between;
     padding: 15px;

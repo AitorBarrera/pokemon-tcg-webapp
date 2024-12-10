@@ -1,17 +1,26 @@
 @use "globals" as *;
 
 header{
-    background-color: $color-primary;
+    background: $color-primary-navbar-gradiant;
 
     img{
         height: 10rem;
     }
 
     nav{
-        ul{
+        ul.nav-header{
             li{
                 h3{
                     text-shadow: 2px 2px black;
+
+                    a{
+                        color: white;
+                        --bs-nav-link-hover-color: #fecc01;
+                    }
+                    a:hover{
+                        color: $color-blue-pokemon !important;
+                        text-shadow: 2px 2px $color-blue-pokemon;
+                    }
                 }
             }
         }

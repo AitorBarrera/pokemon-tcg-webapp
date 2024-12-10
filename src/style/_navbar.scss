@@ -1,7 +1,7 @@
 @use "globals" as *;
 
 #navbar{
-    background-color: $color-navbar;
+    background: $color-navbar-gradiant;
 
     .container{
         max-height: 100%;
@@ -26,6 +26,15 @@
             .nav-item{
                 display: flex;
                 flex-direction: column;
+                height: 100%;
+            }
+
+            h4{
+                font-weight: 800;
+            }
+
+            p{
+                height: 60px;
             }
 
             .currentSeries, .currentSet{
@@ -38,8 +47,8 @@
             }
 
             img{
-                max-height: 200px;
-                max-width: 80%;
+                max-height: 70px;
+                max-width: 150px;
                 margin-bottom: 0.5rem;
             }
 
