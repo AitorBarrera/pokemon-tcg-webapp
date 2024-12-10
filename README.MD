@@ -12,11 +12,11 @@ The main purpose of the app is to:
 
 We use a JSON server to save the favorites data in the `db.json` file.
 
-### Live Demo
+### Repository
 
-You can view the live version of the project here:
 
-[![Ver Página en GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue)](https://aitorbarrera.github.io/pokemon-tcg-webapp/)
+
+[![Ver Página en GitHub](https://img.shields.io/badge/GitHub-Pages-blue)](https://aitorbarrera.github.io/pokemon-tcg-webapp/)
 
 ## API Integration
 
@@ -162,32 +162,30 @@ export async function getRarities(cardSet) { ...
   - **`index.html`**: Main HTML file for the application interface.
 
 
-
 ## App functionality
 
 ### Home page 
 
-<img src="src/img/HOME.png" alt="home" style="width:500px;"></img>
+<img src="src/img/home_page.png" alt="home" style="width:500px;"></img>
 
 In the main page, there are differents cards with buttons, that redirects you to the diferent features of the page.
 
 The series and set button show all the series, and if you click one it show all the sets inside.
 
-<img src="src/img/SERIES-PAGE.png" alt="favourite-button" style="width:500px;"></img>
-<img src="src/img/SETS-PAGE.png" alt="favourite-button" style="width:500px; height:238px;"></img>
-
+<img src="src/img/all_series_page.png" alt="all_series_page" style="width:500px;"></img>
+<img src="src/img/base_sets_page.png" alt="base_sets_page" style="width:500px; height:247px;"></img>
 
 By clicking one set it shows the cards, and you can add more filters.
 
-<img src="src/img/FILTER-PAGE.png" alt="favourite-button" style="width:500px;"></img>
+<img src="src/img/filters_page.png" alt="filters_page" style="width:500px;"></img>
 
 We can also add the cards to favorites using the star button.
 
-<img src="src/img/FAVS-EXAMPLE.png" alt="favourite-button" style="width:200px;"></img>
+<img src="src/img/card.png" alt="card" style="width:200px;"></img>
 
 You can see your favourites cards, clicking the FAVOURITE link in the navbar, or in the main page by the button on the card. Both redirects you to this page, where you can delete the cards if you want.
 
-<img src="src/img/FAVS-PAGE.png" alt="favourite-button" style="width:500px;"></img>
+<img src="src/img/favorites_page.png" alt="favorites_page" style="width:500px;"></img>
 
 
 
@@ -217,10 +215,8 @@ npm run dev
 ```
 ### 5.Open the app in your browser at http://localhost:5173.
 
-
 ## Contribution
 | Team Member | Practice Contribution (%) | Documentation Contribution (%) | Design Contribution (%) | Total Contribution (%) |
 |-------------|---------------------------|-------------------------------|-------------------------|------------------------|
 | Aitor       | 70%                       | 30%                           | 50%                     | 150%                   |
 | Hugo        | 30%                       | 70%                           | 50%                     | 150%                   |
-| **Total**   | **100%**                  | **100%**                      | **100%**                | **300%**               |
