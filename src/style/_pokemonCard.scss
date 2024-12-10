@@ -22,12 +22,12 @@
 
     .starFavorite{
         color: gold;
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     .starFavoriteBorder{
         color: rgb(0, 0, 0);
-        font-size: 4rem;
+        font-size: 2rem;
         font-weight: 100;
     }
 
@@ -43,8 +43,9 @@
     }
 
     &:hover{
-        transform: scale(1.1); /* Aplica un ligero zoom (10% más grande) */
+        transform: scale(1.5); /* Aplica un ligero zoom (10% más grande) */
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Incrementa la intensidad de la sombra */
         transition: all 2sec;
+        z-index: 100;
     }
 }

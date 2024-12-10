@@ -186,8 +186,13 @@
               </div>
             </li>
           </ul>
-          <form class="d-flex my-2 my-lg-0 justify-content-center">
-            <input class="me-sm-2 inputSearchByName" type="text" placeholder="Name" />
+          <form action="" id="formName" class="d-flex my-2 my-lg-0 justify-content-center align-items-center needs-validation" novalidate>
+            <div class="form-group">
+              <input class="me-sm-2 inputSearchByName form-control" type="text" placeholder="Name"/>             
+              <div class="invalid-feedback">
+                Please insert only letters.
+            </div>
+            </div>
             <button class="buttonSearchByName btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
               Search
             </button>
@@ -196,7 +201,7 @@
       </div>
     </nav>
 
-    <div class="cardContainer container py-3 h-100">
+    <div class="cardContainer container-lg py-3 h-100">
       <h2 class="display-1 text-center favoritesTitle d-none sectionTitle">FAVORITES</h2>
       <div class="row h-100">
         <h3 class="h-100 text-center display-6 text-warning">Search for cards with the filters about</h3>
