@@ -500,3 +500,44 @@ function fixLogos() {
         }
     })
 }
+
+
+
+// Form validation
+(function () {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        const buttonForm = form.querySelector('.needs-validation button');
+        
+        buttonForm.addEventListener('click', function (event) {
+            // HTML5 validation
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            //Petcode validation
+            const inputSearchByName = document.querySelector('.inputSearchByName');
+            console.log(inputSearchByName.value);
+            
+            let regEx = /^[a-zA-Z]*$/i;
+
+            if (!regEx.test(inputSearchByName.value)) {
+                console.log(true);
+                inputSearchByName.setCustomValidity('Please insert only letters.');
+                const validationMessage = document.querySelector('.inputSearchByName + div');
+                console.log(validationMessage);
+                
+                validationMessage.textContent = "Please insert only letters.";
+
+            } else {
+                console.log(false);
+                inputSearchByName.setCustomValidity('');
+            }
+
+            // Add Bootstrap validation classes
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();

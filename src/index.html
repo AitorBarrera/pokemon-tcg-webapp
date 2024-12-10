@@ -121,7 +121,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav w-100 mt-2 mt-lg-0 align-items-center h-100">
             <li
-              class="col-3 nav-item dropdown dropdownSeriesContainer d-flex justify-content-center align-items-center h-100">
+              class="col-6 col-md-3 nav-item dropdown dropdownSeriesContainer d-flex justify-content-center align-items-center h-100">
               <a class="nav-link dropdown-toggle ms-4 h-100" href="#" id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
                 <h4 class="text-center">Series:</h4>
@@ -136,7 +136,7 @@
                 </template>
               </div>
             </li>
-            <li class="col-3 nav-item dropdown dropdownSetsContainer d-flex justify-content-center align-items-center">
+            <li class="col-6 col-md-3 nav-item dropdown dropdownSetsContainer d-flex justify-content-center align-items-center">
               <a class="nav-link dropdown-toggle ms-4 text-center" id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
                 <h4 class="text-center">Set:</h4>
@@ -147,7 +147,7 @@
             </li>
 
             <li
-              class="col-3 nav-item dropdown dropdownRarityContainer d-flex justify-content-center align-items-center">
+              class="col-6 col-md-3 nav-item dropdown dropdownRarityContainer d-flex justify-content-center align-items-center">
               <a class="nav-link dropdown-toggle w-100 text-center" id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
                 <h4 class="text-center">Rarity:</h4>
@@ -163,7 +163,7 @@
               </template>
             </li>
 
-            <li class="col-3 nav-item dropdown dropdownSortContainer d-flex justify-content-center align-items-center">
+            <li class="col-6 col-md-3 nav-item dropdown dropdownSortContainer d-flex justify-content-center align-items-center">
               <a class="nav-link dropdown-toggle ms-4 w-100 text-center" id="dropdownId" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" class="">
                 <h4 class="text-center">Sort:</h4>
@@ -186,8 +186,13 @@
               </div>
             </li>
           </ul>
-          <form class="d-flex my-2 my-lg-0 justify-content-center">
-            <input class="me-sm-2 inputSearchByName" type="text" placeholder="Name" />
+          <form action="" id="formName" class="d-flex my-2 my-lg-0 justify-content-center align-items-center needs-validation" novalidate>
+            <div class="form-group">
+              <input class="me-sm-2 inputSearchByName form-control" type="text" placeholder="Name"/>             
+              <div class="invalid-feedback">
+                Please insert only letters.
+            </div>
+            </div>
             <button class="buttonSearchByName btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">
               Search
             </button>
@@ -196,7 +201,7 @@
       </div>
     </nav>
 
-    <div class="cardContainer container py-3 h-100">
+    <div class="cardContainer container-lg py-3 h-100">
       <h2 class="display-1 text-center favoritesTitle d-none sectionTitle">FAVORITES</h2>
       <div class="row h-100">
         <h3 class="h-100 text-center display-6 text-warning">Search for cards with the filters about</h3>
