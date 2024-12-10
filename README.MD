@@ -14,9 +14,7 @@ We use a JSON server to save the favorites data in the `db.json` file.
 
 ### Repository
 
-
-
-[![Ver Página en GitHub](https://img.shields.io/badge/GitHub-Pages-blue)](https://aitorbarrera.github.io/pokemon-tcg-webapp/)
+[![Ver Página en GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/AitorBarrera/pokemon-tcg-webapp)
 
 ## API Integration
 
