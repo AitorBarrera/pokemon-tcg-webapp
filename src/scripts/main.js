@@ -101,7 +101,7 @@ function renderSeriesRow(seriesList) {
                 document.querySelector(".currentSeries").src = serie.logo + ".webp"
                 changeHTML("sectionSetIdRow");
                 renderSets(serie.id);
-            
+                fixLogos()
             }).catch(error => console.log("Error: " + error))
         })
 
@@ -142,6 +142,7 @@ function renderSetsRow(setList) {
                     currentListCards = pokemonCards.cards;
 
                 }).catch(error => console.log("Error: " + error))
+                fixLogos()
             });
 
         setsRow.appendChild(div); 
