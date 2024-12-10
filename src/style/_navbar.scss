@@ -19,8 +19,14 @@
     #collapsibleNavId{
 
         ul{
-            
+            flex-direction: row;
+            flex-wrap: wrap;
             height: 100%;
+
+            .nav-item{
+                display: flex;
+                flex-direction: column;
+            }
 
             .currentSeries, .currentSet{
                 max-height: 70px;
