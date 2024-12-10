@@ -193,3 +193,10 @@ npm run dev
 ```
 ### 5.Open the app in your browser at http://localhost:5173.
 
+
+## Contribution
+| Team Member | Practice Contribution (%) | Documentation Contribution (%) | Design Contribution (%) | Total Contribution (%) |
+|-------------|---------------------------|-------------------------------|-------------------------|------------------------|
+| Aitor       | XX%                       | XX%                           | XX%                     | XX%                   |
+| Hugo        | XX%                       | XX%                           | XX%                     | XX%                   |
+| **Total**   | **100%**                  | **100%**                      | **100%**                | **300%**               |
