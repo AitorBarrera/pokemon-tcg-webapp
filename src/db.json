@@ -614,6 +614,189 @@
         "expanded": false
       },
       "updated": "2023-12-06T01:20:07+01:00"
+    },
+    {
+      "id": "base1-2",
+      "category": "Pokemon",
+      "illustrator": "Ken Sugimori",
+      "image": "https://assets.tcgdex.net/en/base/base1/2",
+      "localId": "2",
+      "name": "Blastoise",
+      "rarity": "Rare",
+      "set": {
+        "cardCount": {
+          "official": 102,
+          "total": 102
+        },
+        "id": "base1",
+        "logo": "https://assets.tcgdex.net/en/base/base1/logo",
+        "name": "Base Set"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "dexId": [
+        9
+      ],
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "evolveFrom": "Wartortle",
+      "stage": "Stage2",
+      "abilities": [
+        {
+          "type": "Pokemon Power",
+          "name": "Rain Dance",
+          "effect": "As often as you like during your turn (before your attack), you may attach 1 Water Energy Card to 1 of your Water Pokémon. (This doesn't use up your 1 Energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed."
+        }
+      ],
+      "attacks": [
+        {
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "name": "Hydro Pump",
+          "effect": "Does 40 damage plus 10 more damage for each attached Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+          "damage": "40+"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "Lightning",
+          "value": "×2"
+        }
+      ],
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2023-12-06T00:47:28+01:00"
+    },
+    {
+      "id": "A1-251",
+      "category": "Pokemon",
+      "illustrator": "PLANETA CG Works",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/251",
+      "localId": "251",
+      "name": "Venusaur ex",
+      "rarity": "Two Star",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 286
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 190,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Razor Leaf",
+          "damage": "60"
+        },
+        {
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Giant Bloom",
+          "effect": "Heal 30 damage from this Pokémon.",
+          "damage": "100"
+        }
+      ],
+      "retreat": 3,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-12-01T23:26:53+01:00"
+    },
+    {
+      "id": "A1-282",
+      "category": "Pokemon",
+      "illustrator": "Nurikabe",
+      "image": "https://assets.tcgdex.net/en/tcgp/A1/282",
+      "localId": "282",
+      "name": "Mewtwo ex",
+      "rarity": "Three Star",
+      "set": {
+        "cardCount": {
+          "official": 226,
+          "total": 286
+        },
+        "id": "A1",
+        "logo": "https://assets.tcgdex.net/en/tcgp/A1/logo",
+        "name": "Genetic Apex",
+        "symbol": "https://assets.tcgdex.net/univ/tcgp/A1/symbol"
+      },
+      "variants": {
+        "firstEdition": false,
+        "holo": true,
+        "normal": true,
+        "reverse": true,
+        "wPromo": false
+      },
+      "hp": 150,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "suffix": "EX",
+      "attacks": [
+        {
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "name": "Psychic Sphere",
+          "damage": "50"
+        },
+        {
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "name": "Psydrive",
+          "effect": "Discard 2 P Energy from this Pokémon.",
+          "damage": "150"
+        }
+      ],
+      "retreat": 2,
+      "legal": {
+        "standard": false,
+        "expanded": false
+      },
+      "updated": "2024-12-01T23:26:53+01:00"
     }
   ],
   "other_collections": [

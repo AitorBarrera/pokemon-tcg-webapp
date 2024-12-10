@@ -18,7 +18,7 @@ We use a JSON server to save the favorites data in the `db.json` file.
 
 ## API Integration
 
-#### API Name: TCG dex.
+### API Name: TCG dex.
 
 #### Link: [API Url](https://tcgdex.dev/)
 
@@ -32,6 +32,7 @@ We use a JSON server to save the favorites data in the `db.json` file.
 | `/sets/{set}`      | `GET`      | Fetches cards within a specific set.                  | [Example](https://api.tcgdex.net/v2/en/sets/base1)    |
 | `/cards/{cardId}`  | `GET`      | Retrieves details for a specific card by its ID.      | [Example](https://api.tcgdex.net/v2/en/cards/base1-4) |
 | `/illustrators`    | `GET`      | Lists all illustrators of TCG cards.                  | [Example](https://api.tcgdex.net/v2/en/illustrators)  |
+| `/cards?id=like:${setId}&name=like:${pokemonName}&rarity=like:${rarityOfCard}&sort:field=${field}`    | `GET`      | Filter cards by different parameters                  | [Example](https://api.tcgdex.net/v2/en/cards?id=like:A1&name=like:pikachu&category=like:pokemon&rarity=like:Rare&sort:field=illustrator)  |
 
 #### Access: We access to the API through the PokemonTCG.js file, where we find the different methods to obtain the information.
 
@@ -94,6 +95,53 @@ export async function getCardCount(cardSet){
 
 export async function getRarities(cardSet) { ...
   }
+```
+
+### API Name: Favorite cards (local API).
+
+#### API Structure:
+
+| **Endpoint**       | **Method** | **Description**                                       | **Example**                                           |
+| ------------------ | ---------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `/favorites`          | `GET`      | Retrieves a list of all favorite cards in the API  | [Example](http://localhost:3000/favorites)        |
+| `/favorites`          | `POST`      | Adds a new card to favorites | [Example](http://localhost:3000/favorites)        |
+| `/favorites/{cardId}`  | `DELETE`      | Delete a card with the specified id    | [Example](http://localhost:3000/favorites/A1-101) |
+
+#### Access: We access to the API through the collectionAPI.js file, where we find the different methods to obtain the information.
+
+We made the fetch with Async/Await.
+
+```javascript
+const API_URL = "http://localhost:3000";
+
+export async function getAllFavorites(){
+
+    try {
+        const response = await fetch(`${API_URL}/favorites`);
+
+        // parse the json response
+        const data = await response.json();
+
+        return data;
+
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+```
+
+In this file we have 3 functions to get, post and delete cards on the API.
+
+```javascript
+export async function getAllFavorites(){
+}
+
+export async function postCardToFavorites(card) {
+}
+
+export async function deleteCardFromFavorites(idCard) {
+}
 ```
 
 ## Folder Structure
