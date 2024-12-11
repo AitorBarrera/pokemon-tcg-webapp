@@ -97,7 +97,16 @@ export async function getSetsBySeriesId(){
 export async function getFilteredCards(set = "base1", name = "", category = "", rarity = "", sortedBy = ""){
 
     try {
-        const endPoint =`${API_URL}/cards?id=like:${set}-&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}&sort:order=ASC`
+        let endPoint =``
+
+        if (set == "undefined"){
+            set = "";
+            endPoint =`${API_URL}/cards?id=like:${set}&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}&sort:order=ASC?pagination:page=1&pagination:itemsPerPage=100`
+        }else{
+            endPoint =`${API_URL}/cards?id=like:${set}-&name=like:${name}&category=like:${category}&rarity=like:${rarity}&sort:field=${sortedBy}&sort:order=ASC`
+        }
+        
+        console.log(endPoint);
         
         const response = await fetch(endPoint);
 
@@ -112,8 +121,7 @@ export async function getFilteredCards(set = "base1", name = "", category = "", 
     }
 }
   
-export async function getCardCount(cardSet){
-
+export async function getCardCount(cardSet = "base1"){
     try {
         const endPoint =`${API_URL}/sets/${cardSet}`
 
@@ -131,7 +139,7 @@ export async function getCardCount(cardSet){
 }
 
 //-----------------------------GET ALL RARITIES IN A SET (CHAT-GPT)------------------------------------
-export async function getRarities(cardSet) {
+export async function getRarities(cardSet = "base1") {
     try {
         const count = await getCardCount(cardSet);
 

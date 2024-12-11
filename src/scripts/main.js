@@ -274,6 +274,7 @@ function renderSeries(seriesList){
         
         logoItem.src = `${serie.logo}.webp`;
         logoItem.alt = `${serie.name}`
+        
         nameItem.textContent = `${serie.name}`
         
 
@@ -312,7 +313,7 @@ function renderSets(seriesId){
 
     API.getSeriesById(seriesId).then((serie) => {
         const sets = serie.sets;
-
+        sets.unshift({})
         sets.forEach( set =>{
             const dropdownItem = dropdownItemTemplate.cloneNode(true).content;
             const logoItem = dropdownItem.querySelector("img");
@@ -320,9 +321,12 @@ function renderSets(seriesId){
             
             logoItem.src = `${set.logo}.webp`;
             logoItem.alt = `${set.name}`
-            nameItem.textContent = `${set.name}`;
+            // nameItem.textContent = `${set.name}`;
+            set.name != undefined? nameItem.textContent = `${set.name}`: nameItem.textContent = `All`
             
             const linkItem = dropdownItem.querySelector("a");
+            
+            set.id != undefined? linkItem.setAttribute("data-id", set.id): linkItem.setAttribute("data-id", "");
             linkItem.setAttribute("data-id", set.id);
 
             const logoCurrent = document.querySelector(".dropdownSetsContainer .currentSet");
@@ -499,6 +503,8 @@ function fixLogos() {
         if (srcImg.indexOf("/swsh/swshp/logo.webp") != -1){
             img.src = `https://assets.tcgdex.net/en/swsh/swsh1/logo.webp`
         }
+
+        
     })
 }
 
